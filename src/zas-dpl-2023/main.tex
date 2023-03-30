@@ -7,6 +7,10 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[ngerman]{babel}
+\usepackage{biblatex} %Imports biblatex package
+
+\addbibresource{citation.bib} %Import the bibliography file
+
 
 \title{Ein Internal Developer Portal als ... }
 \author{placeholder}
@@ -42,6 +46,8 @@
 
 
     \section{Management Summary}
+
+    test.one-two\cite{backstageio}-three
     \pagebreak
 
 
@@ -58,7 +64,10 @@
         \item diese ARbeit in gleicher oder ähnlicher Form noch keiner Prüfungskommission vorlegte.
     \end{itemize}
     placeholder, \today\newline
-    \dashsign
+
+    \section{Quellenverzeichnis}
+
+    \printbibliography
 
 
 \end{document}
