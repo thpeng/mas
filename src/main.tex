@@ -7,13 +7,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[ngerman]{babel}
-\usepackage{biblatex} %Imports biblatex package
-
-\addbibresource{citation.bib} %Import the bibliography file
-
-
-\title{Ein Internal Developer Portal als ... }
-\author{placeholder}
+\usepackage[giveninits=true]{biblatex}
+\addbibresource]{references.bib}
 
 \begin{document}
     \begin{titlepage}
@@ -47,7 +42,8 @@
 
     \section{Management Summary}
 
-    test.one-two\cite{backstageio}-three
+    test.one-two-three
+    \cite{backstageio}
     \pagebreak
 
 
@@ -65,9 +61,11 @@
     \end{itemize}
     placeholder, \today\newline
 
+
     \section{Quellenverzeichnis}
 
-    \printbibliography
+    \printbibliography}
+
 
 
 \end{document}

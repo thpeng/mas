@@ -4,6 +4,13 @@ out/
 !**/src/test/**/out/
 .idea
 *.iml
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+main.run.xml
+*.toc
 
 ### Eclipse ###
 .apt_generated
