@@ -6,7 +6,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage[ngerman]{babel}
+\usepackage[english]{babel}
 \usepackage{biblatex}
 \addbibresource{references.bib}
 
@@ -61,19 +61,66 @@
     \end{itemize}
     placeholder, \today\newline
 
+
     \section{Einleitung}
+
+
     \section{Inhaltlicher Teil}
-    \subsection{was ist eine Internal Developer Platform}
+
+    \subsection{Definition}
+    At the core, an Internal Developer Portal (Portal) is a catalogue of information, which supports the daily work of
+    engineers
+    operating IT systems, developing software or other related work.
+    By itself, the portal is not the single point of truth of the information, but usually aggregates them from several sources.
+    In context of a portal, several sources mention another concept - a internal developer platform.
+    It's worth exploring this concept to discover the value of
+    a portal.
+
+    \subsubsection{Internal Developer Platform}
+    Gartner does differentiate the concept of a Internal Developer Portal and a Internal Developer Platform with the
+    following quote: 'internal developer portals servce as the interface through wicht developers can discover and
+    access internal developer platform capabilities' \cite{gartner}.
+
+    A Internal Developer Platform (Platform), according to the COO Christoph C. Richter from Humanitec\cite{richteretal},
+    should consist at least of the following component:
+    \begin{itemize}
+        \item Application Configuration Management
+        \item Infrastructure Orchestration
+        \item Environment Management
+        \item Deployment Management
+        \item Role-Based Access Control
+    \end{itemize}
+    In some other sources, there are also additional components mentioned, e.g. Observablity\cite{xenon}. XENONSTACK as
+    well as Humanitec mentioned before, are suppliers of Internal Developer Platform solutions with different capabilities.
+    The capabilities and components of Internal Developer Platforms are not unique to the products of those two suppliers.
+    In most contemporary IT operations or software development departments these components and practices are well-known
+    and used widely.
+    Beyond the size of a very small team, it is necessary to use tooling to know where, in which version and with what
+    configuration a software artifact was installed.
+    The reason behind this may be to coordinate a new software rollout, test the software on a dedicated stage, fix bugs
+    or develop new features and to solve incidents caused by your software.
+    Thus, it can be argued, that the concept of an Internal Developer Platform is not unique to specific products
+    or offerings, but can be used on a set of tooling and practices supporting IT operations and software development.
+    Those predecessors are usually disjunct solutions or products.
+    For example there is a seperate Configuration Management Datatabase
+    to address the need of Application Configuration Management or there is a purpose built Continuous Integration /
+    Continuous Deployment pipeline for Deployment Management.
+    These separate solutions are not necessarilty integrated with each other.
+    It may be also the case, that these
+    products or solutions were established before the advent of Agile Methodologies and DevOps. With DevOps, the classical
+    displicines of IT operating and software development are much more integrated to reduce friction, delivery more often
+    and to improve quality
 
     \subsection{Was ist ein Internal Developer Portal}
     Ein Internal Developer Portal ist ein Teil von einer 'Internal Developer Platform' \cite{idporgdevportal}. Das
     Portal fungiert gemäss Gartner\cite{gartner} als Oberfläche für die Plattform.
 
-
-
     \subsection{Systematische Betrachtung}
 
+
     \section{Schlussfolgerung}
+
+
     \section{Quellenverzeichnis}
 
     \printbibliography[heading=none]
