@@ -8,6 +8,8 @@
 \usepackage{lmodern}
 \usepackage[english]{babel}
 \usepackage{biblatex}
+\usepackage{amstex}
+\usepackage{hyperref}
 \addbibresource{references.bib}
 
 \begin{document}
@@ -69,19 +71,17 @@
 
     \subsection{Definition}
     At the core, an Internal Developer Portal (Portal) is a catalogue of information, which supports the daily work of
-    engineers
-    operating IT systems, developing software or other related work.
+    engineers operating IT systems, developing software and other related work.
     By itself, the portal is not the single point of truth of the information, but usually aggregates them from several sources.
-    In context of a portal, several sources mention another concept - a internal developer platform.
-    It's worth exploring this concept to discover the value of
-    a portal.
+    In context of an Internal Developer Portal, several sources mention another concept - an Internal Developer Platform.
+    It's worth exploring this concept first to discover the value of an Internal Developer Portal.
 
     \subsubsection{Internal Developer Platform}
-    Gartner does differentiate the concept of a Internal Developer Portal and a Internal Developer Platform with the
-    following quote: 'internal developer portals servce as the interface through wicht developers can discover and
+    Gartner makes a differentiation between the concept of an Internal Developer Portal and an Internal Developer Platform:
+    'internal developer portals serve as the interface through which developers can discover and
     access internal developer platform capabilities' \cite{gartner}.
-
-    A Internal Developer Platform (Platform), according to the COO Christoph C. Richter from Humanitec\cite{richteretal},
+    %see page 12. additional arguments cognitive load, developer toil, repetetive manual. also interesting argument around team autonomy.
+    An Internal Developer Platform (Platform), according to the COO Christoph C. Richter from Humanitec\cite{richteretal},
     should consist at least of the following component:
     \begin{itemize}
         \item Application Configuration Management
@@ -90,8 +90,8 @@
         \item Deployment Management
         \item Role-Based Access Control
     \end{itemize}
-    In some other sources, there are also additional components mentioned, e.g. Observablity\cite{xenon}. XENONSTACK as
-    well as Humanitec mentioned before, are suppliers of Internal Developer Platform solutions with different capabilities.
+    In some other sources, there are also additional components mentioned, e.g. Observablity\cite{xenon}.
+    XENONSTACK as well as Humanitec mentioned before, are suppliers of Internal Developer Platform solutions with different capabilities.
     The capabilities and components of Internal Developer Platforms are not unique to the products of those two suppliers.
     In most contemporary IT operations or software development departments these components and practices are well-known
     and used widely.
@@ -103,7 +103,7 @@
     or offerings, but can be used on a set of tooling and practices supporting IT operations and software development.
     This set of tooling and practices can be viewed as predecessors of Internal Developer Platforms and are usually
     distinct solutions or products.
-    For example there is a seperate Configuration Management Datatabase
+    For example there is a separate Configuration Management Datatabase
     to address the need of Application Configuration Management or there is a purpose built Continuous Integration /
     Continuous Deployment pipeline for addressing the need for a Deployment Management.
     These solutions are not necessarily integrated with each other.
@@ -113,27 +113,61 @@
     \subsubsection{DevOps}
     With DevOps, the classical disciplines of IT operating and software development are much more integrated to reduce
     friction, release features more often and to improve quality of the products\cite{safedevops}.
-    Before DevOps it was quite common to have different toolings for either development or operating roles.
-    One of the fundamental principles of DevOps was coined by the current CTO of Amazon, Werner Vogels\cite{vogels};
-    'you build it, you run it'.
-    This means, that the same team develops the software and operates it.
+    Before DevOps it was quite common to have different tooling for either development or operating roles, usually
+    because those two roles were separated in different departments or teams.
+    One of the fundamental principle of DevOps was coined by the current CTO of Amazon, Werner Vogels;
+    'you build it, you run it'\cite{vogels}.
+    This means, that the same team that develops the software, operates it.
     With DevOps, a team takes the full responsibility over the lifecycle for a software or a platform.
-    In combination with agile methodologies such as Scrum or SAFe even business oriented people are intergrated in this
+    In combination with agile methodologies such as Scrum or SAFe even business oriented people are integrated in this
     cross-functional team.
-    One example could be the Product Owner\cite{safepo}.
+    One example of a business oriented role in a DevOps team is the Product Owner\cite{safepo}.
     This has also the implication, that a team must have a wide range of skills and should have access to different
-    tools needed.
+    tools needed for their work.
     Such tools can be needed for activities such as requirements engineering, solution architecting, software development
     but also everything that is necessary to operate the software.
-    Especially the operating of the software needs various tools. There are tools for logging and monitoring, the
-    configuration management database to find out whom belongs a particular application or platform but also incident
-    handling and alarming system.
-    While DevOps has various benefits, it adds quite a complexity for a team member in a agile and DevOps team.
+    Especially the operating of the software is a tool-intensive work.
+    There are tools for logging, monitoring, incident handling and alarming.
+    In the case of an incident, a configuration management database or an enterprise architecture database are crucial
+    to find out to whom belongs a particular application or resource.
+    This information is crucial to pinpoint a root cause and to resolve the incident quickly.
+    While DevOps has various benefits, it adds quite a complexity for a team member in an agile and DevOps team.
     That's where the Intergrated Developer Portal has various proposals to support the individual and the team in their
     daily business.
 
+    \subsubsection{Internal Developer Portal}
+    Manjunath Bhat from Gartner argues, that an Internal Developer Portal has three main characteristics\cite{gartner}:
+    \begin{itemize}
+        \item Abstraction
+        \item Developer-centric view
+        \item Pluggable framework
+    \end{itemize}
+    These characteristics are built around some kind of software catalogue.
+    \paragraph{backstage.io}
+    One implementation of an Internal Developer Portal is created from Spotify, named 'Backstage'\cite{backstageio}.
+    While there are older implementations of an Internal Developer Portal and several sources argue, that there are more
+    feature complete and mature alternatives than backstage, it is worth Backstage is interesting for several reason
+    %TODO complete. argument -> backstage als cncf, oss, framework, extendable, beispiel für die folgenden paragraphen.
+    \paragraph{Software Catalogue}
+    The Software Catalogue is the main feature of an Internal Developer Portal.
+    Its purpose is to make the capabilities of the Internal Developer Platform accessible for an engineer.
+    Its content may be any combination of
+    \begin{itemize}
+        \item Teams with members
+        \item Applications
+        \item Infrastructure and platforms
+        \item Most importantly, the relationships between those. These attributes are modelled, e.g. a application is owned by a team.
+    \end{itemize}
+
+
+
+    \subsection{SBB}
+
     \subsubsection{Internal Developer Platform}
 
+    \subsubsection{DevOps}
+
+    \subsubsection{Internal Developer Portal}
 
     \subsection{Systematische Betrachtung}
 
