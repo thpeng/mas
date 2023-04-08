@@ -7,7 +7,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[english]{babel}
-\usepackage{biblatex}
+\usepackage[style=authoryear]{biblatex}
 \addbibresource{references.bib}
 
 \begin{document}
@@ -43,7 +43,7 @@
     \section*{Management Summary}
 
     test.one-two-three
-    \cite{backstageio}
+    \parencite{backstageio}
     \pagebreak
 
 
@@ -61,6 +61,7 @@
     \end{itemize}
     placeholder, \today\newline
 
+    \pagebreak
 
     \section{Einleitung}
 
@@ -76,9 +77,9 @@
     \subsubsection{Internal Developer Platform}
     Gartner makes a differentiation between the concept of an Internal Developer Portal and an Internal Developer Platform:
     'internal developer portals serve as the interface through which developers can discover and
-    access internal developer platform capabilities' \cite{gartner}.
+    access internal developer platform capabilities' \parencite{gartner}.
     %see page 12. additional arguments cognitive load, developer toil, repetetive manual. also interesting argument around team autonomy.
-    An Internal Developer Platform (Platform), according to the COO Christoph C. Richter from Humanitec\cite{richteretal},
+    An Internal Developer Platform (Platform), according to the COO Christoph C. Richter from Humanitec\parencite{richteretal},
     should consist at least of the following component:
     \begin{itemize}
         \item Application Configuration Management
@@ -87,7 +88,7 @@
         \item Deployment Management
         \item Role-Based Access Control
     \end{itemize}
-    In some other sources, there are also additional components mentioned, e.g. Observablity\cite{xenon}.
+    In some other sources, there are also additional components mentioned, e.g. Observablity\parencite{xenon}.
     XENONSTACK as well as Humanitec mentioned before, are suppliers of Internal Developer Platform solutions with different capabilities.
     The capabilities and components of Internal Developer Platforms are not unique to the products of those two suppliers.
     In most contemporary IT operations or software development departments these components and practices are well-known
@@ -109,16 +110,16 @@
 
     \subsubsection{DevOps}
     With DevOps, the classical disciplines of IT operating and software development are much more integrated to reduce
-    friction, release features more often and to improve quality of the products\cite{safedevops}.
+    friction, release features more often and to improve quality of the products\parencite{safedevops}.
     Before DevOps it was quite common to have different tooling for either development or operating roles, usually
     because those two roles were separated in different departments or teams.
     One of the fundamental principle of DevOps was coined by the current CTO of Amazon, Werner Vogels;
-    'you build it, you run it'\cite{vogels}.
+    'you build it, you run it'\parencite{vogels}.
     This means, that the same team that develops the software, operates it.
     With DevOps, a team takes the full responsibility over the lifecycle for a software or a platform.
     In combination with agile methodologies such as Scrum or SAFe even business oriented people are integrated in this
     cross-functional team.
-    One example of a business oriented role in a DevOps team is the Product Owner\cite{safepo}.
+    One example of a business oriented role in a DevOps team is the Product Owner\parencite{safepo}.
     This has also the implication, that a team must have a wide range of skills and should have access to different
     tools needed for their work.
     Such tools can be needed for activities such as requirements engineering, solution architecting, software development
@@ -133,7 +134,7 @@
     daily business.
 
     \subsubsection{Internal Developer Portal}
-    Manjunath Bhat from Gartner argues, that an Internal Developer Portal has three main characteristics\cite{gartner}:
+    Manjunath Bhat from Gartner argues, that an Internal Developer Portal has three main characteristics\parencite{gartner}:
     \begin{itemize}
         \item Abstraction
         \item Developer-centric view
@@ -141,7 +142,7 @@
     \end{itemize}
     These characteristics are built around some kind of software catalogue.
     \paragraph{backstage.io}
-    One implementation of an Internal Developer Portal is created from Spotify, named 'Backstage' \cite{backstageio}.
+    One implementation of an Internal Developer Portal is created from Spotify, named 'Backstage' \parencite{backstageio}.
     While there are older implementations of an Internal Developer Portal and several sources argue, that there are more
     feature complete and mature alternatives than backstage, it is worth Backstage is interesting for several reason
     %TODO complete. argument -> backstage als cncf, oss, framework, extendable, beispiel für die folgenden paragraphen.
@@ -160,22 +161,22 @@
 
     \subsection{SBB}
     The IT departement of the Swiss Federal Railywys (SBB) consists of around 1300 specialists and is responsible for
-    700 applications\cite{sbbitkennzahlen}.
+    700 applications\parencite{sbbitkennzahlen}.
     The application built and operated by this department are used for a wide range of use cases.
     For example, some applications are covering generic enterprise use cases such as human resource management, finance and controlling.
-    Other software is specially built for mission-critical day-to-day operations of the railway such as the Rail Control System (RCS)\cite{sbbrcs}.
+    Other software is specially built for mission-critical day-to-day operations of the railway such as the Rail Control System (RCS)\parencite{sbbrcs}.
     An SBB IT application may be a purchased products, is developed in-house or is a combination thereof which is sometimes called
     'customization'.
 
 
     \subsubsection{Internal Developer Platform}
-    The SBB IT has for most of the core components, as defined by Richter et al\cite{richteretal}, already one or more solutions
+    The SBB IT has for most of the core components, as defined by Richter et al\parencite{richteretal}, already one or more solutions
     in place.
     \begin{itemize}
-        \item Application Configuration Management - is centered around the practice of GitOps\cite{hashicorpvault}
-        \item Infrastructure Orchestration - SBB uses OpenShift since 2015\cite{rhsbbopenshift} as platform-as-a-service (PaaS)
+        \item Application Configuration Management - is centered around the practice of GitOps\parencite{hashicorpvault}
+        \item Infrastructure Orchestration - SBB uses OpenShift since 2015\parencite{rhsbbopenshift} as platform-as-a-service (PaaS)
         \item Environment Management - provided by OpenShift and CI/CD Pipelines
-        \item Deployment Management - is provided by CI/CD pipelines, latest iteration with Tekton\cite{sbbtekton}
+        \item Deployment Management - is provided by CI/CD pipelines, latest iteration with Tekton\parencite{sbbtekton}
         \item Role-Based Access Control - built-in in most of the SBB IT platforms
     \item \end{itemize}
     In addition, there are several other tools and applications used for the day-to-day operations and development.
@@ -192,6 +193,9 @@
     Second, there is no central view to aggregate this data for the benefit of the DevOps engineers.
 
     \subsubsection{DevOps}
+    The SBB IT reorganisation in 2019 created the role of the BizDevOps engineer.
+    A BizDevOps may work on operational or development related tasks but may also fullfill more business oriented roles
+    in teams, such as a requirements engineer or a business specialist.
 
     \subsubsection{Internal Developer Portal}
 
@@ -199,7 +203,7 @@
 
 
     \section{Schlussfolgerung}
-
+    \pagebreak
 
     \section{Quellenverzeichnis}
 
