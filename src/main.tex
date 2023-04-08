@@ -144,7 +144,7 @@
     \end{itemize}
     These characteristics are built around some kind of software catalogue.
     \paragraph{backstage.io}
-    One implementation of an Internal Developer Portal is created from Spotify, named 'Backstage'\cite{backstageio}.
+    One implementation of an Internal Developer Portal is created from Spotify, named 'Backstage' \cite{backstageio}.
     While there are older implementations of an Internal Developer Portal and several sources argue, that there are more
     feature complete and mature alternatives than backstage, it is worth Backstage is interesting for several reason
     %TODO complete. argument -> backstage als cncf, oss, framework, extendable, beispiel für die folgenden paragraphen.
@@ -165,10 +165,22 @@
     The IT departement of the Swiss Federal Railywys (SBB) consists of around 1300 specialists and is responsible for
     700 applications\cite{sbbitkennzahlen}.
     The business use cases for these applications are in a very broad range.
-    For example, some applications are covering generic enterpreise use cases such as human resource management, finance and controlling.
-    Other software is specially built for the day-to-day operations of the railway such as the Rail Control System (RCS)\cite{sbbrcs}.
-    The applications may consist of purchased products o %TODO
+    For example, some applications are covering generic enterprise use cases such as human resource management, finance and controlling.
+    Other software is specially built for the mission-critical day-to-day operations of the railway such as the Rail Control System (RCS)\cite{sbbrcs}.
+    An SBB IT application may be a purchased products, is developed in-house or is a combination thereof which is sometimes called
+    'customization'.
+
+
     \subsubsection{Internal Developer Platform}
+    According to the core component definition of an Internal Developer Portal\cite{humanitec} the SBB IT has at least
+    one or more existing solutions for each concern.
+    \begin{itemize}
+        \item Application Configuration Management - is centered around the practice of GitOps\cite{hashicorpvault}
+        \item Infrastructure Orchestration - SBB uses OpenShift since 2015\cite{rhsbbopenshift} as platform-as-a-service (PaaS)
+        \item Environment Management
+        \item Deployment Management - is provided by CI/CD pipelines, latest iteration with Tekton\cite{sbbtekton}
+        \item Role-Based Access Control
+    \item \end{itemize}
 
     \subsubsection{DevOps}
 
