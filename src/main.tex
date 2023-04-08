@@ -8,8 +8,6 @@
 \usepackage{lmodern}
 \usepackage[english]{babel}
 \usepackage{biblatex}
-\usepackage{amstex}
-\usepackage{hyperref}
 \addbibresource{references.bib}
 
 \begin{document}
@@ -69,11 +67,10 @@
 
     \section{Inhaltlicher Teil}
 
-    \subsection{Definition}
+    \subsection{Value Proposal for an Internal Developer Portal}
     At the core, an Internal Developer Portal (Portal) is a catalogue of information, which supports the daily work of
     engineers operating IT systems, developing software and other related work.
-    By itself, the portal is not the single point of truth of the information, but usually aggregates them from several sources.
-    In context of an Internal Developer Portal, several sources mention another concept - an Internal Developer Platform.
+    By itself, the portal does not store or manage this information, but aggregates it from several sources, for example from an Internal Developer Platform.
     It's worth exploring this concept first to discover the value of an Internal Developer Portal.
 
     \subsubsection{Internal Developer Platform}
@@ -164,23 +161,35 @@
     \subsection{SBB}
     The IT departement of the Swiss Federal Railywys (SBB) consists of around 1300 specialists and is responsible for
     700 applications\cite{sbbitkennzahlen}.
-    The business use cases for these applications are in a very broad range.
+    The application built and operated by this department are used for a wide range of use cases.
     For example, some applications are covering generic enterprise use cases such as human resource management, finance and controlling.
-    Other software is specially built for the mission-critical day-to-day operations of the railway such as the Rail Control System (RCS)\cite{sbbrcs}.
+    Other software is specially built for mission-critical day-to-day operations of the railway such as the Rail Control System (RCS)\cite{sbbrcs}.
     An SBB IT application may be a purchased products, is developed in-house or is a combination thereof which is sometimes called
     'customization'.
 
 
     \subsubsection{Internal Developer Platform}
-    According to the core component definition of an Internal Developer Portal\cite{humanitec} the SBB IT has at least
-    one or more existing solutions for each concern.
+    The SBB IT has for most of the core components, as defined by Richter et al\cite{richteretal}, already one or more solutions
+    in place.
     \begin{itemize}
         \item Application Configuration Management - is centered around the practice of GitOps\cite{hashicorpvault}
         \item Infrastructure Orchestration - SBB uses OpenShift since 2015\cite{rhsbbopenshift} as platform-as-a-service (PaaS)
-        \item Environment Management
+        \item Environment Management - provided by OpenShift and CI/CD Pipelines
         \item Deployment Management - is provided by CI/CD pipelines, latest iteration with Tekton\cite{sbbtekton}
-        \item Role-Based Access Control
+        \item Role-Based Access Control - built-in in most of the SBB IT platforms
     \item \end{itemize}
+    In addition, there are several other tools and applications used for the day-to-day operations and development.
+    Most notable are the following
+    \begin{itemize}
+        \item Development and operation are dependent on a Wiki Software for documentation and communication.
+        \item An Enterprise Architecture Database contains the information about used technologies, platforms and dependencies
+        \item An IT Service Management Platform contains the data concerning team contact information and support groups for applications
+        \item A Configuration Management Database contains data about used assets and resources
+    \end{itemize}
+    Thus, it could be argued, that the foundation for an Internal Developer Platform is in place, but there are two
+    critical pieces missing.
+    First, most of the components mentioned are not integrated with each other.
+    Second, there is no central view to aggregate this data for the benefit of the DevOps engineers.
 
     \subsubsection{DevOps}
 

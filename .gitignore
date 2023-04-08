@@ -9,6 +9,7 @@ out/
 *.bcf
 *.blg
 *.log
+*.out
 main.run.xml
 *.toc
 
