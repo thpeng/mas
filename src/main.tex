@@ -13,7 +13,7 @@
 \begin{document}
     \begin{titlepage}
         \begin{center}
-        {\huge\bfseries Suitability of an Internal Developer Portal to support the daily work of BizDevOps Engineers\par}
+        {\huge\bfseries Suitability of an Internal Developer Portal to Support the Daily Work of BizDevOps Engineers\par}
             \vspace{2cm}
 
             {\scshape\large Certificate work in the \par}
@@ -49,7 +49,7 @@
     \pagebreak
 
 
-    \section*{Declaration of honour}
+    \section*{Declaration of Honour}
 
     I hereby confirm that I have
     \begin{itemize}
@@ -68,18 +68,24 @@
 
     \pagebreak
 
+
     \section{Introduction}
+
+    \subsection{Problem Statement and Controversy}
+
+    \subsection{Objective of the Certificate Work}
     %TODO
 
-    \section{Main Part}
-    \subsection{Value Proposal for an Internal Developer Portal}
+
+    \section{Value Proposition for an Internal Developer Portal}
     %not good enough. TODO
     At the core, an Internal Developer Portal (Portal) is a catalogue of information, which supports the daily work of
     engineers operating IT systems, developing software and other related work.
-    By itself, the portal does not store or manage this information, but aggregates it from several sources, for example from an Internal Developer Platform.
+    By itself, the portal does not store or manage this information, but aggregates it from several sources, for example
+    from an Internal Developer Platform.
     It's worth exploring this concept first to discover the value of an Internal Developer Portal.
 
-    \subsubsection{Internal Developer Platform}
+    \subsection{Internal Developer Platform}
     Gartner makes a differentiation between the concept of an Internal Developer Portal and an Internal Developer Platform:
     'internal developer portals serve as the interface through which developers can discover and
     access internal developer platform capabilities' \parencite{gartner}.
@@ -94,7 +100,8 @@
         \item Role-Based Access Control
     \end{itemize}
     In some other sources, there are also additional components mentioned, e.g. Observablity\parencite{xenon}.
-    XENONSTACK as well as Humanitec mentioned before, are suppliers of Internal Developer Platform solutions with different capabilities.
+    XENONSTACK as well as Humanitec mentioned before, are suppliers of Internal Developer Platform solutions with
+    different capabilities.
     The capabilities and components of Internal Developer Platforms are not unique to the products of those two suppliers.
     In most contemporary IT operations or software development departments these components and practices are well-known
     and used widely.
@@ -113,7 +120,7 @@
     It may be also the case, that these
     products or solutions were established before the advent of Agile Methodologies and DevOps.
 
-    \subsubsection{DevOps}
+    \subsection{DevOps}
     With DevOps, the classical disciplines of IT operating and software development are much more integrated to reduce
     friction, release features more often and to improve quality of the products\parencite{safedevops}.
     Before DevOps it was quite common to have different tooling for either development or operating roles, usually
@@ -138,7 +145,7 @@
     That's where the Intergrated Developer Portal has various proposals to support the individual and the team in their
     daily business.
 
-    \subsubsection{Internal Developer Portal}
+    \subsection{Internal Developer Portal}
     Manjunath Bhat from Gartner argues, that an Internal Developer Portal has three main characteristics\parencite{gartner}:
     \begin{itemize}
         \item Abstraction
@@ -146,11 +153,13 @@
         \item Pluggable framework
     \end{itemize}
     These characteristics are built around some kind of software catalogue.
+
     \paragraph{backstage.io}
     One implementation of an Internal Developer Portal is created from Spotify, named 'Backstage' \parencite{backstageio}.
     While there are older implementations of an Internal Developer Portal and several sources argue, that there are more
     feature complete and mature alternatives than backstage, it is worth Backstage is interesting for several reason
     %TODO complete. argument -> backstage als cncf, oss, framework, extendable, beispiel für die folgenden paragraphen.
+
     \paragraph{Software Catalogue}
     The Software Catalogue is the main feature of an Internal Developer Portal.
     Its purpose is to make the capabilities of the Internal Developer Platform accessible for an engineer.
@@ -163,55 +172,72 @@
     \end{itemize}
 
 
-
-    \subsection{SBB}
+    \section{Situation at the SBB IT}
     The IT departement of the Swiss Federal Railywys (SBB) consists of around 1300 specialists and is responsible for
     700 applications\parencite{sbbitkennzahlen}.
     The application built and operated by this department are used for a wide range of use cases.
-    For example, some applications are covering generic enterprise use cases such as human resource management, finance and controlling.
-    Other software is specially built for mission-critical day-to-day operations of the railway such as the Rail Control System (RCS)\parencite{sbbrcs}.
+    For example, some applications are covering generic enterprise use cases such as human resource management, finance
+    and controlling.
+    Other software is specially built for mission-critical day-to-day operations of the railway such as the Rail Control
+    System (RCS)\parencite{sbbrcs}.
     An SBB IT application may be a purchased products, is developed in-house or is a combination thereof which is sometimes called
     'customization'.
 
-
-    \subsubsection{Internal Developer Platform}
+    \subsection{Internal Developer Platform}
+    %bää TODO
     The SBB IT has for most of the core components, as defined by Richter et al\parencite{richteretal}, already one or more solutions
     in place.
     \begin{itemize}
         \item Application Configuration Management - is centered around the practice of GitOps\parencite{hashicorpvault}
-        \item Infrastructure Orchestration - SBB uses OpenShift since 2015\parencite{rhsbbopenshift} as platform-as-a-service (PaaS)
+        \item Infrastructure Orchestration - for example, SBB uses OpenShift since 2015\parencite{rhsbbopenshift}
         \item Environment Management - provided by OpenShift and CI/CD Pipelines
-        \item Deployment Management - is provided by CI/CD pipelines, latest iteration with Tekton\parencite{sbbtekton}
+        \item Deployment Management - is provided by CI/CD pipelines built on Tekton and ArgoCD\parencite{sbbtekton}
         \item Role-Based Access Control - built-in in most of the SBB IT platforms
-    \item \end{itemize}
+    \end{itemize}
     In addition, there are several other tools and applications used for the day-to-day operations and development.
     Most notable are the following
     \begin{itemize}
         \item Development and operation are dependent on a Wiki Software for documentation and communication.
-        \item An Enterprise Architecture Database contains the information about used technologies, platforms and dependencies
+        \item An Enterprise Architecture Database contains the information about used technologies, platforms and
+        \item dependencies, as modelled by the architects
         \item An IT Service Management Platform contains the data concerning team contact information and support groups for applications
-        \item A Configuration Management Database contains data about used assets and resources
+        \item A Configuration Management Database contains data about used assets, resources and relations to applications
     \end{itemize}
     Thus, it could be argued, that the foundation for an Internal Developer Platform is in place, but there are two
     critical pieces missing.
-    First, most of the components mentioned are not integrated with each other.
-    Second, there is no central view to aggregate this data for the benefit of the DevOps engineers.
+    First, most of the components mentioned are only partially integrated with each other.
+    Second, there is no central view to aggregate data contained in these applications and tools for the benefit of the DevOps engineers.
 
-    \subsubsection{DevOps}
-    The SBB IT reorganisation in 2019 created the role of the BizDevOps engineer.
-    A BizDevOps may work on operational or development related tasks but may also fullfill more business oriented roles
-    in teams, such as a requirements engineer or a business specialist.
+    \subsection{DevOps}
+    In 2015 DevOps and a platform-as-a-service was first introduced in the SBB IT.
+    The stated goals of these additions was to solve the rising complexity in operations and the perceived low velocity
+    in responding to change\parencite{sbbdevops}.
+    Four years later, a reorganisation brought a new operating model to the SBB IT, based on agile principles and SAFe
+    and created the role of the BizDevOps engineer\parencite{sbbagile}.
+    Most legacy roles such as an application engineer, an operations manager, test engineer or a requirements engineer
+    were converted to this BizDevOps Engineer.
+    Even some former business oriented roles are now called BizDevOps engineers.
+    Now, there are DevOps teams established, but they are working mostly with tools from the organisation before.
+    While the tools itself may be the state of the art in their fields, they weren't bought or built with an end-to-end
+    integration in mind which would benefit a BizDevOps engineer.
+    Rather it is the expectation, that a BizDevOps engineer gathers the information that he needs, over several tools and
+    applications by himself.
 
-    \subsubsection{Internal Developer Portal}
-
-    \subsection{Systematische Betrachtung}
+    \subsection{Internal Developer Portal}
+    Most BizDevOps teams of the SBB help themselves with some kind of organisation for links.
+    For example, they have a Wiki page, which consists of all necessary links for operations, e.g. link to monitoring
+    of their product,    link to the productive OpenShift project space or a link to the log data.
 
 
     \section{Method}
-    \section{Schlussfolgerung}
+    %TODO Umfrage.
+
+
+    \section{Conclusion}
     \pagebreak
 
-    \section{Quellenverzeichnis}
+
+    \section{List of Sources}
 
     \printbibliography[heading=none]
 
