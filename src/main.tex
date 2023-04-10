@@ -162,7 +162,7 @@
     \subsubsection{Vendors and Products}
     While it's not the focus of this certificate work to delve into the details of each possible product on the market
     and make a comparison between, it's worthwhile to describe a few.
-    Redpoints mentiones five products as 'Universal Service Catalogue' offerings\cite{devportalsprimer}.
+    Redpoints mentioned five products as 'Universal Service Catalogue' offerings\parencite{devportalsprimer}.
     These five products are not tied into specific cloud offerings such as AWS, Azure or Google Cloud Platform and have
     no opinion about architectural style, such as the products mentioned in the category 'Microservice Catalog'.
     \begin{center}
@@ -171,19 +171,20 @@
             Vendor   & Product      & Year & License               & Deployment  \\ \hline
             Spotify  & backstage.io & 2020 & open source           & self-hosted \\ \hline
             Lyft     & clutch.sh    & 2020 & open source           & self-hosted \\ \hline
-            Moment   & moment.dev   & Year & proprietary           & SaaS        \\ \hline
+            Moment   & moment.dev   & Beta & proprietary           & SaaS        \\ \hline
             Opslevel & opslevel.com & 2018 & partially open source & SaaS        \\ \hline
         \end{tabular}
     \end{center}
-    Roadie is omitted because it's a commercial offering of the backstage
+    Roadie is omitted from the table because it's a commercial offering of Backstage.
+    It seems, there are two main directions; Backstage and Clutch have been opensourced by two tech giants and Moment
+    and OpsLevel are commercial offering of Internal Developer Portals by two startups.
+    For the further discussion about the value proposition of an Internal Developer Portal, some screenshots and concepts will
+    be used from Backstage.
+    Backstage has been built by Spotify\parencite{backstageio}, which invests heavily in what they call the
+    'developer experience' (DX)\parencite{spotifydx}.
+    Additionally, Backstage was adopted in 2020 as an incubating project into the Cloud Native Computing Foundation (CNCF)\parencite{cncf}.
 
-    \paragraph{backstage.io}
-    One implementation of an Internal Developer Portal is created from Spotify, named 'Backstage' \parencite{backstageio}.
-    While there are older implementations of an Internal Developer Portal and several sources argue, that there are more
-    feature complete and mature alternatives than backstage, it is worth Backstage is interesting for several reason
-    %TODO complete. argument -> backstage als cncf, oss, framework, extendable, beispiel für die folgenden paragraphen.
-
-    \paragraph{Software Catalogue}
+    \subsubsection{Software Catalogue}
     The Software Catalogue is the main feature of an Internal Developer Portal.
     Its purpose is to make the capabilities of the Internal Developer Platform accessible for an engineer.
     Its content may be any combination of
@@ -193,6 +194,14 @@
         \item Infrastructure and platforms
         \item Most importantly, the relationships between those. These attributes are modelled, e.g. a application is owned by a team.
     \end{itemize}
+
+    \subsubsection{Platform as a Product}
+
+    \subsubsection{Golden Path}
+
+    \subsubsection{Technical Documentation}
+
+    \subsubsection{Extendability}
 
 
     \section{Situation at the SBB IT}
