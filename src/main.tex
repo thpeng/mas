@@ -123,7 +123,7 @@
     \subsection{DevOps}
     With DevOps, the classical disciplines of IT operating and software development are much more integrated to reduce
     friction, release features more often and to improve quality of the products\parencite{safedevops}.
-    Before DevOps it was quite common to have different tooling for either development or operating roles, usually
+    Before DevOps, it was quite common to have different tooling for either development or operating roles, usually
     because those two roles were separated in different departments or teams.
     One of the fundamental principle of DevOps was coined by the current CTO of Amazon, Werner Vogels;
     'you build it, you run it'\parencite{vogels}.
@@ -152,7 +152,30 @@
         \item Developer-centric view
         \item Pluggable framework
     \end{itemize}
-    These characteristics are built around some kind of software catalogue.
+    The overarching goal of these characteristics are to increase the devops experience by shortening the time searching
+    and interpreting information.
+    The search task is supported by a central software catalogue.
+    The interpretation of the data is supported by an underlying logical model, which describes the assets, technologies
+    and their relationship in between.
+    The logical model is different between each of the internal developer portal but have some common elements.
+
+    \subsubsection{Vendors and Products}
+    While it's not the focus of this certificate work to delve into the details of each possible product on the market
+    and make a comparison between, it's worthwhile to describe a few.
+    Redpoints mentiones five products as 'Universal Service Catalogue' offerings\cite{devportalsprimer}.
+    These five products are not tied into specific cloud offerings such as AWS, Azure or Google Cloud Platform and have
+    no opinion about architectural style, such as the products mentioned in the category 'Microservice Catalog'.
+    \begin{center}
+        \begin{tabular}{ | l | l | l | l | l | }
+            \hline
+            Vendor   & Product      & Year & License               & Deployment  \\ \hline
+            Spotify  & backstage.io & 2020 & open source           & self-hosted \\ \hline
+            Lyft     & clutch.sh    & 2020 & open source           & self-hosted \\ \hline
+            Moment   & moment.dev   & Year & proprietary           & SaaS        \\ \hline
+            Opslevel & opslevel.com & 2018 & partially open source & SaaS        \\ \hline
+        \end{tabular}
+    \end{center}
+    Roadie is omitted because it's a commercial offering of the backstage
 
     \paragraph{backstage.io}
     One implementation of an Internal Developer Portal is created from Spotify, named 'Backstage' \parencite{backstageio}.
@@ -206,22 +229,22 @@
     Thus, it could be argued, that the foundation for an Internal Developer Platform is in place, but there are two
     critical pieces missing.
     First, most of the components mentioned are only partially integrated with each other.
+    % perhaps argue with different identifier, authorization things.
     Second, there is no central view to aggregate data contained in these applications and tools for the benefit of the DevOps engineers.
 
     \subsection{DevOps}
     In 2015 DevOps and a platform-as-a-service was first introduced in the SBB IT.
     The stated goals of these additions was to solve the rising complexity in operations and the perceived low velocity
     in responding to change\parencite{sbbdevops}.
-    Four years later, a reorganisation brought a new operating model to the SBB IT, based on agile principles and SAFe
+    Four years later, a reorganisation brought a new operating model to the SBB IT, based on agile principles, DevOps and SAFe
     and created the role of the BizDevOps engineer\parencite{sbbagile}.
-    Most legacy roles such as an application engineer, an operations manager, test engineer or a requirements engineer
-    were converted to this BizDevOps Engineer.
-    Even some former business oriented roles are now called BizDevOps engineers.
-    Now, there are DevOps teams established, but they are working mostly with tools from the organisation before.
+    Most pre-reorganisation roles such as an application engineer, operations manager, test engineer or a requirements engineer
+    were converted to this BizDevOps Engineer role.
+    Even some former business oriented roles are now called BizDevOps engineers and are integrated in this cross-functional
+    teams.
+    DevOps teams are now established, but they are stilll working mostly with tools from the organisation before.
     While the tools itself may be the state of the art in their fields, they weren't bought or built with an end-to-end
     integration in mind which would benefit a BizDevOps engineer.
-    Rather it is the expectation, that a BizDevOps engineer gathers the information that he needs, over several tools and
-    applications by himself.
 
     \subsection{Internal Developer Portal}
     Most BizDevOps teams of the SBB help themselves with some kind of organisation for links.
