@@ -7,6 +7,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[english]{babel}
+\usepackage{graphicx}
 \usepackage[style=authoryear]{biblatex}
 \addbibresource{references.bib}
 
@@ -177,16 +178,24 @@
     \end{center}
     Roadie is omitted from the table because it's a commercial offering of Backstage.
     It seems, there are two main directions; Backstage and Clutch have been opensourced by two tech giants and Moment
-    and OpsLevel are commercial offering of Internal Developer Portals by two startups.
+    and OpsLevel are commercial offerings by two different startups.
     For the further discussion about the value proposition of an Internal Developer Portal, some screenshots and concepts will
     be used from Backstage.
     Backstage has been built by Spotify\parencite{backstageio}, which invests heavily in what they call the
     'developer experience' (DX)\parencite{spotifydx}.
-    Additionally, Backstage was adopted in 2020 as an incubating project into the Cloud Native Computing Foundation (CNCF)\parencite{cncf}.
+    Additionally, Backstage was adopted in 2020 as an incubating project into the Cloud Native Computing Foundation
+    (CNCF)\parencite{cncf}.
 
     \subsubsection{Software Catalogue}
     The Software Catalogue is the main feature of an Internal Developer Portal.
     Its purpose is to make the capabilities of the Internal Developer Platform accessible for an engineer.
+
+    \begin{figure}
+        \includegraphics[width=\linewidth]{backstage_item_details}
+        \caption{The Software Catalog from the Backstage Demo\parencite{backstagedemo}}
+        \label{fig:catalog}
+    \end{figure}
+
     Its content may be any combination of
     \begin{itemize}
         \item Teams with members
@@ -194,12 +203,36 @@
         \item Infrastructure and platforms
         \item Most importantly, the relationships between those. These attributes are modelled, e.g. a application is owned by a team.
     \end{itemize}
+    Data may be shown in a tabular fashion or may be shown as a relationship graph and the catalogue is searchable.
+    An Engineer may bookmark its favourite items and its own resources are marked by 'owned'.
+
+    In addition to the catalogue with its tabular overview, there is a details view.
+    \begin{figure}
+        \includegraphics[width=\linewidth]{backstage_item_details}
+        \caption{Details about an artifact}
+        \label{fig:details}
+    \end{figure}
+    In the details view more attributes are shown for the chosen item from the overview.
+    Depending on the kind of item, different attributes are shown.
+    For an application, it may be its used resources, consumed and provided APIs and other subcomponents.
+    For teams, the members are shown and its owned resources and its contact details.
 
     \subsubsection{Platform as a Product}
+    In some implementations of an Internal Developer Portal, the catalogue is not merely a copy of an architecture database.
+    In addition to the mentioned applications, platforms, organisational data and resources, there are other products
+    of the teams shown.
+    For example platform teams may offer support and consultation for their platform or area of expertise and advertise
+    this service there.
+    Some teams use the Internal Developer Platform to showcase code or libraries and thus create an inner-source community.
+    In some cases, the whole lifecycle of a resource, from ordering, updating until removal are implemented or integrated
+    in an Internal Developer Platform.
+
 
     \subsubsection{Golden Path}
 
     \subsubsection{Technical Documentation}
+
+    \subsubsection{Expertise}
 
     \subsubsection{Extendability}
 
