@@ -9,6 +9,8 @@
 \usepackage[english]{babel}
 \usepackage{graphicx}
 \usepackage[style=authoryear]{biblatex}
+\usepackage{url}
+\usepackage{hyperref}
 \addbibresource{references.bib}
 
 \begin{document}
@@ -49,6 +51,14 @@
     \tableofcontents
     \pagebreak
 
+    \section*{Used Tools}
+    In addition to the sources mentioned in the bibliography, the following aids and tools have been used
+    \begin{itemize}
+        \item Version control with Git and GitHub, the source code for this document is at \url{https://github.com/thpeng/mas}
+        \item Supporting translations with Deepl (\url{https://www.deepl.com/})
+        \item Microsoft Forms for conducting a survey (\url{https://forms.office.com})
+        \item The document has been written with \LaTeX from (\url{https://miktex.org/}) and using IntelliJ IDEA (\url{https://www.jetbrains.com/de-de/idea/})
+    \end{itemize}
 
     \section*{Declaration of Honour}
 
@@ -73,9 +83,11 @@
     \section{Introduction}
 
     \subsection{Problem Statement and Controversy}
+    %TODO
 
     \subsection{Objective of the Certificate Work}
     %TODO
+    \pagebreak
 
 
     \section{Value Proposition for an Internal Developer Portal}
@@ -272,7 +284,8 @@
     critical pieces missing.
     First, most of the components mentioned are only partially integrated with each other.
     % perhaps argue with different identifier, authorization things.
-    Second, there is no central view to aggregate data contained in these applications and tools for the benefit of the DevOps engineers.
+    Second, there is no central view to aggregate data contained in these applications and tools for the benefit of
+    the DevOps engineers.
 
     \subsection{DevOps}
     In 2015 DevOps and a platform-as-a-service was first introduced in the SBB IT.
@@ -284,7 +297,7 @@
     were converted to this BizDevOps Engineer role.
     Even some former business oriented roles are now called BizDevOps engineers and are integrated in this cross-functional
     teams.
-    DevOps teams are now established, but they are stilll working mostly with tools from the organisation before.
+    DevOps teams are now established, but they are still working mostly with tools from the organisation before.
     While the tools itself may be the state of the art in their fields, they weren't bought or built with an end-to-end
     integration in mind which would benefit a BizDevOps engineer.
 
