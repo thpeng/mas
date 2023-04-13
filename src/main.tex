@@ -55,8 +55,8 @@
     In addition to the sources mentioned in the bibliography, the following aids and tools have been used
     \begin{itemize}
         \item Version control with Git and GitHub, the source code for this document is at \url{https://github.com/thpeng/mas}
-        \item Supporting translations with Deepl (\url{https://www.deepl.com/})
-        \item Microsoft Forms for conducting a survey (\url{https://forms.office.com})
+        \item Deepl at (\url{https://www.deepl.com/}) for supporting translations.
+        \item Microsoft Forms for conducting a survey (\url{https://forms.office.com}) .
         \item The document has been written with \LaTeX from (\url{https://miktex.org/}) and using IntelliJ IDEA (\url{https://www.jetbrains.com/de-de/idea/})
     \end{itemize}
 
@@ -83,7 +83,6 @@
     \section{Introduction}
     \label{sec:introduction}
 
-
     \subsection{Problem Statement and Controversy}
     \label{subsec:iproblemstatement}
     %TODO
@@ -108,7 +107,7 @@
     \label{subsec:vpplatform}
     Gartner makes a differentiation between the concept of an Internal Developer Portal and an Internal Developer Platform:
     ``internal developer portals serve as the interface through which developers can discover and
-    access internal developer platform capabilities`` \parencite{gartner} .
+    access internal developer platform capabilities``\parencite{gartner} .
     %see page 12. additional arguments cognitive load, developer toil, repetetive manual. also interesting argument around team autonomy.
     An Internal Developer Platform (Platform), according to the COO Christoph C. Richter from Humanitec\parencite{richteretal} ,
     should consist at least of the following component:
@@ -206,8 +205,7 @@
     be used from Backstage.
     Backstage has been built by Spotify\parencite{backstageio}, which invests heavily in what they call the
     ``developer experience`` (DX)\parencite{spotifydx}.
-    Additionally, Backstage was adopted in 2020 as an incubating project into the Cloud Native Computing Foundation
-    (CNCF)\parencite{cncf}.
+    Additionally, Backstage was adopted in 2020 as an incubating project into the Cloud Native Computing Foundation\parencite{cncf} .
 
     \subsubsection{Software Catalogue}
     The Software Catalogue is the main feature of an Internal Developer Portal.
@@ -249,10 +247,36 @@
     Some teams use the Internal Developer Platform to showcase code or libraries and thus create an inner-source community.
     In some cases, the whole lifecycle of a resource, from ordering, updating until removal are implemented or integrated
     in an Internal Developer Platform.
+    In a know-how sharing session between SBB and Booking.com, Booking.com told about their Internal Developer Portal as a
+    distinct product, which is owned by a dedicated team.
+    This team is also responsible for the onboarding of other platform and application teams and entices them with the
+    value of an integrated Internal Developer Portal.
 
     \subsubsection{Golden Path}
+    The term ``Golden Path`` was coined by Spotify\parencite{spotifygoldenpath} and is itself a reference to the Frank
+    Herberts Dune trilogy, describing the only viable path to getting things right.
+    A Golden Path is a ready-to-use template for getting a project quickly started.
+    It may consist of software engineering artifacts, pre-configured infrastructure components and is usually highly
+    opinionated.
+    Opinionated means, that the context of the company is already factored in, such as internal regulations,
+    the currently promoted techstack and other internal specifics.
+    For example, a Golden Path for a database is already integrated with the security infrastructure of the company,
+    logging is taken care of and some best practices concerning database configuration and modelling are implemented.
+    Golden Pathes are not necessarily product-specific, they may encompass a typical development stack used
+    in the company, such as a web application Golden Path consisting of a frontend build with javascript, a Java backend
+    and an Oracle database, all integrated in a single build pipeline for CI/CD, securely configured and with the
+    company look and feel already set up.
+    With such a template mechanism in place, new applications ar built faster, reuse the same solutions for cross-cutting
+    functionalities and relieve developers from writing tedious plumbing code to integrate each of these components with
+    each other.
 
     \subsubsection{Technical Documentation}
+    Platforms using an Internal Developer Portal may choose to migrate their user facing documentation to the Internal
+    Developer Portal.
+    The foundation for this technical documentation may be a solution based on markdown\parencite{backstagetechdocs}
+    or similar syntax.
+    The benefit with this approach is, that documentation is treated as code and can be integrated in the same toolchain.
+    For example the documentation resides beside the code, can be peer-reviewed, built and released in the same manner.
 
     \subsubsection{Expertise}
 
@@ -267,15 +291,15 @@
     For example, some applications are covering generic enterprise use cases such as human resource management, finance
     and controlling.
     Other software is specially built for mission-critical day-to-day operations of the railway such as the Rail Control
-    System (RCS) \parencite{sbbrcs} .
+    System (RCS)\parencite{sbbrcs} .
     An SBB IT application may be a purchased products, is developed in-house or is a combination thereof which is sometimes called
     ``customization``.
 
     \subsection{Internal Developer Platform}
     \label{subsec:sbbplatform}
     %bää TODO
-    The SBB IT has for most of the core components, as defined by Richter et al\parencite{richteretal}, already one or more solutions
-    in place.
+    The SBB IT has for most of the core components, as defined by Richter\parencite{richteretal} , already one or
+    more solutions in place.
     \begin{itemize}
         \item Application Configuration Management - is centered around the practice of GitOps\parencite{hashicorpvault}
         \item Infrastructure Orchestration - for example, SBB uses OpenShift since 2015\parencite{rhsbbopenshift}
