@@ -181,12 +181,13 @@
     The logical model is different between each of the internal developer portal but have some common elements.
 
     \subsubsection{Vendors and Products}
+    \label{sssec:vendors}
     While it's not the focus of this certificate work to delve into the details of each possible product on the market
-    and make a comparison between, it's worthwhile to describe a few.
-    Redpoints mentioned five products as ``Universal Service Catalogue`` offerings\parencite{devportalsprimer}.
+    and make a comparison between them, it's worthwhile to describe a few.
+    Redpoints mentions five products as ``Universal Service Catalogue`` offerings\parencite{devportalsprimer}.
     This kind of Internal Developer Portal is not tied into specific cloud offerings such as AWS, Azure or Google
-    Cloud Platform (``TODO category``)and has no opinion about architectural style, such as the products mentioned in
-    the category ``Microservice Catalog``.
+    Cloud Platform (``API Catalog tied to an API Gateway / Service Mesh``)and has no opinion about a particular application
+    architectural style, such as the products mentioned in the category ``Microservice Catalog``.
     \begin{center}
         \begin{tabular}{ | l | l | l | l | l | }
             \hline
@@ -259,7 +260,7 @@
     It may consist of software engineering artifacts, pre-configured infrastructure components and is usually highly
     opinionated.
     Opinionated means, that the context of the company is already factored in, such as internal regulations,
-    the currently promoted techstack and other internal specifics.
+    the currently promoted tech stack and other internal specifics.
     For example, a Golden Path for a database is already integrated with the security infrastructure of the company,
     logging is taken care of and some best practices concerning database configuration and modelling are implemented.
     Golden Pathes are not necessarily product-specific, they may encompass a typical development stack used
@@ -284,10 +285,21 @@
     Their solution is to enrich teams and users with additional data about their knowledge and let other user give feedback
     how a team or user did support them, called a ``Bravo`` in their terminology.
     Thus, they create something like a social network inside their company for connecting people to solve problems or
-    easing the way how to find people with knowledge about specific technologies.
-
+    easing the way how to find people with specific skills or knowledge.
 
     \subsubsection{Extendability}
+    As shown in chapter \ref{sssec:vendors} , there are multiple offerings of Internal Developer Portal and varying
+    implementations.
+    In case of the Software-as-a-service offerings, the extendability consists of using plugins for well-known
+    technologies or products and preparing and inserting the companies data for the catalogue feature.
+    The self-hosted variants, such as Backstage and Clutch are more like a skeleton or a framework.
+    For both products, there are pre-built binaries which are installable and runnable, but you can choose to build your
+    own Internal Developer Portal and use these products as a starting point.
+    Both support custom-made plugins on the front-end side which may use additional datasources outside of the direct
+    internal developer portal.
+    Thus, you may integrate your Internal Developer Portal with the existing Internal Developer Platform and leverage
+    your existing tooling landscape in a single and integrated user experience for DevOps Engineers.
+    \pagebreak
 
 
     \section{Situation at the SBB IT}
@@ -297,10 +309,14 @@
     The application built and operated by this department are used for a wide range of use cases.
     For example, some applications are covering generic enterprise use cases such as human resource management, finance
     and controlling.
-    Other software is specially built for mission-critical day-to-day operations of the railway such as the Rail Control
+    Other software is specially built for mission-critical, day-to-day operations of the railway such as the Rail Control
     System (RCS)\parencite{sbbrcs} .
-    An SBB IT application may be a purchased products, is developed in-house or is a combination thereof which is sometimes called
-    ``customization``.
+    An SBB IT application may be a purchased product, may be developed in-house or is a combination thereof which is
+    sometimes called a ``customization``.
+    In addition, there is a sizable departement, which is providing the tooling and platforms for creating and maintaining
+    these applications.
+    Examples are a platform-as-a-service, databases, messaging but also networking, security and
+    speciality services like UX or test-engineering and others.
 
     \subsection{Internal Developer Platform}
     \label{subsec:sbbplatform}
