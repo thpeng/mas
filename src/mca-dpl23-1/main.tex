@@ -306,23 +306,28 @@
     \label{sec:sbbit}
     The IT department of the Swiss Federal Railways (SBB) consists of around 1300 specialists and is responsible for
     700 applications\parencite{sbbitkennzahlen}.
-    The application built and operated by this department are used for a wide range of use cases.
+    The applications built and operated by this department are used for a wide range of use cases.
     For example, some applications are covering generic enterprise use cases such as human resource management, finance
     and controlling.
     Other software is specially built for mission-critical, day-to-day operations of the railway such as the Rail Control
     System (RCS)\parencite{sbbrcs} .
     An SBB IT application may be a purchased product, may be developed in-house or is a combination thereof which is
     sometimes called a ``customization``.
-    In addition, there is a sizable departement, which is providing the tooling and platforms for creating and maintaining
-    these applications.
-    Examples are a platform-as-a-service, databases, messaging but also networking, security and
+    Applications and products, built and operated by the SBB, are regulated by different standards and regulations of the
+    swiss government or by industry initiatives.
+    Examples are the EN 50128 standard by the European Committee for Electrotechnical Standardization (CENELEC), which
+    governs among other things the development of safety-related software with different requirement levels
+    or the ``Handbuch Cybersecurity für Betriebe des öffentlichen Verkehrs`` (HCBöV)\parencite{hcboev} with regulations
+    concerning cyber-security, risk management, business continuity management among others.
+    In addition to the more business-oriented applications, there is a need for platforms and tools to help create
+    and operate these.
+    Examples are a platform-as-a-service, databases, messaging but also networking, monitoring, security and
     speciality services like UX or test-engineering and others.
 
     \subsection{Internal Developer Platform}
     \label{subsec:sbbplatform}
-    %bää TODO
-    The SBB IT has for most of the core components, as defined by Richter\parencite{richteretal} , already one or
-    more solutions in place.
+    The SBB IT has for most of the core components of an Internal Developer Platform as laid out in chapter \ref{subsec:vpplatform}
+    already solutions in place:
     \begin{itemize}
         \item Application Configuration Management - is centered around the practice of GitOps\parencite{hashicorpvault}
         \item Infrastructure Orchestration - for example, SBB uses OpenShift since 2015\parencite{rhsbbopenshift}
@@ -335,29 +340,31 @@
     \begin{itemize}
         \item Development and operation are dependent on a Wiki Software for documentation and communication.
         \item An Enterprise Architecture Database contains the information about used technologies, platforms and
-        \item dependencies, as modelled by the architects
+        dependencies, as modelled by the architects
         \item An IT Service Management Platform contains the data concerning team contact information and support groups for applications
         \item A Configuration Management Database contains data about used assets, resources and relations to applications
     \end{itemize}
     Thus, it could be argued, that the foundation for an Internal Developer Platform is in place, but there are two
     critical pieces missing.
     First, most of the components mentioned are only partially integrated with each other.
-    % perhaps argue with different identifier, authorization things.
+    Examples for missing integration are different identifier for assets, unaligned authorization such as per-user vs.
+    per-group models and manual data maintenance.
     Second, there is no central view to aggregate data contained in these applications and tools for the benefit of
     the DevOps engineers.
 
     \subsection{DevOps}
     \label{subsec:sbbdevops}
-    In 2015 DevOps and a platform-as-a-service was first introduced in the SBB IT .
+    In 2015 the practice of DevOps and a platform-as-a-service was first introduced in the SBB IT .
     The stated goals of these additions was to solve the rising complexity in operations and the perceived low velocity
     in responding to change\parencite{sbbdevops} .
     Four years later, a reorganisation brought a new operating model to the SBB IT, based on agile principles, DevOps and SAFe
-    and created the role of the BizDevOps engineer\parencite{sbbagile}.
+    and created the role of the BizDevOps engineer\parencite{sbbagile} .
     Most pre-reorganisation roles such as an application engineer, operations manager, test engineer or a requirements engineer
     were converted to this BizDevOps Engineer role.
     Even some former business oriented roles are now called BizDevOps engineers and are integrated in this cross-functional
     teams.
-    DevOps teams are now established, but they are still working mostly with tools from the organisation before.
+    DevOps teams in 2023 are now the established standard, but they are still working mostly with tools for developing and
+    operating from the organisation before.
     While the tools itself may be the state of the art in their fields, they weren't bought or built with an end-to-end
     integration in mind which would benefit a BizDevOps engineer.
 
