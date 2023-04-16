@@ -96,19 +96,23 @@
 
     \section{Value Proposition for an Internal Developer Portal}
     \label{sec:vp}
-    %not good enough. TODO
-    At the core, an Internal Developer Portal (Portal) is a catalogue of information, which supports the daily work of
+    An Internal Developer Portal is a web-based information catalogue which is tailored for the needs of
     engineers operating IT systems, developing software and other related work.
-    By itself, the portal does not store or manage this information, but aggregates it from several sources, for example
-    from an Internal Developer Platform.
-    It's worth exploring this concept first to discover the value of an Internal Developer Portal.
+    Internal Developer Portal are proposed as the solution for perceived problems\parencite{backstagestory} of DevOps
+    \footnote{DevOps is a combination of the words Development and Operations and can be either a role or a set of practices}
+    engineers while developing and operating IT Systems such as
+    \begin{itemize}
+        \item A lack of a central repository for reliable and tailored information
+        \item A high cognitive load of engineers because of switching between multiple and very different tools while developing or operating IT Systems
+        \item Increasing the developer experience by abstracting away complexity in infrastructure management
+    \end{itemize}
+    One potential source of information for using in the Internal Developer Portal is an Internal Developer Platform.
 
     \subsection{Internal Developer Platform}
     \label{subsec:vpplatform}
     Gartner makes a differentiation between the concept of an Internal Developer Portal and an Internal Developer Platform:
     ``internal developer portals serve as the interface through which developers can discover and
     access internal developer platform capabilities``\parencite{gartner} .
-    %see page 12. additional arguments cognitive load, developer toil, repetetive manual. also interesting argument around team autonomy.
     An Internal Developer Platform (Platform), according to the COO Christoph C. Richter from Humanitec\parencite{richteretal} ,
     should consist at least of the following component:
     \begin{itemize}
@@ -137,8 +141,7 @@
     Continuous Deployment pipeline for addressing the need for a Deployment Management.
     These solutions are not necessarily integrated with each other.
     It may be also the case, that these
-    products or solutions were established before the advent of Agile Methodologies and DevOps
-    \footnote{DevOps is a combination of the words Development and Operations and can be either a role or a set of practices}.
+    products or solutions were established before the advent of Agile Methodologies and DevOps.
 
     \subsection{DevOps}
     \label{subsec:devops}
@@ -207,7 +210,7 @@
     and OpsLevel are purposefully built by startups as a product and have commercial offerings.
     For the further discussion about the value proposition of an Internal Developer Portal, some screenshots and concepts will
     be used from Backstage.
-    Backstage has been built by Spotify\parencite{backstageio}, which invests heavily in what they call the
+    Backstage has been built by Spotify, which invests heavily in what they call the
     ``developer experience`` (DX)\parencite{spotifydx}.
     Additionally, Backstage was adopted in 2020 as an incubating project into the Cloud Native Computing Foundation\parencite{cncf} .
 
@@ -302,10 +305,13 @@
     The self-hosted variants, such as Backstage and Clutch are more like a skeleton or a framework.
     For both products, there are pre-built binaries which are installable and runnable, but you can choose to build your
     own Internal Developer Portal and use these products as a starting point.
-    Both support custom-made plugins on the front-end side which may use additional datasources outside of the direct
+    Both support custom-made plugins on the front-end side which may use additional datasource outside the direct
     internal developer portal.
-    Thus, you may integrate your Internal Developer Portal with the existing Internal Developer Platform and leverage
-    your existing tooling landscape in a single and integrated user experience for DevOps Engineers.
+    This approach is handy for decentralized organisational forms where each team have maximal autonomy about how they
+    reach their goals, but would like to use and contribute to a centralized catalogue by adding data and functionality
+    via plugins.
+    The plugin architecture allows to leverage your Internal Developer Portal with the tooling landscape in a
+    single and integrated user experience for DevOps Engineers.
     \pagebreak
 
 
@@ -396,8 +402,10 @@
     However, there was no single owner of the portal and after the immediate pain point of the platform has been adressed,
     there was no further effort to expand the functionality until now.
 
+
     \section{Method}
     \label{sec:method}
+
     \subsection{Customer Journey}
     Chapter \ref{sec:vp} and \ref{sec:sbbit} may give the impresison, that an internal developer portal could be a perfect
     match for the stated controversy.
