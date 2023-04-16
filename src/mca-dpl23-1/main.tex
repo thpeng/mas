@@ -149,7 +149,9 @@
     ``you build it, you run it``\parencite{vogels} .
     This means, that the same team that develops the software, operates it.
     With DevOps, a team takes the full responsibility over the lifecycle for a software or a platform.
-    In combination with agile methodologies such as Scrum or SAFe even business oriented people are integrated in this
+    In combination with agile methodologies such as Scrum\footnote{Scrum is a iterative software development methodology}
+    or SAFe\footnote{SAFe stands for Scaled Agile Framework and adds orchestration layers above agile (Scrum) teams for
+    a better cross-team and product-centric alignment} even business oriented people are integrated in this
     cross-functional team.
     One example of a business oriented role in a DevOps team is the Product Owner\parencite{safepo} .
     This has also the implication, that a team must have a wide range of skills and should have access to different
@@ -265,7 +267,10 @@
     logging is taken care of and some best practices concerning database configuration and modelling are implemented.
     Golden Pathes are not necessarily product-specific, they may encompass a typical development stack used
     in the company, such as a web application Golden Path consisting of a frontend build with javascript, a Java backend
-    and an Oracle database, all integrated in a single build pipeline for CI/CD, securely configured and with the
+    and an Oracle database, all integrated in a single build pipeline for CI/CD\footnote{CI/CD stands for continuous
+    integration and continuous deployment and is a practice in software engineering. Its main focus is to automate all steps
+    between development and rolling out on production, such as testing, building artifacts and installing them. Its goal
+    is to deliver fast and with a high quality software to the client.}, securely configured and with the
     company look and feel already set up.
     With such a template mechanism in place, new applications ar built faster, reuse the same solutions for cross-cutting
     functionalities and relieve developers from writing tedious plumbing code to integrate each of these components with
@@ -313,9 +318,12 @@
     System (RCS)\parencite{sbbrcs} .
     An SBB IT application may be a purchased product, may be developed in-house or is a combination thereof which is
     sometimes called a ``customization``.
-    In addition, there is a sizable departement, which is providing the tooling and platforms for creating and maintaining
+    In addition, there is a sizable department, which is providing the tooling and platforms for creating and maintaining
     these applications.
-    Examples are a platform-as-a-service, databases, messaging but also networking, security and
+    Examples are a PaaS\footnote{A platform-as-a-service (PaaS) is a platform which exposes resources such as compute or
+    storage to applications. The team which is building an application is relieved from the burden of obtaining and
+    provisioning resources on a hardware level. A well-known implementation of a PaaS is Kubernetes from the CNCF.},
+    service, databases, messaging but also networking, security and
     speciality services like UX or test-engineering and others.
 
     \subsection{Internal Developer Platform}
@@ -348,7 +356,7 @@
 
     \subsection{DevOps}
     \label{subsec:sbbdevops}
-    In 2015 DevOps and a platform-as-a-service was first introduced in the SBB IT .
+    In 2015 DevOps and a P was first introduced in the SBB IT .
     The stated goals of these additions was to solve the rising complexity in operations and the perceived low velocity
     in responding to change\parencite{sbbdevops} .
     Four years later, a reorganisation brought a new operating model to the SBB IT, based on agile principles, DevOps and SAFe
