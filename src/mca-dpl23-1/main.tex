@@ -52,7 +52,7 @@
     \pagebreak
 
     \section*{Used Tools}
-    In addition to the sources mentioned in the bibliography, the following aids and tools have been used
+    In addition to the sources mentioned in the bibliography\ref{sec:bibliograhpy}, the following aids and tools have been used
     \begin{itemize}
         \item Version control with Git and GitHub, the source code for this document is at \url{https://github.com/thpeng/mas/tree/master/src/mca-dpl23-1}
         \item Deepl at (\url{https://www.deepl.com/}) for supporting translations.
@@ -79,19 +79,48 @@
 
     \pagebreak
 
+    % max 15 - 20 pages beginning here
+
 
     \section{Introduction}
     \label{sec:introduction}
+    SBB has an extensive and constantly growing IT landscape of applications and tools for supporting the digitization
+    of core business processes of the SBB .
+    This digitization efforts brought great changes into the IT department of the SBB.
+    In less than ten years, the development model has changed from strictly waterfall to an agile methodology, cloud
+    technologies have been adopted while hardware-bound platforms are being out-phased and a new internal organization,
+    on the base of separation of specialist and line management, has been introduced.
+    While these changes are taking root now and are yielding various positives results, they still pose a challenge
+    because of the complexity and the rapidly changing technological landscape.
+    In addition, regulatory pressure has increased significantly in recent years, as exemplified by the
+    HCBöV\footnote{Handbuch Cybersecurity für Betriebe des öffentlichen Vekehrs}, as well as the new Data Protection Act
+    in Switzerland - nDSG.\linebreak
+    Feedback from various employees in different roles from SBB's so called ``Digitalen Zone`` indicates, that the overall
+    increase in complexity has an impact on the daily work of DevOps\footnote{DevOps is a combination of the words
+    Development and Operations and can be either a role or a set of practices} engineers.
+    The picture that is being painted is, although all information for the design,
+    development and operation of applications is available in principle, it is maintained in very different places and
+    forms.
+    This makes the procurement of information for these activities time-consuming and requires that a DevOps
+    engineer is already very familiar with the IT landscape of SBB .
 
     \subsection{Problem Statement and Controversy}
     \label{subsec:iproblemstatement}
-    %TODO
+    Research on the Internet about the problem, as well as advice from suppliers, shows that there is greater momentum
+    to address such issues with an Internal Developer Portal (IDP). The central promise of the concept of an
+    Internal Developer Portal is that it can reduce the so-called ``cognitive load`` of DevOps engineers by easily
+    processing and presenting information about teams, associated applications and their use of infrastructure.
 
     \subsection{Objective of the Certificate Work}
     \label{subsec:iobjective}
-
-    %TODO
-    \pagebreak
+    The purpose of this certificate thesis is to examine whether the above-mentioned problem is valid and if true,
+    can be addressed and to what extent by introducing an Internal Developer Portal.
+    The first step is to discover the value proposition by the concept of an Internal Developer Platform and putting this
+    proposition in the general context of developing software and operating IT systems.
+    The second step is to corroborate the problem statement about complexity and lacking integration with a quantitative
+    survey.
+    The third part will be to put the results of the survey and the value proposition together and to recommend a course
+    of action.
 
 
     \section{Value Proposition for an Internal Developer Portal}
@@ -99,7 +128,6 @@
     An Internal Developer Portal is a web-based information catalogue which is tailored for the needs of
     engineers operating IT systems, developing software and other related work.
     Internal Developer Portal are proposed as the solution for perceived problems\parencite{backstagestory} of DevOps
-    \footnote{DevOps is a combination of the words Development and Operations and can be either a role or a set of practices}
     engineers while developing and operating IT Systems such as
     \begin{itemize}
         \item A lack of a central repository for reliable and tailored information
@@ -217,7 +245,7 @@
     \subsubsection{Software Catalogue}
     The Software Catalogue is the main feature of an Internal Developer Portal.
     Its purpose is to make the capabilities of the Internal Developer Platform accessible for an engineer as seen in the
-    screenshot at \ref{fig:catalog}.
+    screenshot at\ref{fig:catalog}.
 
     \begin{figure}
         \includegraphics[width=\linewidth]{backstage_item_details}
@@ -289,7 +317,8 @@
     For example the documentation resides beside the code, can be peer-reviewed, built and released in the same manner.
 
     \subsubsection{Expertise}
-    Splunk\footnote{Splunk is a software company specialised in loganalysis and monitoring and it is known for its product with the same name}
+    Splunk\footnote{Splunk is a company specialised in creating software for loganalysis and monitoring and it is known
+    for its product with the same name}
     describes a use case, how to leverage an Internal Developer Platform to make expertise visible in their
     company\parencite{splunkidp} .
     Their solution is to enrich teams and users with additional data about their knowledge and let other user give feedback
@@ -342,7 +371,7 @@
 
     \subsection{Internal Developer Platform}
     \label{subsec:sbbplatform}
-    The SBB IT has for most of the core components of an Internal Developer Platform, as laid out in chapter \ref{subsec:vpplatform},
+    The SBB IT has for most of the core components of an Internal Developer Platform, as laid out in chapter\ref{subsec:vpplatform},
     already solutions in place:
     \begin{itemize}
         \item Application Configuration Management - is centered around the practice of GitOps\parencite{hashicorpvault}
@@ -370,7 +399,7 @@
 
     \subsection{DevOps}
     \label{subsec:sbbdevops}
-    In 2015 the practice of DevOps and a P was first introduced in the SBB IT .
+    In 2015 the practice of DevOps and a PaaS was first introduced in the SBB IT .
     The stated goals of these additions was to solve the rising complexity in operations and the perceived low velocity
     in responding to change\parencite{sbbdevops} .
     Four years later, a reorganisation brought a new operating model to the SBB IT, based on agile principles, DevOps and SAFe
@@ -398,7 +427,7 @@
     While this problem about discovery and sharing knowledge isn't fully addressed, there were some efforts to create
     a self-service portal for ordering resources.
     The reason for this portal was, that platform teams weren't happy with unstructured ordering with email, telephone or
-    others ad-hoc methods and built a modular and decentralised portal for this use case.
+    others ad-hoc methods and built a modular and decentralized portal for this use case.
     However, there was no single owner of the portal and after the immediate pain point of the platform has been adressed,
     there was no further effort to expand the functionality until now.
 
@@ -417,6 +446,7 @@
     \section{Conclusion}
     \label{sec:conclusion}
     \pagebreak
+    % max 15 - 20 pages end here
 
 
     \section{List of Sources}
