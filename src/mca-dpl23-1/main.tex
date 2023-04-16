@@ -137,7 +137,8 @@
     Continuous Deployment pipeline for addressing the need for a Deployment Management.
     These solutions are not necessarily integrated with each other.
     It may be also the case, that these
-    products or solutions were established before the advent of Agile Methodologies and DevOps.
+    products or solutions were established before the advent of Agile Methodologies and DevOps
+    \footnote{DevOps is a combination of the words Development and Operations and can be either a role or a set of practices}.
 
     \subsection{DevOps}
     \label{subsec:devops}
@@ -192,6 +193,7 @@
     architectural style, such as the products mentioned in the category ``Microservice Catalog``.
     \begin{center}
         \begin{tabular}{ | l | l | l | l | l | }
+            \label{Tab:uscofferings}
             \hline
             Vendor   & Product      & Year & License               & Deployment  \\ \hline
             Spotify  & backstage.io & 2020 & open source           & self-hosted \\ \hline
@@ -200,7 +202,7 @@
             Opslevel & opslevel.com & 2018 & partially open source & SaaS        \\ \hline
         \end{tabular}
     \end{center}
-    Roadie is omitted from the table because it's a commercial offering of Backstage.
+    Roadie is omitted from the table\ref{Tab:uscofferings} because it's a commercial offering of Backstage.
     It seems, there are two main directions; Backstage and Clutch have been developed by two big tech companies for their
     internal audience, have been made available as opensource and Moment
     and OpsLevel are purposefully built by startups as a product and have commercial offerings.
@@ -212,14 +214,14 @@
 
     \subsubsection{Software Catalogue}
     The Software Catalogue is the main feature of an Internal Developer Portal.
-    Its purpose is to make the capabilities of the Internal Developer Platform accessible for an engineer.
+    Its purpose is to make the capabilities of the Internal Developer Platform accessible for an engineer as seen in the
+    screenshot at \ref{fig:catalog}.
 
     \begin{figure}
         \includegraphics[width=\linewidth]{backstage_item_details}
         \caption{The Software Catalog from the Backstage Demo\parencite{backstagedemo}}
         \label{fig:catalog}
     \end{figure}
-
     Its content may be any combination of
     \begin{itemize}
         \item Teams with members
@@ -285,7 +287,8 @@
     For example the documentation resides beside the code, can be peer-reviewed, built and released in the same manner.
 
     \subsubsection{Expertise}
-    Splunk describes a use case, how to leverage an Internal Developer Platform to make expertise visible in their
+    Splunk\footnote{Splunk is a software company specialised in loganalysis and monitoring and it is known for its product with the same name}
+    describes a use case, how to leverage an Internal Developer Platform to make expertise visible in their
     company\parencite{splunkidp} .
     Their solution is to enrich teams and users with additional data about their knowledge and let other user give feedback
     how a team or user did support them, called a ``Bravo`` in their terminology.
@@ -293,7 +296,7 @@
     easing the way how to find people with specific skills or knowledge.
 
     \subsubsection{Extendability}
-    As shown in chapter \ref{sssec:vendors} , there are multiple offerings of Internal Developer Portal and varying
+    As shown in chapter\ref{sssec:vendors} , there are multiple offerings of Internal Developer Portal and varying
     implementations.
     In case of the Software-as-a-service offerings, the extendability consists of using plugins for well-known
     technologies or products and preparing and inserting the companies data for the catalogue feature.
@@ -311,26 +314,31 @@
     \label{sec:sbbit}
     The IT department of the Swiss Federal Railways (SBB) consists of around 1300 specialists and is responsible for
     700 applications\parencite{sbbitkennzahlen}.
-    The application built and operated by this department are used for a wide range of use cases.
+    The applications built and operated by this department are used for a wide range of use cases.
     For example, some applications are covering generic enterprise use cases such as human resource management, finance
     and controlling.
     Other software is specially built for mission-critical, day-to-day operations of the railway such as the Rail Control
     System (RCS)\parencite{sbbrcs} .
     An SBB IT application may be a purchased product, may be developed in-house or is a combination thereof which is
     sometimes called a ``customization``.
-    In addition, there is a sizable department, which is providing the tooling and platforms for creating and maintaining
-    these applications.
+    Applications and products, built and operated by the SBB, are regulated by different standards and regulations of the
+    swiss government or by industry initiatives.
+    Examples are the EN 50128 standard by the European Committee for Electrotechnical Standardization (CENELEC)\parencite{cenelec},
+    which governs among other things the development of safety-related software with different requirement levels
+    or the ``Handbuch Cybersecurity für Betriebe des öffentlichen Verkehrs`` (HCBöV)\parencite{hcboev} with regulations
+    concerning cyber-security, risk management, business continuity management among others.
+    In addition to the more business-oriented applications, there is a need for platforms and tools to help create
+    and operate these.
     Examples are a PaaS\footnote{A platform-as-a-service (PaaS) is a platform which exposes resources such as compute or
     storage to applications. The team which is building an application is relieved from the burden of obtaining and
     provisioning resources on a hardware level. A well-known implementation of a PaaS is Kubernetes from the CNCF.},
-    service, databases, messaging but also networking, security and
+    databases, messaging but also networking, monitoring, security and
     speciality services like UX or test-engineering and others.
 
     \subsection{Internal Developer Platform}
     \label{subsec:sbbplatform}
-    %bää TODO
-    The SBB IT has for most of the core components, as defined by Richter\parencite{richteretal} , already one or
-    more solutions in place.
+    The SBB IT has for most of the core components of an Internal Developer Platform, as laid out in chapter \ref{subsec:vpplatform},
+    already solutions in place:
     \begin{itemize}
         \item Application Configuration Management - is centered around the practice of GitOps\parencite{hashicorpvault}
         \item Infrastructure Orchestration - for example, SBB uses OpenShift since 2015\parencite{rhsbbopenshift}
@@ -343,41 +351,59 @@
     \begin{itemize}
         \item Development and operation are dependent on a Wiki Software for documentation and communication.
         \item An Enterprise Architecture Database contains the information about used technologies, platforms and
-        \item dependencies, as modelled by the architects
+        dependencies, as modelled by the architects
         \item An IT Service Management Platform contains the data concerning team contact information and support groups for applications
         \item A Configuration Management Database contains data about used assets, resources and relations to applications
     \end{itemize}
     Thus, it could be argued, that the foundation for an Internal Developer Platform is in place, but there are two
     critical pieces missing.
     First, most of the components mentioned are only partially integrated with each other.
-    % perhaps argue with different identifier, authorization things.
+    Examples for missing integration are different identifier for assets, unaligned authorization such as per-user vs.
+    per-group models and manual data maintenance.
     Second, there is no central view to aggregate data contained in these applications and tools for the benefit of
     the DevOps engineers.
 
     \subsection{DevOps}
     \label{subsec:sbbdevops}
-    In 2015 DevOps and a P was first introduced in the SBB IT .
+    In 2015 the practice of DevOps and a P was first introduced in the SBB IT .
     The stated goals of these additions was to solve the rising complexity in operations and the perceived low velocity
     in responding to change\parencite{sbbdevops} .
     Four years later, a reorganisation brought a new operating model to the SBB IT, based on agile principles, DevOps and SAFe
-    and created the role of the BizDevOps engineer\parencite{sbbagile}.
+    and created the role of the BizDevOps engineer\parencite{sbbagile} .
     Most pre-reorganisation roles such as an application engineer, operations manager, test engineer or a requirements engineer
     were converted to this BizDevOps Engineer role.
     Even some former business oriented roles are now called BizDevOps engineers and are integrated in this cross-functional
     teams.
-    DevOps teams are now established, but they are still working mostly with tools from the organisation before.
+    DevOps teams in 2023 are now the established standard, but they are still working mostly with tools for developing and
+    operating from the organisation before.
     While the tools itself may be the state of the art in their fields, they weren't bought or built with an end-to-end
     integration in mind which would benefit a BizDevOps engineer.
 
     \subsection{Internal Developer Portal}
     \label{subsec:sbbportal}
-    Most BizDevOps teams of the SBB help themselves with some kind of organisation for links.
-    For example, they have a Wiki page, which consists of all necessary links for operations, e.g. link to monitoring
-    of their product,    link to the productive OpenShift project space or a link to the log data.
-
+    Most BizDevOps teams of the SBB help themselves with some kind of organisation for the necessary information
+    for the day-to-day work.
+    A common approach is to leverage the internal Wiki software, where each teams maintain their relevant http link
+    collection in the context of their project in one or more pages.
+    When someone joins a team, its first task is in most cases, that he/she must familiarize himself/herself with this
+    collection.
+    Naturally, these link collection grow outdated and its maintenance needs also effort from a team.
+    If whole teams are being staffed, for example with models such as managed capacity or near-shore, it is even worse
+    for getting up to speed.
+    While this problem about discovery and sharing knowledge isn't fully addressed, there were some efforts to create
+    a self-service portal for ordering resources.
+    The reason for this portal was, that platform teams weren't happy with unstructured ordering with email, telephone or
+    others ad-hoc methods and built a modular and decentralised portal for this use case.
+    However, there was no single owner of the portal and after the immediate pain point of the platform has been adressed,
+    there was no further effort to expand the functionality until now.
 
     \section{Method}
     \label{sec:method}
+    \subsection{Customer Journey}
+    Chapter \ref{sec:vp} and \ref{sec:sbbit} may give the impresison, that an internal developer portal could be a perfect
+    match for the stated controversy.
+
+    \subsection{Quantitative Survey}
     %TODO Umfrage.
 
 
