@@ -11,6 +11,8 @@
 \usepackage[style=authoryear]{biblatex}
 \usepackage{url}
 \usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{tabularx}
 \addbibresource{references.bib}
 
 \begin{document}
@@ -57,7 +59,7 @@
         \item Version control with Git and GitHub, the source code for this document is at \url{https://github.com/thpeng/mas/tree/master/src/mca-dpl23-1}
         \item Deepl at (\url{https://www.deepl.com/}) for supporting translations.
         \item Microsoft Forms for conducting a survey (\url{https://forms.office.com}) .
-        \item The document has been written with \LaTeX from (\url{https://miktex.org/}) and using IntelliJ IDEA (\url{https://www.jetbrains.com/de-de/idea/})
+        \item The document has been written with \LaTeX  (\url{https://miktex.org/}) and using IntelliJ IDEA (\url{https://www.jetbrains.com/de-de/idea/})
     \end{itemize}
 
     \section*{Declaration of Honour}
@@ -221,16 +223,20 @@
     This kind of Internal Developer Portal is not tied into specific cloud offerings such as AWS, Azure or Google
     Cloud Platform (``API Catalog tied to an API Gateway / Service Mesh``)and has no opinion about a particular application
     architectural style, such as the products mentioned in the category ``Microservice Catalog``.
-    \begin{center}
-        \begin{tabular}{ | l | l | l | l | l | }
-            \hline
-            Vendor   & Product      & Year & License               & Deployment  \\ \hline
-            Spotify  & backstage.io & 2020 & open source           & self-hosted \\ \hline
-            Lyft     & clutch.sh    & 2020 & open source           & self-hosted \\ \hline
-            Moment   & moment.dev   & Beta & proprietary           & SaaS        \\ \hline
-            Opslevel & opslevel.com & 2018 & partially open source & SaaS        \\ \hline
-        \end{tabular}
-    \end{center}
+    \begin{table}[!htbp]
+        \begin{center}
+            \begin{tabularx}{\textwidth}{lllll}
+                \toprule
+                Vendor   & Product      & Year & License               & Deployment  \\
+                \midrule
+                Spotify  & backstage.io & 2020 & open source           & self-hosted \\
+                Lyft     & clutch.sh    & 2020 & open source           & self-hosted \\
+                Moment   & moment.dev   & Beta & proprietary           & SaaS        \\
+                Opslevel & opslevel.com & 2018 & partially open source & SaaS        \\
+                \bottomrule
+            \end{tabularx}
+        \end{center}
+    \end{table}
     Roadie is omitted from the table because it's a commercial offering of Backstage.
     It seems, there are two main directions; Backstage and Clutch have been developed by two big tech companies for their
     internal audience, have been made available as opensource and Moment
@@ -433,10 +439,33 @@
 
     \section{Method}
     \label{sec:method}
+    The method to verify the observations about the state of the DevOps Experience is by creating a survey
+    based on different personas of BizDevOps Engineers.
+    The different personas are created with a customer journey, based on preliminary works\parencite{sbbjobstobedone}.
 
     \subsection{Customer Journey}
-    Chapter \ref{sec:vp} and \ref{sec:sbbit} may give the impresison, that an internal developer portal could be a perfect
-    match for the stated controversy.
+    \label{subsec:cusjour}
+    The customer journey is focused on the interaction of different personas with the existing Internal Developer Platform.
+    The assumption is, that this interaction between the BizDevOps Engineers and the Internal Developer Platform has a big
+    impact on the DevOps Experience.
+    The personas of the customer journey are roles which are quite common in a BizDevOps team in the SBB IT.\linebreak
+    \textit{Peter Plattform} is working as a platform engineer and interested in the lifecycle of resources and platforms which
+    are necessary for the building and operating of application in his team.\linebreak
+    \textit{Diego Developer} is a software engineer and his duty is to work on features and enables in the context of his team.
+    He is interested in building solutions and need knowhow and consulting for doing so.
+    His secondary interest is, to get his work as fast as possible and with the highest quality into the production environment.
+    \textit{Nobert Neuling} is the rookie in the team.\linebreak
+    He wants to acquire knowledge, try out the established technologies or platforms and needs a solid template for creating
+    his own solutions.\linebreak
+    \textit{Agnes Architekt} is working as an IT architect.
+    The product owner of the team asked her to identify variants to lower the operation cost.
+    She is also very interested
+    to know about changes in the platform, so that she can inform the product owner and put the necessary enablers in
+    the next product increment.\linebreak
+    \textit{Ida Incident} is working on an operational issue.
+    She needs to know the technical topology of her application and the used platforms.
+    She has to know, which team is responsible for which platform and how she could reach them.\linebreak
+    For more information, see \ref{fig:customerjourney}
 
     \subsection{Quantitative Survey}
     %TODO Umfrage.
@@ -452,13 +481,47 @@
     \label{sec:bibliograhpy}
     \printbibliography[heading=none]
 
+
     \section{Appendix}
+    \label{sec:appendix}
+
     \subsection{Customer Journey Map}
+    \label{subsec:cusjourmap}
     \begin{figure}
         \includegraphics[angle=270,origin=c,width=\linewidth]{customer-journey.png}
         \caption{Customer Journey Map}
         \label{fig:customerjourney}
     \end{figure}
+
+    \subsection{Survey}
+    \label{subsec:survey}
+    \begin{table}[!htbp]
+        \begin{center}
+            \begin{tabularx}{\textwidth}{lXll}
+                \toprule
+                Id & Question                                                                                                                                                                              & Mean & <3 \\
+                \midrule
+                1  & Auffindbarkeit von Informationen über die Plattformen und Services. Zb. Confluence, Ardoq, Intranet... & 0 & 0         \\
+                2  & Ich kriege schnell und unkompliziert Beratung bei der Konzipierung von Applikationen, zb. für Engineering oder Development. & 0 & 0  \\
+                3  & Qualität der Dokumentation der Plattformen und Services (Sowohl Umfang, Aktualität und Inhalt). & 0 & 0  \\
+                4  & Onboarding, bis ich meine Werkzeuge für Dev oder Ops lokal installiert habe.                                                                                                          & 0 & 0  \\
+                5  & Lifecycle von Infrastruktur im Selfservice, hier; ich kann Services und Plattformen schnell und unkompliziert ausprobieren.  & 0 & 0  \\
+                6  & Lifecycle von Infrastruktur im Self-Service, hier Bestellen von Plattformen                                                                                                           & 0    & 0  \\
+                7  & Lifecycle von Infrastruktur im Self-Service, hier, Upgrade von Plattformen / deiner Applikation auf den Plattformen & 0 & 0  \\
+                8  & Lifecycle von Infrastruktur im Self-Service, hier Modifikation von Plattformen oder Applikationen. & 0 & 0  \\
+                9  & Lifecycle von Infrastruktur im Self-Service, hier Run-Down oder Rückgabe von Plattformen & 0 & 0  \\
+                10 & Es gibt einen Blueprint / Golden Path / Vorlage, die mir zeigt, wie ich eine Plattform verwenden kann. & 0 & 0  \\
+                11 & Die Plattformen erlauben mir, meine Ressourcen automatisiert zu bauen und zu deployen (CI/CD) & 0 & 0  \\
+                12 & Ich kann meinem PO die Kosten unserer genutzten Services und Plattformen nachvollziehbar erklären. & 0 & 0  \\
+                13 & Ich verstehe, wie meine Applikation mit den Plattformen zusammenhängt bei Incidents & 0 & 0  \\
+                14 & Welches DSRV Team für welche Plattform verantwortlich ist, ist mir klar.                                                                                                              & 0    & 0  \\
+                15 & Ich kriege schnell und unkompliziert Hilfe im Incident Fall.                                                                                                                          & 0    & 0  \\
+                16 & Die Plattformen zeigen mir an, ob sie funktionsfähig sind oder nicht. (zb. Monitoring, Chat, ...). & 0 & 0  \\
+                17 & Ich, bzw. mein Team, werden rechtzeitig und mit genug Details informiert, wenn sich auf den Plattformen etwas ändert, was Auswirkungen auf die von uns verantwortete Applikation hat. & 0 & 0  \\
+                \bottomrule
+            \end{tabularx}
+        \end{center}
+    \end{table}
 
 
 \end{document}
