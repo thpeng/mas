@@ -520,8 +520,20 @@
     However, information about integrating these use cases in an Internal Developer Portal are scarce.
     Question 15 ask a question about support in the incident process and is neither related to an Internal Developer Platform
     nor an Internal Developer Portal. \\
+    The survey and the questions are scoped on the DevOps experience and usage of the platform, products or services of
+    the so called Core\footnote{Core consists of multiple DSRVs, most with mission-critical platforms} DSRVs\footnote{
+        A DSRV stands for Digital Service and is one or more teams with multiple services and platforms. A DSRV is built
+        around a domain, eg. Monitoring,        Cloud infrastructure, PaaS and others}.
+    It is not necessary, that the respondent must have used all of these services.
+    The scope is also usage in the last three months.
     The rating questions have choices from one to five star and are mandatory.
-    %TODO
+    \begin{itemize}
+        \item One star - non-existent or unknown
+        \item Two star - with room for improvement
+        \item Three star - I can work with it, corresponds to what I expect
+        \item Four star - above average
+        \item Five star - super, that's what makes you
+    \end{itemize}
 
     In addition, two more questions, documented in table \ref{tab:oetable} were asked for gathering additional data for
     internal needs of the SBB IT.
@@ -531,7 +543,7 @@
     These interviews and the resulting insights are not part of this certificate work.
     The final question\footnote{The final engagement question was added based on input of the internal product management team}
     is a engagement questions and tries to gauge the overall satisfaction of the BizDevOps engineers
-    with the available services and platforms of the so called ``Core``.
+    with the available services and platforms of the so called Core DSRVs.
     % 2.3.2 Discoverability -> 1, 13, 6 (strong)
     %2.3.3 Platform as a Product n/a
     %2.3.4 Golden Path -> 10 (strong)
@@ -578,25 +590,25 @@
         \begin{center}
             \begin{tabularx}{\textwidth}{lX}
                 \toprule
-                Id & Question                                                                                                                                                                                                                                                    \\
+                Id & Question                                                                                                                                                                              \\
                 \midrule
-                1  & Auffindbarkeit von Informationen über die Plattformen und Services. Zb. Confluence, Ardoq, Intranet...                                                                                                                                                      \\
-                2  & Ich kriege schnell und unkompliziert Beratung bei der Konzipierung von Applikationen, zb. für Engineering oder Development.                                                                                                                                 \\
-                3  & Qualität der Dokumentation der Plattformen und Services (Sowohl Umfang, Aktualität und Inhalt).                                                                                                                                                             \\
-                4  & Onboarding, bis ich meine Werkzeuge für Dev oder Ops lokal installiert habe.                                                                                                                                                                                \\
-                5  & Lifecycle von Infrastruktur im Selfservice, hier; ich kann Services und Plattformen schnell und unkompliziert ausprobieren.                                                                                                                                 \\
-                6  & Lifecycle von Infrastruktur im Self-Service, hier Bestellen von Plattformen                                                                                                                                                                                 \\
-                7  & Lifecycle von Infrastruktur im Self-Service, hier, Upgrade von Plattformen / deiner Applikation auf den Plattformen                                                                                                                                         \\
-                8  & Lifecycle von Infrastruktur im Self-Service, hier Modifikation von Plattformen oder Applikationen.                                                                                                                                                          \\
-                9  & Lifecycle von Infrastruktur im Self-Service, hier Run-Down oder Rückgabe von Plattformen                                                                                                                                                                    \\
-                10 & Es gibt einen Blueprint / Golden Path / Vorlage, die mir zeigt, wie ich eine Plattform verwenden kann.                                                                                                                                                      \\
-                11 & Die Plattformen erlauben mir, meine Ressourcen automatisiert zu bauen und zu deployen (CI/CD)                                                                                                                                                               \\
-                12 & Ich kann meinem PO die Kosten unserer genutzten Services und Plattformen nachvollziehbar erklären.                                                                                                                                                          \\
-                13 & Ich verstehe, wie meine Applikation mit den Plattformen zusammenhängt bei Incidents                                                                                                                                                                         \\
-                14 & Welches DSRV\footnote{A DSRV stands for Digital Service and is one or more teams with multiple services and platforms. A DSRV is built around a domain, eg. Monitoring, Procurement and others} Team für welche Plattform verantwortlich ist, ist mir klar. \\
-                15 & Ich kriege schnell und unkompliziert Hilfe im Incident Fall.                                                                                                                                                                                                \\
-                16 & Die Plattformen zeigen mir an, ob sie funktionsfähig sind oder nicht. (zb. Monitoring, Chat, ...).                                                                                                                                                          \\
-                17 & Ich, bzw. mein Team, werden rechtzeitig und mit genug Details informiert, wenn sich auf den Plattformen etwas ändert, was Auswirkungen auf die von uns verantwortete Applikation hat.                                                                       \\
+                1  & Auffindbarkeit von Informationen über die Plattformen und Services. Zb. Confluence, Ardoq, Intranet...                                                                                \\
+                2  & Ich kriege schnell und unkompliziert Beratung bei der Konzipierung von Applikationen, zb. für Engineering oder Development.                                                           \\
+                3  & Qualität der Dokumentation der Plattformen und Services (Sowohl Umfang, Aktualität und Inhalt).                                                                                       \\
+                4  & Onboarding, bis ich meine Werkzeuge für Dev oder Ops lokal installiert habe.                                                                                                          \\
+                5  & Lifecycle von Infrastruktur im Selfservice, hier; ich kann Services und Plattformen schnell und unkompliziert ausprobieren.                                                           \\
+                6  & Lifecycle von Infrastruktur im Self-Service, hier Bestellen von Plattformen                                                                                                           \\
+                7  & Lifecycle von Infrastruktur im Self-Service, hier, Upgrade von Plattformen / deiner Applikation auf den Plattformen                                                                   \\
+                8  & Lifecycle von Infrastruktur im Self-Service, hier Modifikation von Plattformen oder Applikationen.                                                                                    \\
+                9  & Lifecycle von Infrastruktur im Self-Service, hier Run-Down oder Rückgabe von Plattformen                                                                                              \\
+                10 & Es gibt einen Blueprint / Golden Path / Vorlage, die mir zeigt, wie ich eine Plattform verwenden kann.                                                                                \\
+                11 & Die Plattformen erlauben mir, meine Ressourcen automatisiert zu bauen und zu deployen (CI/CD)                                                                                         \\
+                12 & Ich kann meinem PO die Kosten unserer genutzten Services und Plattformen nachvollziehbar erklären.                                                                                    \\
+                13 & Ich verstehe, wie meine Applikation mit den Plattformen zusammenhängt bei Incidents                                                                                                   \\
+                14 & Welches DSRV Team für welche Plattform verantwortlich ist, ist mir klar.                                                                                                              \\
+                15 & Ich kriege schnell und unkompliziert Hilfe im Incident Fall.                                                                                                                          \\
+                16 & Die Plattformen zeigen mir an, ob sie funktionsfähig sind oder nicht. (zb. Monitoring, Chat, ...).                                                                                    \\
+                17 & Ich, bzw. mein Team, werden rechtzeitig und mit genug Details informiert, wenn sich auf den Plattformen etwas ändert, was Auswirkungen auf die von uns verantwortete Applikation hat. \\
                 \bottomrule
             \end{tabularx}
         \end{center}
