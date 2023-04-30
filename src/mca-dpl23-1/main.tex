@@ -122,6 +122,7 @@
     The third part consists of bringing together the results of the survey and the value proposition and making a
     recommendation for action.
 
+
     \section{Value Proposition for an Internal Developer Portal}
     \label{sec:vp}
     An Internal Developer Portal is a web-based information catalogue which is tailored for the needs of
@@ -233,9 +234,10 @@
                 Opslevel & opslevel.com & 2018 & partially open source & SaaS        \\
                 \bottomrule
             \end{tabularx}
+            \caption{\label{tab:vendors} Vendor and Products.}
         \end{center}
     \end{table}
-    Roadie is omitted from the table because it's a commercial offering of Backstage.
+    Roadie is omitted from the table \ref{tab:vendors} because it's a commercial offering of Backstage.
     It seems, there are two main directions; Backstage and Clutch have been developed by two big tech companies for their
     internal audience, have been made available as opensource and Moment
     and OpsLevel are purposefully built by startups as a product and have commercial offerings.
@@ -245,13 +247,14 @@
     ``developer experience`` (DX)\parencite{spotifydx}.
     Additionally, Backstage was adopted in 2020 as an incubating project into the Cloud Native Computing Foundation\parencite{cncf} .
 
-    \subsubsection{Discoverability}
+    \subsubsection{Discoverability and Information Gathering}
+    \label{sssec:disc}
     The Software Catalogue is the main feature of an Internal Developer Portal.
     Its purpose is to make the capabilities of the Internal Developer Platform accessible for an engineer as seen in the
     screenshot at\ref{fig:catalog}.
 
     \begin{figure}
-        \includegraphics[width=\linewidth]{backstage_item_details}
+        \includegraphics[width=\linewidth]{backstage_catalog}
         \caption{The Software Catalog from the Backstage Demo\parencite{backstagedemo}}
         \label{fig:catalog}
     \end{figure}
@@ -276,7 +279,10 @@
     For an application, it may be its used resources, consumed and provided APIs and other subcomponents.
     For teams, the members are shown and its owned resources and its contact details.
 
+    % not sure if to include this section in the final document.
+
     \subsubsection{Platform as a Product}
+    \label{sssec:paap}
     In some implementations of an Internal Developer Portal, the catalogue is not merely a copy of an architecture database.
     In addition to the mentioned applications, platforms, organisational data and resources, there are other products
     of the teams shown.
@@ -291,6 +297,7 @@
     value of an integrated Internal Developer Portal.
 
     \subsubsection{Golden Path}
+    \label{sssec:goldenpath}
     The term ``Golden Path`` was coined by Spotify\parencite{spotifygoldenpath} and is itself a reference to the Frank
     Herberts Dune trilogy, describing the only viable path to getting things right.
     A Golden Path is a ready-to-use template for getting a project quickly started.
@@ -300,7 +307,7 @@
     the currently promoted tech stack and other internal specifics.
     For example, a Golden Path for a database is already integrated with the security infrastructure of the company,
     logging is taken care of and some best practices concerning database configuration and modelling are implemented.
-    Golden Pathes are not necessarily product-specific, they may encompass a typical development stack used
+    Golden Paths are not necessarily product-specific, they may encompass a typical development stack used
     in the company, such as a web application Golden Path consisting of a frontend build with javascript, a Java backend
     and an Oracle database, all integrated in a single build pipeline for CI/CD\footnote{CI/CD stands for continuous
     integration and continuous deployment and is a practice in software engineering. Its main focus is to automate all steps
@@ -311,6 +318,7 @@
     each other.
 
     \subsubsection{Technical Documentation}
+    \label{sssec:techdoc}
     Platforms using an Internal Developer Portal may choose to migrate their user facing documentation to the Internal
     Developer Portal.
     The foundation for this technical documentation may be a solution based on markdown\parencite{backstagetechdocs}
@@ -318,17 +326,19 @@
     The benefit with this approach is, that documentation is treated as code and can be integrated in the same toolchain.
     For example the documentation resides beside the code, can be peer-reviewed, built and released in the same manner.
 
-    \subsubsection{Expertise}
+    \subsubsection{Visibility of Expertise}
+    \label{sssec:expertise}
     Splunk\footnote{Splunk is a company specialised in creating software for loganalysis and monitoring and it is known
     for its product with the same name}
-    describes a use case, how to leverage an Internal Developer Platform to make expertise visible in their
+    describes a use case, how to leverage an Internal Developer Portal to make expertise visible in their
     company\parencite{splunkidp} .
     Their solution is to enrich teams and users with additional data about their knowledge and let other user give feedback
     how a team or user did support them, called a ``Bravo`` in their terminology.
     Thus, they create something like a social network inside their company for connecting people to solve problems or
     easing the way how to find people with specific skills or knowledge.
 
-    \subsubsection{Extendability}
+    \subsubsection{Extendability of the Platform}
+    \label{sssec:extendability}
     As shown in chapter\ref{sssec:vendors} , there are multiple offerings of Internal Developer Portal and varying
     implementations.
     In case of the Software-as-a-service offerings, the extendability consists of using plugins for well-known
@@ -345,7 +355,17 @@
     single and integrated user experience for DevOps Engineers.
 
     \subsubsection{FinOps}
-    %TODO
+    \label{sssec:finops}
+    FinOps is a practice to enable DevOps Teams to make decisions about resource usage and creates transparency
+    about the costs incurred by these decision.
+    The FinOps foundation defines\parencite{finopsdefinition} this practice as ``FinOps is an evolving cloud financial management discipline and
+    cultural practice that enables organizations to get maximum business value by helping engineering, finance,
+    technology and business teams to collaborate on data-driven spending decisions.``.
+    An Internal Developer Portal may help with this practice by providing functionality for one of the basic discipline
+    FinOps: ``Understanding Cloud Usage And Cost``.
+    The Backstage.io Demo shows one possible implementation in the Demo\parencite{backstagedemocost}.
+    This capability enables a DevOps team to take responsibility also in the financial domain and creates transparency
+    for the business what the true costs of their product is.
     \pagebreak
 
 
@@ -469,34 +489,55 @@
     For more information, see figure\ref{fig:customerjourney}
 
     \subsection{Quantitative Survey}
-    The goal of the survey is to
-    %TODO Umfrage.
+    \label{subsec:quansur}
+    For a quantitative survey, a mix of questions were created based on the customer journey.
+    Some are related to the value proposition of an Internal Developer Portal and some questions about other known or
+    suspected issues around the existing Internal Developer Platform.
+    The survey is intentionally kept short.
+    The expectation is, that a short survey generates more responses because the time effort for the responders is low.
+    The intended target of the audience are the BizDevOps engineers of the SBB.
+    One of the main information source for the BizDevOps engineers is the CLEW\footnote{CLEW stands for Cloud, ESTA, itself an acronym of Entwicklungstack and WZU, Werkzeugunterstützung}
+    blog.
+    This blog has an audience of 780 subscribers.
+    The survey itself is built with Microsoft Forms.
+    The start date of the survey was the 24.04.2023 and the end date was on 08.05.2024.
 
-    \subsubsection{Question}
-    For the survey 19 questions were created.
-    17 are rating questions with a one star to five star range.
-    One question was a question with a free text answer to solicit more input and to generate additional interview partner
+    \subsubsection{Questions}
+    From the sixteen steps in the customer journey seventeen rating questions were created.
+    The rating questions are documented in the appendix in table \ref{tab:ratingquestionstable}.
+    The relation between he value proposal in chapter \ref{sec:vp} to the questions are as follow:
+    \begin{itemize}
+        \item Questions 1, 6, 13 relate to Discoverability and Information Gathering in chapter \ref{sssec:disc}
+        \item Question 2 relates to Visibility of Expertise from chapter \ref{sssec:expertise}
+        \item Questions 3 and 17 relate to Technical Documentation, chapter \ref{sssec:techdoc}
+        \item Question 10 relates to the chapter \ref{sssec:goldenpath}, Golden Path
+        \item Question 12 relates to FinOps, chapter \ref{sssec:finops}
+    \end{itemize}
+    Questions 4, 11 and 15 do not have a strong correlation with the concept of an Internal Developer Portal.
+    However, these three questions relate to the capabilities of the existing Internal Developer Platform.
+    The questions 5, 6, 7, 8 and 9 gauge the maturity of the Internal Developer Platform concerning the lifecylce of resources.
+    The may be integrated in a Internal Developer Portal because of its Extendability described in chapter \ref{sssec:extendability}.
+    However, information about integrating these use cases in an Internal Developer Portal are scarce.
+    Question 15 ask a question about support in the incident process and is neither related to an Internal Developer Platform
+    nor an Internal Developer Portal. \\
+    In addition, two more questions, documented in table \ref{tab:oetable} were asked for gathering additional data for
+    internal needs of the SBB IT.
+    One question has a free text answer to solicit more input and to generate additional interview partner
     for a qualitative survey.
     These interviews and the resulting insights are not part of this certificate work.
-    The final question was about the
+    The final question is a engagement questions and tries to gauge the overall satisfaction of the BizDevOps engineers
+    with the available services and platforms of the so called.
     %TODO Umfrage.
-    % 2.3.2 Discoverability -> 1, 13, (strong)
+    % 2.3.2 Discoverability -> 1, 13, 6 (strong)
     %2.3.3 Platform as a Product n/a
     %2.3.4 Golden Path -> 10 (strong)
     %2.3.5 Technical Documentation, -> 3,17 -> ev. noch Extend! (strong)
     %2.3.6 Expertise -> 2, (strong)
     %2.3.7 Extendability
-    %2.3.8 FinOps -> Frage 12. (weak)
-    % n/a -> 4, 11 (none)
+    %2.3.8 FinOps -> Frage 12. (strong)
+    % n/a -> 4, 11, 15 (none)
     % Lifecycle: -> 5, 6, 7, 8, 9 (weak)
     % monitoring, -> 16 (weak)
-
-
-    \subsubsection{Setup}
-    The survey is made with Microsoft Forms.
-    The audience of the survey are the subscribers of the main blog of the SBB IT platforms, CLEW\footnote{CLEW stands for Cloud, ESTA, itself an acronym of Entwicklungstack and WZU, Werkzeugunterstützung}.
-    There are 784 subscriber on the blog.
-    The start date of the survey was the 24.04.2023 and the end date was on 08.05.2024.
 
     \subsubsection{Result}
     %TODO Umfrage.
@@ -526,48 +567,83 @@
 
     \subsection{Survey}
     \label{subsec:survey}
+
     \subsection{Rating Questions}
-    \label{subsubsec:rating}
-    \begin{table}[!htbp]
-        \begin{center}
-            \begin{tabularx}{\textwidth}{lXll}
-                \toprule
-                Id & Question                                                                                                                                                                              & Mean & <3 \\
-                \midrule
-                1  & Auffindbarkeit von Informationen über die Plattformen und Services. Zb. Confluence, Ardoq, Intranet... & 0 & 0         \\
-                2  & Ich kriege schnell und unkompliziert Beratung bei der Konzipierung von Applikationen, zb. für Engineering oder Development. & 0 & 0  \\
-                3  & Qualität der Dokumentation der Plattformen und Services (Sowohl Umfang, Aktualität und Inhalt). & 0 & 0  \\
-                4  & Onboarding, bis ich meine Werkzeuge für Dev oder Ops lokal installiert habe.                                                                                                          & 0 & 0  \\
-                5  & Lifecycle von Infrastruktur im Selfservice, hier; ich kann Services und Plattformen schnell und unkompliziert ausprobieren.  & 0 & 0  \\
-                6  & Lifecycle von Infrastruktur im Self-Service, hier Bestellen von Plattformen                                                                                                           & 0    & 0  \\
-                7  & Lifecycle von Infrastruktur im Self-Service, hier, Upgrade von Plattformen / deiner Applikation auf den Plattformen & 0 & 0  \\
-                8  & Lifecycle von Infrastruktur im Self-Service, hier Modifikation von Plattformen oder Applikationen. & 0 & 0  \\
-                9  & Lifecycle von Infrastruktur im Self-Service, hier Run-Down oder Rückgabe von Plattformen & 0 & 0  \\
-                10 & Es gibt einen Blueprint / Golden Path / Vorlage, die mir zeigt, wie ich eine Plattform verwenden kann. & 0 & 0  \\
-                11 & Die Plattformen erlauben mir, meine Ressourcen automatisiert zu bauen und zu deployen (CI/CD) & 0 & 0  \\
-                12 & Ich kann meinem PO die Kosten unserer genutzten Services und Plattformen nachvollziehbar erklären. & 0 & 0  \\
-                13 & Ich verstehe, wie meine Applikation mit den Plattformen zusammenhängt bei Incidents & 0 & 0  \\
-                14 & Welches DSRV Team für welche Plattform verantwortlich ist, ist mir klar.                                                                                                              & 0    & 0  \\
-                15 & Ich kriege schnell und unkompliziert Hilfe im Incident Fall.                                                                                                                          & 0    & 0  \\
-                16 & Die Plattformen zeigen mir an, ob sie funktionsfähig sind oder nicht. (zb. Monitoring, Chat, ...). & 0 & 0  \\
-                17 & Ich, bzw. mein Team, werden rechtzeitig und mit genug Details informiert, wenn sich auf den Plattformen etwas ändert, was Auswirkungen auf die von uns verantwortete Applikation hat. & 0 & 0  \\
-                \bottomrule
-            \end{tabularx}
-        \end{center}
-    \end{table}
-    \subsection{Open and Engagement Questions}
-    \label{subsubsec:openandengagement}
+    \label{subsec:rating}
     \begin{table}[!htbp]
         \begin{center}
             \begin{tabularx}{\textwidth}{lX}
                 \toprule
-                Id & Question                                                                                                                                                                             \\
+                Id & Question                                                                                                                                                                                                                                                    \\
                 \midrule
-                18  & Was du uns sonst noch mit auf den Weg geben willst für die 'geilste DevOps Experience', die du erleben möchtest. Falls du bereit bist, in einem kleinen Interview noch mehr Auskünfte zu erteilen und Nachfragen zu beantworten, gib uns doch hier auch deine Kontaktdaten.        \\
-                19  & Auf einer Skala von 1 - 10, würdest du CORE (die genannten DSRVs und deren Plattformen) deinen Freunden und Arbeitskollegen weiterempfehlen?  \\
+                1  & Auffindbarkeit von Informationen über die Plattformen und Services. Zb. Confluence, Ardoq, Intranet...                                                                                                                                                      \\
+                2  & Ich kriege schnell und unkompliziert Beratung bei der Konzipierung von Applikationen, zb. für Engineering oder Development.                                                                                                                                 \\
+                3  & Qualität der Dokumentation der Plattformen und Services (Sowohl Umfang, Aktualität und Inhalt).                                                                                                                                                             \\
+                4  & Onboarding, bis ich meine Werkzeuge für Dev oder Ops lokal installiert habe.                                                                                                                                                                                \\
+                5  & Lifecycle von Infrastruktur im Selfservice, hier; ich kann Services und Plattformen schnell und unkompliziert ausprobieren.                                                                                                                                 \\
+                6  & Lifecycle von Infrastruktur im Self-Service, hier Bestellen von Plattformen                                                                                                                                                                                 \\
+                7  & Lifecycle von Infrastruktur im Self-Service, hier, Upgrade von Plattformen / deiner Applikation auf den Plattformen                                                                                                                                         \\
+                8  & Lifecycle von Infrastruktur im Self-Service, hier Modifikation von Plattformen oder Applikationen.                                                                                                                                                          \\
+                9  & Lifecycle von Infrastruktur im Self-Service, hier Run-Down oder Rückgabe von Plattformen                                                                                                                                                                    \\
+                10 & Es gibt einen Blueprint / Golden Path / Vorlage, die mir zeigt, wie ich eine Plattform verwenden kann.                                                                                                                                                      \\
+                11 & Die Plattformen erlauben mir, meine Ressourcen automatisiert zu bauen und zu deployen (CI/CD)                                                                                                                                                               \\
+                12 & Ich kann meinem PO die Kosten unserer genutzten Services und Plattformen nachvollziehbar erklären.                                                                                                                                                          \\
+                13 & Ich verstehe, wie meine Applikation mit den Plattformen zusammenhängt bei Incidents                                                                                                                                                                         \\
+                14 & Welches DSRV\footnote{A DSRV stands for Digital Service and is one or more teams with multiple services and platforms. A DSRV is built around a domain, eg. Monitoring, Procurement and others} Team für welche Plattform verantwortlich ist, ist mir klar. \\
+                15 & Ich kriege schnell und unkompliziert Hilfe im Incident Fall.                                                                                                                                                                                                \\
+                16 & Die Plattformen zeigen mir an, ob sie funktionsfähig sind oder nicht. (zb. Monitoring, Chat, ...).                                                                                                                                                          \\
+                17 & Ich, bzw. mein Team, werden rechtzeitig und mit genug Details informiert, wenn sich auf den Plattformen etwas ändert, was Auswirkungen auf die von uns verantwortete Applikation hat.                                                                       \\
                 \bottomrule
             \end{tabularx}
         \end{center}
+        \caption{\label{tab:ratingquestionstable} Rating questions used in the survey.}
+    \end{table}
+
+    \subsection{Open and Engagement Questions}
+    \label{subsec:openandengagement}
+    \begin{table}[!htbp]
+        \begin{center}
+            \begin{tabularx}{\textwidth}{lX}
+                \toprule
+                Id & Question                                                                                                                                                                                                                                                                    \\
+                \midrule
+                18 & Was du uns sonst noch mit auf den Weg geben willst für die 'geilste DevOps Experience', die du erleben möchtest. Falls du bereit bist, in einem kleinen Interview noch mehr Auskünfte zu erteilen und Nachfragen zu beantworten, gib uns doch hier auch deine Kontaktdaten. \\
+                19 & Auf einer Skala von 1 - 10, würdest du CORE (die genannten DSRVs und deren Plattformen) deinen Freunden und Arbeitskollegen weiterempfehlen?                                                                                                                                \\
+                \bottomrule
+            \end{tabularx}
+        \end{center}
+        \caption{\label{tab:oetable} Open and engagement questions used in the survey.}
+    \end{table}
+
+    \subsection{Rating Questions Results}
+    \label{subsec:ratingresults}
+    \begin{table}[!htbp]
+        \begin{center}
+            \begin{tabularx}{\textwidth}{llllllll}
+                \toprule
+                Id & One Star & Two Star & Three Star & Four Star & Five Star & Mean & Variance \\
+                \midrule
+                1  & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
+                2  & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
+                3  & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
+                4  & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
+                5  & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
+                6  & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
+                7  & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
+                8  & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
+                9  & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
+                10 & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
+                11 & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
+                12 & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
+                13 & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
+                14 & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
+                15 & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
+                16 & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
+                17 & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
+                \bottomrule
+            \end{tabularx}
+        \end{center}
+        \caption{\label{tab:ratingquestionresultstable} Rating questions result from the survey.}
     \end{table}
 
 \end{document}
