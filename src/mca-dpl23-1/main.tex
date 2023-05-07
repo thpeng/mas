@@ -173,31 +173,32 @@
 
     \subsection{DevOps}
     \label{subsec:devops}
-    With DevOps, the classical disciplines of IT operating and software development are much more integrated to reduce
-    friction, release features more often and to improve quality of the products\parencite{safedevops}.
-    Before DevOps, it was quite common to have different tooling for either development or operating roles, usually
-    because those two roles were separated in different departments or teams.
-    One of the fundamental principle of DevOps was coined by the current CTO of Amazon, Werner Vogels;
-    ``you build it, you run it``\parencite{vogels} .
-    This means, that the same team that develops the software, operates it.
-    With DevOps, a team takes the full responsibility over the lifecycle for a software or a platform.
-    In combination with agile methodologies such as Scrum\footnote{Scrum is a iterative software development methodology}
+    With DevOps, the traditional disciplines of IT operations and software development are much more integrated to
+    to reduce friction, release features more frequently, and improve product quality\parencite{safedevops}.
+    Prior to DevOps, it was common to use different tools and processes for the development and operations roles
+    because these two roles were housed in different departments or teams.
+    There is a fundamental trade-off in developing and operating solutions separately.
+    Developers are measured on responsiveness and speed of delivery.
+    Operators, on the other hand, are measured by the secure and stable operation of solutions.
+    One of the basic principles of DevOps was coined by Werner Vogels, the current CTO of Amazon;
+    ``You build it, you run it``\parencite{vogels}.
+    This means that the same team that develops the software also runs it.
+    With DevOps, a team takes full responsibility over the lifecycle of a software or platform.
+    In combination with agile methodologies such as Scrum\footnote{Scrum is an iterative software development methodology}
     or SAFe\footnote{SAFe stands for Scaled Agile Framework and adds orchestration layers above agile (Scrum) teams for
-    a better cross-team and product-centric alignment} even business oriented people are integrated in this
+    a better cross-team and product-centric alignment}, business-oriented individuals are also integrated into this
     cross-functional team.
-    One example of a business oriented role in a DevOps team is the Product Owner\parencite{safepo} .
-    This has also the implication, that a team must have a wide range of skills and should have access to different
-    tools needed for their work.
-    Such tools can be needed for activities such as requirements engineering, solution architecting, software development
-    but also everything that is necessary to operate the software.
-    Especially the operating of the software is a tool-intensive work.
-    There are tools for logging, monitoring, incident handling and alarming.
-    In the case of an incident, a configuration management database or an enterprise architecture database are crucial
-    to find out to whom belongs a particular application or resource.
-    This information is crucial to pinpoint a root cause and to resolve the incident quickly.
-    While DevOps has various benefits, it adds quite a complexity for a team member in an agile and DevOps team.
-    That's where the Integrated Developer Portal has various proposals to support the individual and the team in their
-    daily business.
+    An example of a business-oriented role in a DevOps team is the Product Owner\parencite{safepo}.
+    This also means that a team must have a wide range of skills and access to various tools needed for their work.
+    Such tools can be used for activities such as requirements engineering, solution architecture, software development
+    but also anything needed to operate the software.
+    Especially the operation of the software is a tool-intensive work.
+    There are tools for logging, monitoring, incident handling and alerting.
+    In the event of an incident, a configuration management database or an enterprise architecture database are critical
+    to find out who a particular application or resource belongs to.
+    This information is important to determine the root cause and quickly resolve the incident.
+    Although DevOps offers numerous benefits, it is quite complex for a team member in an agile and DevOps team.
+    Here, the Integrated Developer Portal offers several suggestions to help individuals and teams with their day-to-day operations.
 
     \subsection{Internal Developer Portal}
     \label{subsec:vpportal}
@@ -283,48 +284,48 @@
 
     \subsubsection{Platform as a Product}
     \label{sssec:paap}
-    In some implementations of an Internal Developer Portal, the catalogue is not merely a copy of an architecture database.
-    In addition to the mentioned applications, platforms, organisational data and resources, there are other products
-    of the teams shown.
-    For example platform teams may offer support and consultation for their platform or area of expertise and advertise
-    this service there.
-    Some teams use the Internal Developer Platform to showcase code or libraries and thus create an inner-source community.
-    In some cases, the whole lifecycle of a resource, from ordering, updating until removal are implemented or integrated
-    in an Internal Developer Platform.
-    In a know-how sharing session between SBB and Booking.com, Booking.com told about their Internal Developer Portal as a
-    distinct product, which is owned by a dedicated team.
-    This team is also responsible for the onboarding of other platform and application teams and entices them with the
+    In some implementations of an Internal Developer Portal, the catalog is not just a copy of an architecture database.
+    In addition to the aforementioned applications, platforms, organizational data, and resources, other products of the
+    of the teams are represented.
+    For example, platform teams may provide support and consulting for their platform or area of expertise and offer this service.
+    Some teams use the Internal Developer Platform to showcase code or libraries to create an inner-source community.
+    In an expertise-sharing session between SBB and Booking.com, Booking.com reported its Internal Developer Portal as a
+    standalone product that is managed by a dedicated team.
+    This team is also responsible for onboarding other platform and application teams, convincing them of the
     value of an integrated Internal Developer Portal.
 
     \subsubsection{Golden Path}
     \label{sssec:goldenpath}
     The term ``Golden Path`` was coined by Spotify\parencite{spotifygoldenpath} and is itself a reference to the Frank
-    Herberts Dune trilogy, describing the only viable path to getting things right.
-    A Golden Path is a ready-to-use template for getting a project quickly started.
-    It may consist of software engineering artifacts, pre-configured infrastructure components and is usually highly
+    Herbert`s Dune trilogy and describes the only viable way to do things right.
+    A Golden Path is a ready-to-use template for getting a project started quickly.
+    It can consist of software engineering artifacts and preconfigured infrastructure components and is usually very
     opinionated.
-    Opinionated means, that the context of the company is already factored in, such as internal regulations,
-    the currently promoted tech stack and other internal specifics.
-    For example, a Golden Path for a database is already integrated with the security infrastructure of the company,
-    logging is taken care of and some best practices concerning database configuration and modelling are implemented.
-    Golden Paths are not necessarily product-specific, they may encompass a typical development stack used
-    in the company, such as a web application Golden Path consisting of a frontend build with javascript, a Java backend
-    and an Oracle database, all integrated in a single build pipeline for CI/CD\footnote{CI/CD stands for continuous
+    Opinionated means that the context of the enterprise is already considered, such as internal regulations,
+    the currently supported tech stack, and other internal specifics.
+    For example, a golden path for a database is already built into the company's security infrastructure,
+    Logging is ensured, and some best practices for database configuration and modeling are implemented.
+    Golden Paths are not necessarily product-specific; they can encompass a typical development stack used in the enterprise
+    used in the enterprise, such as a Golden Path for a web application.
+    This stack may consists of a frontend built
+    with Javascript, a Java backend and an Oracle database, all integrated into a single build pipeline for CI/CD\footnote{CI/CD stands for continuous
     integration and continuous deployment and is a practice in software engineering. Its main focus is to automate all steps
     between development and rolling out on production, such as quality assurance, building artifacts and installing them.},
-    securely configured and with the company look and feel already set up.
-    With such a template mechanism in place, new applications ar built faster, reuse the same solutions for cross-cutting
-    functionalities and relieve developers from writing tedious plumbing code to integrate each of these components with
+    securely configured and with the enterprise look and feel already established.
+    With such a template mechanism, new applications can be built faster, the same solutions can be reused for overarching
+    reused, and developers don't have to write tedious code to integrate each of these components with each other.
     each other.
 
     \subsubsection{Technical Documentation}
     \label{sssec:techdoc}
-    Platforms using an Internal Developer Portal may choose to migrate their user facing documentation to the Internal
-    Developer Portal.
-    The foundation for this technical documentation may be a solution based on markdown\parencite{backstagetechdocs}
-    or similar syntax.
-    The benefit with this approach is, that documentation is treated as code and can be integrated in the same toolchain.
-    For example the documentation resides beside the code, can be peer-reviewed, built and released in the same manner.
+    Platforms that use an Internal Developer Portal may choose to migrate their user-facing documentation to the portal.
+    The basis for this technical documentation can be a solution based on Markdown\parencite{backstagetechdocs}
+    or a similar syntax.
+    The advantage of this approach is that the documentation is treated like code and can be integrated into the same toolchain.
+    For example, the documentation sits alongside the platform automation code, is peer reviewed, created
+    and published in sync with the platform's update cycle.
+    In the discussion mentioned in the chapter \ref{sssec:paap}, Booking.com talked about an integration in their Internal
+    developer Portal, where communication about lifecycle and changes to their platforms is integrated into their portal.
 
     \subsubsection{Visibility of Expertise}
     \label{sssec:expertise}
@@ -505,7 +506,7 @@
     \subsubsection{Questions}
     From the sixteen steps in the customer journey seventeen rating questions were created.
     The rating questions are documented in the appendix in table \ref{tab:ratingquestionstable}.
-    The relation between he value proposal in chapter \ref{sec:vp} to the questions are as follow:
+    The relation between t he value proposal in chapter \ref{sec:vp} to the questions are as follow:
     \begin{itemize}
         \item Questions 1, 6, 13 relate to Discoverability and Information Gathering in chapter \ref{sssec:disc}
         \item Question 2 relates to Visibility of Expertise from chapter \ref{sssec:expertise}
@@ -515,9 +516,15 @@
     \end{itemize}
     Questions 4, 11 and 16 do not have a strong correlation with the concept of an Internal Developer Portal.
     However, these three questions relate to the capabilities of the existing Internal Developer Platform.
-    The questions 5, 6, 7, 8 and 9 gauge the maturity of the Internal Developer Platform concerning the lifecylce of resources.
+    The questions 5, 6, 7, 8 and 9 gauge the maturity of the Internal Developer Platform concerning the lifecycle of resources.
     The may be integrated in a Internal Developer Portal because of its Extendability described in chapter \ref{sssec:extendability}.
     However, information about integrating these use cases in an Internal Developer Portal are scarce.
+    There are no direct questions about the chapter Extendability \ref{sssec:extendability} and Platform as a Product
+    \ref{sssec:paap}.
+    Extendability is more of a non-functional requirement for the choosing of the concrete Internal Developer Portal
+    solution instead of a wanted feature for a user of this portal.
+    Platform as a Product is more a goal for the SBB IT internal product management to make the Work of the BizDevOps
+    teams more visible and accessible and are not an intrinsic goal of an engineer.
     Question 15 ask a question about support in the incident process and is neither related to an Internal Developer Platform
     nor an Internal Developer Portal. \\
     The survey and the questions are scoped on the DevOps experience and usage of the platform, products or services of
@@ -527,6 +534,7 @@
     It is not necessary, that the respondent must have used all of these services.
     The scope is also usage in the last three months.
     The rating questions have choices from one to five star and are mandatory.
+    The description of the meaning of the rating is given as follows
     \begin{itemize}
         \item One star - non-existent or unknown
         \item Two star - with room for improvement
@@ -556,7 +564,8 @@
     % monitoring, -> 16 (weak)
 
     \subsubsection{Result}
-    %TODO Umfrage.
+    In the two weeks run time of the survey, the response rate was 9.61\% with 75 respondents.
+    Based on a confidence level of 95\% the margin of error is 11\% for this survey.
 
 
     \section{Conclusion}
@@ -635,31 +644,60 @@
     \label{subsec:ratingresults}
     \begin{table}[!htbp]
         \begin{center}
-            \begin{tabularx}{\textwidth}{llllllll}
+            \begin{tabularx}{\textwidth}{llllll}
                 \toprule
-                Id & One Star & Two Star & Three Star & Four Star & Five Star & Mean & Variance \\
+                Id & One Star & Two Star & Three Star & Four Star & Five Star \\
                 \midrule
-                1  & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
-                2  & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
-                3  & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
-                4  & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
-                5  & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
-                6  & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
-                7  & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
-                8  & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
-                9  & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
-                10 & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
-                11 & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
-                12 & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
-                13 & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
-                14 & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
-                15 & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
-                16 & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
-                17 & 0        & 0        & 0          & 0         & 0         & 0    & 0        \\
+                1  & 3        & 12       & 39         & 21        & 0         \\
+                2  & 4        & 4        & 18         & 0         & 0         \\
+                3  & 0        & 0        & 0          & 0         & 0         \\
+                4  & 0        & 0        & 0          & 0         & 0         \\
+                5  & 0        & 0        & 0          & 0         & 0         \\
+                6  & 0        & 0        & 0          & 0         & 0         \\
+                7  & 0        & 0        & 0          & 0         & 0         \\
+                8  & 0        & 0        & 0          & 0         & 0         \\
+                9  & 0        & 0        & 0          & 0         & 0         \\
+                10 & 0        & 0        & 0          & 0         & 0         \\
+                11 & 0        & 0        & 0          & 0         & 0         \\
+                12 & 0        & 0        & 0          & 0         & 0         \\
+                13 & 0        & 0        & 0          & 0         & 0         \\
+                14 & 0        & 0        & 0          & 0         & 0         \\
+                15 & 0        & 0        & 0          & 0         & 0         \\
+                16 & 0        & 0        & 0          & 0         & 0         \\
+                17 & 0        & 0        & 0          & 0         & 0         \\
                 \bottomrule
             \end{tabularx}
         \end{center}
-        \caption{\label{tab:ratingquestionresultstable} Rating questions result from the survey.}
+        \caption{\label{tab:rawratingquestionresultstable} Rating questions raw result from the survey.}
+    \end{table}
+
+    \begin{table}[!htbp]
+        \begin{center}
+            \begin{tabularx}{\textwidth}{lllll}
+                \toprule
+                Id & Average & Variance & Detractors & Promoters \\
+                \midrule
+                1  & 3.04    & 0.598    & 20.0\%     & 28.0\%    \\
+                2  & 3.68    & 1.018    & 10.7\%     & 65.0\%    \\
+                3  & 3.27    & 0.649    & 17.3\%     & 42.7\%    \\
+                4  & 0       & 0        & 17.3\%     & 52.0\%    \\
+                5  & 0       & 0        & 16.0\%     & 57.3\%    \\
+                6  & 0       & 0        & 8.0\%      & 70.7\%    \\
+                7  & 0       & 0        & 12.0\%     & 62.7\%    \\
+                8  & 0       & 0        & 10.7\%     & 57.3\%    \\
+                9  & 0       & 0        & 20.0\%     & 49.3\%    \\
+                10 & 0       & 0        & 20.0\%     & 42.7\%    \\
+                11 & 0       & 0        & 8.0\%      & 66.7\%    \\
+                12 & 0       & 0        & 44.0\%     & 21.3\%    \\
+                13 & 0       & 0        & 14.7\%     & 44.0\%    \\
+                14 & 0       & 0        & 36.0\%     & 33.3\%    \\
+                15 & 0       & 0        & 10.7\%     & 74.7\%    \\
+                16 & 0       & 0        & 20.0\%     & 44.0\%    \\
+                17 & 0       & 0        & 18.7\%     & 57.3\%    \\
+                \bottomrule
+            \end{tabularx}
+        \end{center}
+        \caption{\label{tab:ratingquestionresultstable} Rating questions raw result from the survey.}
     \end{table}
 
 \end{document}
