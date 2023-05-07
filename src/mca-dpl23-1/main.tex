@@ -252,7 +252,7 @@
     \label{sssec:disc}
     The Software Catalogue is the main feature of an Internal Developer Portal.
     Its purpose is to make the capabilities of the Internal Developer Platform accessible for an engineer as seen in the
-    screenshot at\ref{fig:catalog}.
+    screenshot in figure \ref{fig:catalog}.
 
     \begin{figure}
         \includegraphics[width=\linewidth]{backstage_catalog}
@@ -269,7 +269,7 @@
     Data may be shown in a tabular fashion or may be shown as a relationship graph and the catalogue is searchable.
     An Engineer may bookmark its favourite items and its own resources are marked by ``owned``.
 
-    In addition to the catalogue with its tabular overview, there is a details view.
+    In addition to the catalogue with its tabular overview, there is a details view seen in figure \ref{fig:portaldetails}.
     \begin{figure}
         \includegraphics[width=\linewidth]{backstage_item_details}
         \caption{Details about an artifact}
@@ -367,7 +367,6 @@
     The Backstage.io Demo shows one possible implementation in the Demo\parencite{backstagedemocost}.
     This capability enables a DevOps team to take responsibility also in the financial domain and creates transparency
     for the business what the true costs of their product is.
-    \pagebreak
 
 
     \section{Situation at the SBB IT}
@@ -506,9 +505,9 @@
     \subsubsection{Questions}
     From the sixteen steps in the customer journey seventeen rating questions were created.
     The rating questions are documented in the appendix in table \ref{tab:ratingquestionstable}.
-    The relation between t he value proposal in chapter \ref{sec:vp} to the questions are as follow:
+    The relation between the value proposal in chapter \ref{sec:vp} and the questions are as follow:
     \begin{itemize}
-        \item Questions 1, 6, 13 relate to Discoverability and Information Gathering in chapter \ref{sssec:disc}
+        \item Questions 1, 13 and 14 relate to Discoverability and Information Gathering in chapter \ref{sssec:disc}
         \item Question 2 relates to Visibility of Expertise from chapter \ref{sssec:expertise}
         \item Questions 3 and 17 relate to Technical Documentation, chapter \ref{sssec:techdoc}
         \item Question 10 relates to the chapter \ref{sssec:goldenpath}, Golden Path
@@ -552,7 +551,7 @@
     The final question\footnote{The final engagement question was added based on input of the internal product management team}
     is a engagement questions and tries to gauge the overall satisfaction of the BizDevOps engineers
     with the available services and platforms of the so called Core DSRVs.
-    % 2.3.2 Discoverability -> 1, 13, 6 (strong)
+    % 2.3.2 Discoverability -> 1, 13, 14 (strong)
     %2.3.3 Platform as a Product n/a
     %2.3.4 Golden Path -> 10 (strong)
     %2.3.5 Technical Documentation, -> 3,17 -> ev. noch Extend! (strong)
@@ -566,6 +565,43 @@
     \subsubsection{Result}
     In the two weeks run time of the survey, the response rate was 9.61\% with 75 respondents.
     Based on a confidence level of 95\% the margin of error is 11\% for this survey.
+    The raw results for the rating questions are included in table \ref{tab:rawratingquestionresultstable}.
+    The calculated values for the rating questions are present in \ref{tab:ratingquestionresultstable}.
+    An aggregated result for the five value proposals with eight related questions are documented in the table \ref{tab:aggregateidpresults}.
+    \begin{table}[!htbp]
+        \begin{center}
+            \begin{tabularx}{\textwidth}{llllll}
+                \toprule
+                Theme           & Ids       & Average & Detractors & Promoters & Variance \\
+                \midrule
+                Discoverability & 1, 13, 14 & 3.45    & 14.2\%     & 47\%      & 0.780    \\
+                Expertise       & 2         & 4       & 18         & 0         & 0        \\
+                Documentation   & 3, 17     & 0       & 0          & 0         & 0        \\
+                Golden Path     & 10        & 0       & 0          & 0         & 0        \\
+                FinOps          & 12        & 0       & 0          & 0         & 0        \\
+                \bottomrule
+            \end{tabularx}
+        \end{center}
+        \caption{\label{tab:aggregateidpresults} Rating questions raw result from the survey.}
+    \end{table}
+
+    In contrast, the aggregated result of the questions about other topics, grouped by questions about lifecycle of resources,
+    generic Internal Developer Platform questions and about Incident handling are as seen in table \ref{tab:nonidpresults}.
+
+    \begin{table}[!htbp]
+        \begin{center}
+            \begin{tabularx}{\textwidth}{llllll}
+                \toprule
+                Theme     & Ids           & Average & Detractors & Promoters & Variance \\
+                \midrule
+                Lifecycle & 5, 6, 7, 8, 9 & 3.60    & 13.3\%     & 59.5\%      & 1.137    \\
+                Platform  & 4, 11, 16     & 4       & 18         & 0         & 0        \\
+                Incident  & 15            & 0       & 0          & 0         & 0        \\
+                \bottomrule
+            \end{tabularx}
+        \end{center}
+        \caption{\label{tab:nonidpresults} Rating questions raw result from the survey.}
+    \end{table}
 
 
     \section{Conclusion}
@@ -697,7 +733,7 @@
                 \bottomrule
             \end{tabularx}
         \end{center}
-        \caption{\label{tab:ratingquestionresultstable} Rating questions raw result from the survey.}
+        \caption{\label{tab:ratingquestionresultstable} Rating questions calculated result from the survey.}
     \end{table}
 
 \end{document}
