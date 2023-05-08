@@ -558,9 +558,9 @@
     %2.3.6 Expertise -> 2, (strong)
     %2.3.7 Extendability
     %2.3.8 FinOps -> Frage 12. (strong)
-    % n/a -> 4, 11, 15 (none)
+    % n/a -> 4, 11, 16 (platform)
     % Lifecycle: -> 5, 6, 7, 8, 9 (weak)
-    % monitoring, -> 16 (weak)
+    % monitoring, -> 15 (none)
 
     \subsubsection{Result of the Rating Questions}
     \label{sssec:rratque}
@@ -568,6 +568,8 @@
     Based on a confidence level of 95\% the margin of error is 10\% for this survey.
     The raw results for the rating questions are included in table \ref{tab:rawratingquestionresultstable}.
     The calculated values for the rating questions are present in \ref{tab:ratingquestionresultstable}.
+    Overall, the seventeen question have an average of 3.40, the average of detractors is 18.5\% of the
+    respondents and the average of the promoters is 51.3.
     An aggregated result for the five value proposals with eight related questions are documented in the table \ref{tab:aggregateidpresults}.
     \begin{table}[!htbp]
         \begin{center}
@@ -575,18 +577,18 @@
                 \toprule
                 Theme           & Ids       & Average & Detractors & Promoters & Variance \\
                 \midrule
-                Discoverability & 1, 13, 14 & 3.45    & 14.2\%     & 47\%      & 0.780    \\
-                Expertise       & 2         & 4       & 18         & 0         & 0        \\
-                Documentation   & 3, 17     & 0       & 0          & 0         & 0        \\
-                Golden Path     & 10        & 0       & 0          & 0         & 0        \\
-                FinOps          & 12        & 0       & 0          & 0         & 0        \\
+                Discoverability & 1, 13, 14 & 3.11    & 24.4\%     & 35.1\%    & 0.826    \\
+                Expertise       & 2         & 3.64    & 12.0\%     & 65.3\%    & 1.097    \\
+                Documentation   & 3, 17     & 3.41    & 18.7\%     & 51.9\%    & 1.056    \\
+                Golden Path     & 10        & 3.21    & 20.0\%     & 42.7\%    & 0.850    \\
+                FinOps          & 12        & 2.62    & 45.3\%     & 21.3\%    & 1.420    \\
                 \bottomrule
             \end{tabularx}
         \end{center}
         \caption{\label{tab:aggregateidpresults} Aggregated results for IDP related questions.}
     \end{table}
 
-    In contrast, the aggregated result of the questions about other topics, grouped by questions about lifecycle of resources,
+    In contrast, the aggregated result of the questions about other topics, grouped by questi§ons about lifecycle of resources,
     generic Internal Developer Platform questions and about Incident handling are as seen in table \ref{tab:nonidpresults}.
 
     \begin{table}[!htbp]
@@ -595,9 +597,9 @@
                 \toprule
                 Theme     & Ids           & Average & Detractors & Promoters & Variance \\
                 \midrule
-                Lifecycle & 5, 6, 7, 8, 9 & 3.60    & 13.3\%     & 59.5\%    & 1.137    \\
-                Platform  & 4, 11, 16     & 4       & 18         & 0         & 0        \\
-                Incident  & 15            & 0       & 0          & 0         & 0        \\
+                Lifecycle & 5, 6, 7, 8, 9 & 3.59    & 13.9\%     & 59.5\%    & 1.147    \\
+                Platform  & 4, 11, 16     & 3.46    & 15.6\%     & 54.7\%    & 1.025    \\
+                Incident  & 15            & 3.92    & 10.7\%     & 74.7\%    & 1.099    \\
                 \bottomrule
             \end{tabularx}
         \end{center}
@@ -607,19 +609,19 @@
     \subsubsection{Result of the Open Question}
     \label{sssec:ropque}
 
-    % techdoc + Benach: IIIII
+    % techdoc + Benach: IIIIII
     % CI/CD kritik: IIII
     % Enhancement local installation: III
-    % Discovery: III
+    % Discovery: IIII
     % thanks: III
     % finOps: II
     % infrastructure-as-code missing: II
     % critic of vision: II
     % missing consultancy / unified support: II
+    % gandalf kritik: II
     % multiple tools for the same job: I
     % Availability of toolchainL: I
     % non-informatiker: I
-    % gandalf kritik: II
     % missing review/freigabeprozess: I
     % missing resource lifecycle for delete, upgrade: I
     % missing devsecops: I
@@ -737,23 +739,23 @@
                 \toprule
                 Id & Average & Variance & Detractors & Promoters \\
                 \midrule
-                1  & 3.04    & 0.598    & 20.0\%     & 28.0\%    \\
-                2  & 3.68    & 1.018    & 10.7\%     & 65.0\%    \\
-                3  & 3.27    & 0.649    & 17.3\%     & 42.7\%    \\
-                4  & 0       & 0        & 17.3\%     & 52.0\%    \\
-                5  & 0       & 0        & 16.0\%     & 57.3\%    \\
-                6  & 0       & 0        & 8.0\%      & 70.7\%    \\
-                7  & 0       & 0        & 12.0\%     & 62.7\%    \\
-                8  & 0       & 0        & 10.7\%     & 57.3\%    \\
-                9  & 0       & 0        & 20.0\%     & 49.3\%    \\
-                10 & 0       & 0        & 20.0\%     & 42.7\%    \\
-                11 & 0       & 0        & 8.0\%      & 66.7\%    \\
-                12 & 0       & 0        & 44.0\%     & 21.3\%    \\
-                13 & 0       & 0        & 14.7\%     & 44.0\%    \\
-                14 & 0       & 0        & 36.0\%     & 33.3\%    \\
-                15 & 0       & 0        & 10.7\%     & 74.7\%    \\
-                16 & 0       & 0        & 20.0\%     & 44.0\%    \\
-                17 & 0       & 0        & 18.7\%     & 57.3\%    \\
+                1  & 3.04    & 0.590    & 20.0\%     & 28.0\%    \\
+                2  & 3.64    & 1.097    & 12.0\%     & 65.3\%    \\
+                3  & 3.25    & 0.661    & 18.7\%     & 42.7\%    \\
+                4  & 3.37    & 1.312    & 18.7\%     & 52.0\%    \\
+                5  & 3.55    & 1.379    & 17.3\%     & 57.3\%    \\
+                6  & 3.92    & 0.915    & 8.0\%      & 70.7\%    \\
+                7  & 3.59    & 1.057    & 10.7\%     & 62.7\%    \\
+                8  & 3.55    & 1.037    & 21.3\%     & 57.3\%    \\
+                9  & 3.32    & 1.348    & 20.0\%     & 49.3\%    \\
+                10 & 3.21    & 0.850    & 20.0\%     & 42.7\%    \\
+                11 & 3.76    & 0.865    & 8.0\%      & 66.7\%    \\
+                12 & 2.62    & 1.420    & 45.3\%     & 21.3\%    \\
+                13 & 3.38    & 0.841    & 16.0\%     & 44.0\%    \\
+                14 & 2.92    & 1.046    & 37.3\%     & 33.3\%    \\
+                15 & 3.92    & 1.099    & 10.7\%     & 74.7\%    \\
+                16 & 3.25    & 0.898    & 20.0\%     & 45.3\%    \\
+                17 & 3.53    & 1.118    & 18.7\%     & 58.7\%    \\
                 \bottomrule
             \end{tabularx}
         \end{center}
