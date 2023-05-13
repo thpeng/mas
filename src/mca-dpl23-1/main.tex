@@ -63,12 +63,12 @@
     \pagebreak
 
     \section*{Used Tools}
-    In addition to the sources mentioned in the bibliography\ref{sec:bibliograhpy}, the following aids and tools have been used
+    In addition to the sources mentioned in the bibliography, chapter \ref{sec:bibliograhpy}, the following aids and tools have been used
     \begin{itemize}
         \item Version control with Git and GitHub, the source code for this document is at \url{https://github.com/thpeng/mas/tree/master/src/mca-dpl23-1}
-        \item Deepl at (\url{https://www.deepl.com/}) for supporting translations.
-        \item Microsoft Forms for conducting a survey (\url{https://forms.office.com}) .
-        \item The document has been written with \LaTeX  (\url{https://miktex.org/}) and using IntelliJ IDEA (\url{https://www.jetbrains.com/de-de/idea/})
+        \item Deepl at (\url{https://www.deepl.com/}) to support translations.
+        \item Microsoft Forms to conduct a survey (\url{https://forms.office.com}) .
+        \item The document is written in \LaTeX  (\url{https://miktex.org/}) with the editor IntelliJ IDEA (\url{https://www.jetbrains.com/de-de/idea/})
     \end{itemize}
 
     \section*{Declaration of Honour}
@@ -99,13 +99,13 @@
     SBB's core business processes.
     These digitization efforts brought major changes to SBB's IT department.
     In less than ten years, the development model has changed from a pure waterfall to an agile methodology,
-    cloud technologies were adopted while hardware-bound platforms were phased out, and a new internal organization was introduced,
-    based on the separation of business and line management, has been introduced.
+    cloud technologies were adopted while hardware-bound platforms were phased out, and a new internal organization,
+    based on the separation of business and line management, has been introduced.\\
     Although these changes are now taking root and leading to various positive outcomes, they still pose a challenge
     due to the new and still existing complexity and the rapidly changing technological landscape.
     In addition, regulatory pressure has increased significantly in recent years, as exemplified by the
     HCBöV\footnote{Handbuch Cybersecurity für Betriebe des öffentlichen Vekehrs}, as well as the new Data Protection Act
-    in Switzerland - nDSG.\linebreak
+    in Switzerland - nDSG.\\
     Feedback from various employees in different roles from SBB's so called ``Digitalen Zone`` indicates, that the overall
     increase in complexity has an impact on the daily work of DevOps\footnote{DevOps is a combination of the words
     Development and Operations and can be either a role or a set of practices} engineers.
@@ -118,16 +118,17 @@
     \label{subsec:iproblemstatement}
     Research on the Internet about this problem, as well as guidance from vendors, indicates that there is greater momentum
     to address such issues with an internal developer portal (IDP). The central promise of the concept of an
-    Internal Developer Portal is that it can reduce the so-called ``cognitive load`` of DevOps engineers by providing
-    Processing and presenting information about teams, associated applications and their infrastructure usage.
+    Internal Developer Portal is that it can reduce the so-called ``cognitive load`` of DevOps engineers.\\
+    Internal Developer Portal aims to provide a one stop shop for information about teams, associated applications and
+    their used infrastructure and resources.
 
     \subsection{Objective of the Certificate Work}
     \label{subsec:iobjective}
-    The aim of this certificate thesis is to investigate whether and to what extent the above-mentioned problem
-    can be solved by the introduction of an internal developer portal.
+    The goal of this certificate thesis is to investigate whether and to what extent the above-mentioned problem
+    can be solved by the introduction of an internal developer portal.\\
     In a first step, the benefits of the concept of an internal developer platform are elaborated and placed in the
-    into the general context of software development and the operation of IT systems in the SBB.
-    In a second step, the problem of complexity and lack of integration is underpinned with a quantitative survey.
+    into the general context of software development and the operation of IT systems in the SBB.\\
+    In a second step, the problem of complexity and lack of integration is underpinned with a quantitative survey.\\
     The third part consists of bringing together the results of the survey and the value proposition and making a
     recommendation for action.
 
@@ -135,7 +136,7 @@
     \section{Value Proposition for an Internal Developer Portal}
     \label{sec:vp}
     An Internal Developer Portal is a web-based information catalogue which is tailored for the needs of
-    engineers operating IT systems, developing software and other related work.
+    engineers operating IT systems, developing software and other related work.\\
     Internal Developer Portal are proposed as the solution for perceived problems\parencite{backstagestory} of DevOps
     engineers while developing and operating IT Systems such as
     \begin{itemize}
@@ -161,7 +162,7 @@
     \end{itemize}
     In some other sources, there are also additional components mentioned, e.g. Observability\parencite{xenon}.
     XENONSTACK as well as Humanitec mentioned before, are suppliers of Internal Developer Platform solutions with
-    different capabilities.
+    different capabilities.\\
     The capabilities and components of Internal Developer Platforms are not unique to the products of those two suppliers.
     In most contemporary IT operations or software development departments these components and practices are well-known
     and used widely.
@@ -172,7 +173,7 @@
     Thus, it can be argued, that the concept of an Internal Developer Platform is not unique to specific products
     or offerings, but can be used on a set of tooling and practices supporting IT operations and software development.
     This set of tooling and practices can be viewed as predecessors of Internal Developer Platforms and are usually
-    distinct solutions or products.
+    distinct solutions or products.\\
     For example there is a separate Configuration Management Database
     to address the need of Application Configuration Management or there is a purpose built Continuous Integration /
     Continuous Deployment pipeline for addressing the need for a Deployment Management.
@@ -188,7 +189,7 @@
     because these two roles were housed in different departments or teams.
     There is a fundamental trade-off in developing and operating solutions separately.
     Developers are measured on responsiveness and speed of delivery.
-    Operators, on the other hand, are measured by the secure and stable operation of solutions.
+    Operators, on the other hand, are measured by the secure and stable operation of solutions.\\
     One of the basic principles of DevOps was coined by Werner Vogels, the current CTO of Amazon;
     ``You build it, you run it``\parencite{vogels}.
     This means that the same team that develops the software also runs it.
@@ -197,7 +198,7 @@
     or SAFe\footnote{SAFe stands for Scaled Agile Framework and adds orchestration layers above agile (Scrum) teams for
     a better cross-team and product-centric alignment}, business-oriented individuals are also integrated into this
     cross-functional team.
-    An example of a business-oriented role in a DevOps team is the Product Owner\parencite{safepo}.
+    An example of a business-oriented role in a DevOps team is the Product Owner\parencite{safepo}.\\
     This also means that a team must have a wide range of skills and access to various tools needed for their work.
     Such tools can be used for activities such as requirements engineering, solution architecture, software development
     but also anything needed to operate the software.
@@ -205,7 +206,7 @@
     There are tools for logging, monitoring, incident handling and alerting.
     In the event of an incident, a configuration management database or an enterprise architecture database are critical
     to find out who a particular application or resource belongs to.
-    This information is important to determine the root cause and quickly resolve the incident.
+    This information is important to determine the root cause of the incident and quickly resolve it.
     Although DevOps offers numerous benefits, it is quite complex for a team member in an agile and DevOps team.
     Here, the Integrated Developer Portal offers several suggestions to help individuals and teams with their day-to-day operations.
 
@@ -234,7 +235,7 @@
     architectural style, such as the products mentioned in the category ``Microservice Catalog``.
     For further discussion about the capabilities of Internal Developer Portal the focus will be laid on this
     ``Universal Service Catalogue`` category.
-    The reason is, this category has the fewest conceptional restrictions.
+    The reason is, this category has the fewest conceptional restrictions.\\
     \begin{table}[!htbp]
         \begin{center}
             \begin{tabularx}{\textwidth}{lllll}
@@ -252,10 +253,10 @@
     \end{table}
     Roadie is omitted from the table \ref{tab:vendors} because it's a commercial offering of Backstage.
     It seems, there are two main directions; Backstage and Clutch have been developed by two big tech companies for their
-    internal audience, have been made available as opensource.
+    internal audience, have been made available as opensource.\\
     Moment and OpsLevel are purposefully built by startups as their product and have commercial offerings.
     For the further discussion about the value proposition of an Internal Developer Portal, some screenshots and concepts will
-    be used from Backstage.
+    be used from Backstage.\\
     Backstage has been built by Spotify, which invests heavily in what they call the
     ``developer experience`` (DX)\parencite{spotifydx}.
     Additionally, Backstage was adopted in 2020 as an incubating project into the Cloud Native Computing Foundation\parencite{cncf} .
@@ -300,7 +301,7 @@
     In addition to the aforementioned applications, platforms, organizational data, and resources, other products of the
     of the teams are represented.
     For example, platform teams may provide support and consulting for their platform or area of expertise and offer this service.
-    Some teams use the Internal Developer Platform to showcase code or libraries to create an inner-source community.
+    Some teams use the Internal Developer Platform to showcase code or libraries to create an inner-source community.\\
     In an expertise-sharing session between SBB and Booking.com, Booking.com reported its Internal Developer Portal as a
     standalone product that is managed by a dedicated team.
     This team is also responsible for onboarding other platform and application teams, convincing them of the
@@ -316,17 +317,15 @@
     Opinionated means that the context of the enterprise is already considered, such as internal regulations,
     the currently supported tech stack, and other internal specifics.
     For example, a golden path for a database is already built into the company's security infrastructure,
-    Logging is ensured, and some best practices for database configuration and modeling are implemented.
-    Golden Paths are not necessarily product-specific; they can encompass a typical development stack used in the enterprise
-    used in the enterprise, such as a Golden Path for a web application.
-    This stack may consists of a frontend built
-    with Javascript, a Java backend and an Oracle database, all integrated into a single build pipeline for CI/CD\footnote{CI/CD stands for continuous
+    logging is ensured, and some best practices for database configuration and modeling are implemented.\\
+    Golden Paths are not necessarily product-specific; they can encompass a typical development stack used in the enterprise.
+    For example a stack for a typical web application may consists of a frontend built with Javascript, a Java backend
+    and an Oracle database, all integrated into a single build pipeline for CI/CD\footnote{CI/CD stands for continuous
     integration and continuous deployment and is a practice in software engineering. Its main focus is to automate all steps
     between development and rolling out on production, such as quality assurance, building artifacts and installing them.},
     securely configured and with the enterprise look and feel already established.
-    With such a template mechanism, new applications can be built faster, the same solutions can be reused for overarching
-    reused, and developers don't have to write tedious code to integrate each of these components with each other.
-    each other.
+    With such a template mechanism, new applications can be built faster, the same solutions are implemented for multiple
+    applications and developers don't have to write tedious code to integrate each of these components with each other.
 
     \subsubsection{Technical Documentation and Communication}
     \label{sssec:techdoc}
@@ -335,9 +334,13 @@
     or a similar syntax.
     The advantage of this approach is that the documentation is treated like code and can be integrated into the same toolchain.
     For example, the documentation sits alongside the platform automation code, is peer reviewed, created
-    and published in sync with the platform's update cycle.
+    and published in sync with the platform's update cycle.\\
     In the discussion mentioned in the chapter \ref{sssec:paap}, Booking.com talked about an integration in their Internal
     developer Portal, where communication about lifecycle and changes to their platforms is integrated into their portal.
+    Based, as described in chapter \ref{sssec:disc}, on the data about the relationships between platforms, teams,
+    resources and applications, it is possible to inform the DevOps engineers in a targeted manner with regard to their
+    responsible applications.
+    This is especially important when communicating breaking changes, release notes or information about outages.
 
     \subsubsection{Visibility of Expertise}
     \label{sssec:expertise}
@@ -375,7 +378,7 @@
     cultural practice that enables organizations to get maximum business value by helping engineering, finance,
     technology and business teams to collaborate on data-driven spending decisions.``.
     An Internal Developer Portal may help with this practice by providing functionality for one of the basic discipline
-    FinOps: ``Understanding Cloud Usage And Cost``.
+    FinOps: ``Understanding Cloud Usage And Cost``.\\
     The Backstage.io Demo shows one possible implementation in the Demo\parencite{backstagedemocost}.
     This capability enables a DevOps team to take responsibility also in the financial domain and creates transparency
     for the business what the true costs of their product is.
@@ -389,22 +392,25 @@
     For example, some applications are covering generic enterprise use cases such as human resource management, finance
     and controlling.
     Other software is specially built for mission-critical, day-to-day operations of the railway such as the Rail Control
-    System (RCS)\parencite{sbbrcs} .
+    System (RCS)\parencite{sbbrcs} .\\
     An SBB IT application may be a purchased product, may be developed in-house or is a combination thereof which is
-    sometimes called a ``customization``.
+    sometimes called a ``customization``.\\
     Applications and products, built and operated by the SBB, are regulated by different standards and regulations of the
     swiss government or by industry initiatives.
     Examples are the EN 50128 standard by the European Committee for Electrotechnical Standardization (CENELEC)\parencite{cenelec},
     which governs among other things the development of safety-related software with different requirement levels
     or the HCBöV\parencite{hcboev} with regulations concerning cyber-security, risk management, business continuity
-    management among others.
+    management among others.\\
     In addition to the more business-oriented applications, there is a need for platforms and tools to help create
-    and operate these.
+    and operate these applications.
     Examples are a PaaS\footnote{A platform-as-a-service (PaaS) is a platform which exposes resources such as compute or
     storage to applications. The team which is building an application is relieved from the burden of obtaining and
     provisioning resources on a hardware level. A well-known implementation of a PaaS is Kubernetes from the CNCF.},
     databases, messaging but also networking, monitoring, security and
     speciality services like UX or test-engineering and others.
+    This platform and services are provided in the SBB by the so called DSRVs\footnote{
+        A DSRV stands for Digital Service and is one or more teams with multiple services and platforms. A DSRV is built
+        around a domain, eg. Monitoring, Cloud, Application Integration and others}.
 
     \subsection{Internal Developer Platform}
     \label{subsec:sbbplatform}
@@ -418,7 +424,7 @@
         \item Role-Based Access Control - built-in in most of the SBB IT platforms
     \end{itemize}
     In addition, there are several other tools and applications used for the day-to-day operations and development.
-    Most notable are the following
+    Most notable are the following:
     \begin{itemize}
         \item Development and operation are dependent on a Wiki Software for documentation and communication.
         \item An Enterprise Architecture Database contains the information about used technologies, platforms and
@@ -438,13 +444,13 @@
     \label{subsec:sbbdevops}
     In 2015, DevOps practices and a PaaS were introduced in SBB IT.
     The stated goal of these additions was to improve the increasing complexity in operations and the perceived slow
-    speed in responding to change.
-    Four years later, a reorganization brought a new operating model to SBB IT based on agile principles, DevOps and
+    speed in responding to change\cite{sbbdevops}.\\
+    Four years later, a reorganization brought a new operating model to the SBB IT based on agile principles, DevOps and
     SAFe, creating the role of BizDevOps engineer\parencite{sbbagile} .
     Most of the pre-restructuring roles, such as Application Engineer, Operations Manager, Test Engineer or
     Requirements Engineer were transformed into this BizDevOps Engineer role.
     Even some formerly more business-oriented roles are now called BizDevOps engineers and integrated into these
-    cross-functional teams.
+    cross-functional teams.\\
     DevOps teams in SBB IT in 2023 are now the established standard.
     Despite this, they still work primarily with tools for development and operations from the predecessor organization.
     The tools themselves may be state-of-the-art in their areas, but they were not purchased or developed with
@@ -458,7 +464,7 @@
     In most cases, when someone joins a team, their first task is to familiarize themselves with this collection.
     Of course, these link collections become outdated and maintaining them also requires effort from a team.
     When entire teams are newly staffed, for example with models such as managed capacity or near-shore, it is even less
-    easy for them to get all the information they need.
+    easy for them to get all the information they need.\\
     While this discovery and knowledge sharing issue has not been fully resolved, there have been some efforts to create
     a to create a self-service portal for ordering resources.
     The reason for this portal was that the platform teams were dissatisfied with the unstructured ordering of resources
@@ -479,7 +485,7 @@
     \label{subsec:cusjour}
     The customer journey is focused on the interaction of different personas with the existing Internal Developer Platform.
     The assumption is, that this interaction between the BizDevOps Engineers and the Internal Developer Platform has a big
-    impact on the DevOps Experience.
+    impact on the DevOps Experience.\\
     The personas of the customer journey are roles which are quite common in a BizDevOps team in the SBB IT.\\
     \textit{Peter Plattform} is working as a platform engineer and interested in the lifecycle of resources and platforms which
     are necessary for the building and operating of application in his team.\\
@@ -526,24 +532,23 @@
         \item Question 12 relates to FinOps, chapter \ref{sssec:finops}
     \end{itemize}
     Questions 4, 11 and 16 do not have a strong correlation with the concept of an Internal Developer Portal.
-    However, these three questions relate to the capabilities of the existing Internal Developer Platform.
+    However, these three questions relate to the capabilities of the existing Internal Developer Platform.\\
     The questions 5, 6, 7, 8 and 9 gauge the maturity of the Internal Developer Platform concerning the lifecycle of resources.
     The may be integrated in a Internal Developer Portal because of its Extendability described in chapter \ref{sssec:extendability}.
-    However, information about integrating these use cases in an Internal Developer Portal are scarce.
+    However, information about integrating these use cases in an Internal Developer Portal are scarce.\\
     There are no direct questions about the chapter Extendability \ref{sssec:extendability} and Platform as a Product
     \ref{sssec:paap}.
     Extendability is more of a non-functional requirement for the choosing of the concrete Internal Developer Portal
-    solution instead of a wanted feature for a user of this portal.
-    Platform as a Product is more a goal for the SBB IT internal product management to make the Work of the BizDevOps
+    solution instead of a wanted feature for a user of this portal.\\
+    Platform as a Product is a goal for the SBB IT internal product management to make the Work of the BizDevOps
     teams more visible and accessible and are not an intrinsic goal of an engineer.
-    Question 15 ask a question about support in the incident process and is neither related to an Internal Developer Platform
+    There is no question for this topic included in the survey.\\
+    Question 15 asks about support in the incident process and is neither related to an Internal Developer Platform
     nor an Internal Developer Portal. \\
     The survey and the questions are scoped on the DevOps experience and usage of the platform, products or services of
-    the so called Core\footnote{Core consists of multiple DSRVs, most with mission-critical platforms} DSRVs\footnote{
-        A DSRV stands for Digital Service and is one or more teams with multiple services and platforms. A DSRV is built
-        around a domain, eg. Monitoring,        Cloud infrastructure, PaaS and others}.
+    the so called Core\footnote{Core consists of multiple DSRVs, most with mission-critical platforms} DSRVs.
     It is not necessary, that the respondent must have used all of these services.
-    The scope is also usage in the last three months.
+    The scope is also usage in the last three months.\\
     The rating questions have choices from one to five star and are mandatory.
     The description of the meaning of the rating is given as follows
     \begin{itemize}
@@ -621,28 +626,30 @@
     \subsubsection{Result of the Open Question}
     \label{sssec:ropque}
     32 of the 76 respondents answered the open question.
+    Due to the sensitive answers about used technologies, teams and processes only some excerpts of the responses are included in this chapter.
+    The answers in full are documented in the internal wiki\cite{sbbdevopsexperience}.\\
     Six of the respondents mentioned the topic of Technical Documentation and Communication.
     One BizDevOps engineer would like to have ``Information und Dokumentation zentralisierter oder verknüpft.``.
     Another mentioned the decentralized communication about platform news: ``Man müsste eigentlich jemanden separat einstellen
     der all die Blogs etc. pp. im Auge behält. Es passiert immer wieder, dass irgendwo eine Information zwischen die
-    Stühle fällt, weil es einfach aufgrund der Menge untergeht.``
+    Stühle fällt, weil es einfach aufgrund der Menge untergeht.``\\
     Four people mentioned the CI/CD pipelines.
-    There are multiple issues with the older, but still supported, CI/CD pipeline.
+    There are multiple issues with the older, but still supported, CI/CD pipeline.\\
     Three respondents had some comments about the local installation of development tools, which was
     a target of the question 4.
     Three had some suggestions about adding tools and improving the development toolset and
-    one said about the setup process: ``In 15 Minuten Entwicklungsumgebung aufsetzen und los coden ist schon geil! :-)``
-    Three respondents simply stated their gratitude and thanked various service and platform teams for their effort.
-    One respondent simply wrote ``danke, von Herz``.
+    one said about the setup process: ``In 15 Minuten Entwicklungsumgebung aufsetzen und los coden ist schon geil! :-)``\\
+    Three respondents simply stated their gratitude and thanked the various service and platform teams of the Core for their effort.
+    For example, one respondent simply wrote ``danke, von Herz``.\\
     Two mentions the topic of FinOps.
-    One quote about this topic ``Kosten sind sehr schwierig zu verstehen und nachvollziehen auf die Rechnung. Reporting
+    One quote about this topic by an BizDevOps engineer was: ``Kosten sind sehr schwierig zu verstehen und nachvollziehen auf die Rechnung. Reporting
     sollte unbedingt verbessert sein, man weiss nicht wo man könnte optimieren (zu beispiel welche anteil von kosten für
-    xyz kommt von storage? von anzahle objekte? usw.)``
+    xyz kommt von storage? von anzahle objekte? usw.)``\\
     There were also two suggestions about missing infrastructure as code capabilities with the input of
     Two feedback concerned the current vision and its wording of the so called Core DSRVs.
     Two questioned a perceived lack of consultancy and unified support with %TODO
     And finally, there were two critical votes about the modernization effort of the SBB IT which is known as the ''Gandalf Plan''.
-    Six feedbacks each concerned various other topics which will not be discussed in more detail.
+    Six feedbacks each concerned different other topics which will not be discussed in more detail.
     % techdoc + Benach: IIIIII
     % CI/CD kritik: IIII
     % Discovery: IIII
