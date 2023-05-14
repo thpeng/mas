@@ -444,7 +444,7 @@
     \label{subsec:sbbdevops}
     In 2015, DevOps practices and a PaaS were introduced in SBB IT.
     The stated goal of these additions was to improve the increasing complexity in operations and the perceived slow
-    speed in responding to change\cite{sbbdevops}.\\
+    speed in responding to change\parencite{sbbdevops}.\\
     Four years later, a reorganization brought a new operating model to the SBB IT based on agile principles, DevOps and
     SAFe, creating the role of BizDevOps engineer\parencite{sbbagile} .
     Most of the pre-restructuring roles, such as Application Engineer, Operations Manager, Test Engineer or
@@ -487,23 +487,28 @@
     The assumption is, that this interaction between the BizDevOps Engineers and the Internal Developer Platform has a big
     impact on the DevOps Experience.\\
     The personas of the customer journey are roles which are quite common in a BizDevOps team in the SBB IT.\\
-    \textit{Peter Plattform} is working as a platform engineer and interested in the lifecycle of resources and platforms which
-    are necessary for the building and operating of application in his team.\\
+    \textit{Peter Plattform} is working as a platform engineer and is interested what the platforms are offering for building
+    an application.
+    Peter would like to try out a platform.
+    After the try out, he orders a resource from this platform and is responsible over the full lifecycle until it is not
+    needed anymore.\\
     \textit{Diego Developer} is a software engineer and his duty is to work on features and enabler in the context of his team.
     He is interested in building solutions and needs know-how and best practices for doing so.
-    His secondary interest is, to get his work as fast as possible and with the highest quality into the production environment.
-    \textit{Norbert Neuling} is the rookie in the team.\\
-    He wants to acquire knowledge, try out the established technologies or platforms and needs a solid template for creating
-    his own solutions.\\
+    His secondary interest is, to get his work as fast as possible and with the highest quality into the production environment.\\
+    \textit{Norbert Neuling} is the rookie in the team and started two days ago in this team.
+    He needs first to install the necessary tooling to enable him to develop features.
+    He needs some guidance about what the best practices are concerning the used technologies and platforms.\\
     \textit{Agnes Architekt} is working as an IT architect.
-    The product owner of the team asked her to identify variants to lower the operation cost.
-    She is also very interested
-    to know about changes in the platforms, so that she can inform the product owner and put the necessary enablers in
-    the next product increment\footnote{SAFe terminology for a cycle of usually five two-week SCRUM Sprints of agile software development.}.\\
-    \textit{Ida Incident} is working on an operational issue.
-    She needs to know the technical topology of her application and the used platforms.
-    She has to know, which team is responsible for which platform and how she could reach them.\\
-    For more information, see figure\ref{fig:customerjourney}
+    The product owner of the team asked her to identify possibilities to lower the operational cost.
+    She is also responsible for the enabler\footnote{An enabler is a work item which has no direct business value.
+    For example a migration to a new version for a web framework or other technical necessities.} of the product.
+    She has to create the necessary backlog items and communicates with the Product Owner, so that he can prioritize
+    them and put them in one of the next product increments\footnote{SAFe terminology for a cycle of usually five two-week SCRUM Sprints of agile software development.}.
+    For this work, she needs to know about the upgrade plans of the used services an platforms.     \\
+    \textit{Ida Incident} is working on an operational issue which is affecting the users of her application.
+    She needs to know the technical topology of her application and the platforms which are used for operating this application.
+    She needs to know the team which is responsible for a given platform and how she could reach them.\\
+    For more information about the customer journey, see figure\ref{fig:customerjourney}.
 
     \subsection{Quantitative Survey}
     \label{subsec:quansur}
@@ -565,8 +570,8 @@
     for a qualitative survey.
     This question is optional for the respondent.
     These interviews and the resulting insights are not part of this certificate work.
-    The final question\footnote{The final engagement question was added based on input of the internal product management team}
-    is a engagement questions and tries to gauge the overall satisfaction of the BizDevOps engineers
+    The last question\footnote{The engagement question was added based on input of the internal product management team}
+    is a engagement question and tries to gauge the overall satisfaction of the BizDevOps engineers
     with the available services and platforms of the so called Core DSRVs.
     % 2.3.2 Discoverability -> 1, 13, 14 (strong)
     %2.3.3 Platform as a Product n/a
@@ -634,11 +639,11 @@
     der all die Blogs etc. pp. im Auge behält. Es passiert immer wieder, dass irgendwo eine Information zwischen die
     Stühle fällt, weil es einfach aufgrund der Menge untergeht.``\\
     Four people mentioned the CI/CD pipelines.
-    There are multiple issues with the older, but still supported, CI/CD pipeline.\\
+    There are multiple issues concerning the older, but still supported, CI/CD pipeline.\\
     Three respondents had some comments about the local installation of development tools, which was
     a target of the question 4.
-    Three had some suggestions about adding tools and improving the development toolset and
-    one said about the setup process: ``In 15 Minuten Entwicklungsumgebung aufsetzen und los coden ist schon geil! :-)``\\
+    Three had some suggestions about adding tools and improving the development toolset.
+    One respondent was very pleases and said about the setup process: ``In 15 Minuten Entwicklungsumgebung aufsetzen und los coden ist schon geil! :-)``\\
     Three respondents simply stated their gratitude and thanked the various service and platform teams of the Core for their effort.
     For example, one respondent simply wrote ``danke, von Herz``.\\
     Two mentions the topic of FinOps.
@@ -647,8 +652,9 @@
     xyz kommt von storage? von anzahle objekte? usw.)``\\
     There were also two suggestions about missing infrastructure as code capabilities with the input of
     Two feedback concerned the current vision and its wording of the so called Core DSRVs.
-    Two questioned a perceived lack of consultancy and unified support with %TODO
-    And finally, there were two critical votes about the modernization effort of the SBB IT which is known as the ''Gandalf Plan''.
+    Two questioned a perceived lack of consultancy and unified support.
+    And finally, there were two critical votes about the modernization effort of the SBB IT which is known as the
+    ''Gandalf Plan'' and the perceived primacy of technology enabler over features for the business.
     Six feedbacks each concerned different other topics which will not be discussed in more detail.
     % techdoc + Benach: IIIIII
     % CI/CD kritik: IIII
@@ -669,7 +675,7 @@
 
     \subsubsection{Result of the Engagement Question}
     \label{sssec:rengque}
-    The average of the engagement question was 7.70 with a variance of xx\%.
+    The average result of the engagement question was 7.70 with a variance of xx\%.
     The distribution can be seen in figure 3.
     %TODO distribution
     The result of the engagement question is not further discussed for evaluating the value proposition of an Internal Developer Portal.
@@ -679,24 +685,58 @@
     \label{sec:conclusion}
     Based on the data of the rating questions in chapter \ref{sssec:rratque} the value propositions of Discoverability, Golden Path
     and FinOps are below the average of all questions (3.40) and outside of the margin of error (10\%).
-    The average of the subject documentation is almost equal to the general average with 3.41
-    The topic Expertise has a rating of 3.64, which exceeds the average value.
-    The topics which are not directly related to the Internal Developer Portal are at the average or above.
-    Platform topics have an average of 3.46 is near the overall average.
+    The average of the subject documentation is almost equal to the general average with 3.41.
+    The topic Expertise has a average rating of 3.64, which exceeds the overall average value.
+    The topics which are not directly related to the Internal Developer Portal are at the overall average or above.
+    Platform topics have an average of 3.46 and is near the overall average.
     Lifecycle has an average value of 3.59 and the topic of Incident support is at an average of 3.92.
     Summarizing the data;
     \begin{itemize}
-        \item Three of the five tested value propositions are below the overall average
-        \item Two of the three other topics are above and one is near the overall average
-        \item Fifteen answers for the open question contain issues or enhancement concerning one or more of the value propositions for the Internal Developer Portal
+        \item Three of the five tested value propositions are below the overall average and outside the error margin.
+        \item Two of the three other topics are above and one is near the overall average.
+        \item Fifteen answers for the open-ended questions contain issues related to the value proposition of an Internal Developer Portal
     \end{itemize}
-    Thus, there is an argument, that an Internal Developer Portal could be of value for the BizDevOps engineers if the following
-    criteria are met.
+    Thus, seems to be a case, that an Internal Developer Portal could be of value for the BizDevOps engineers if the following
+    criteria are met:
     \begin{itemize}
         \item The solution must have have some kind of a FinOps capability.
         \item The solution must improve the discoverability of services, teams, resources and platforms.
         \item The solution must have the capability to publish Golden Path
     \end{itemize}
+    There could be additional benefit for the BizDevOps engineers, if the solution also has the capability to aid with
+    Documentation functionality and makes it more accessible.
+    There seems no current need to use an Internal Developer Platform for making Expertise more visible.
+
+    \subsection{Action Recommendations}
+    \label{subsec:arec}
+    \subsubsection{Prioritize Relationships}
+    From the rating questions, open question responses to direct feedback, over and over the current tooling landscape is
+    criticized for the lack of an integrated view of application, teams, used platforms and resources.
+    There is currently no capability of this kind and could be the unique selling point of this Internal Developer Platform.
+    \subsubsection{Target BizDevOps Engineer}
+    There is value in targeting the needs of the BizDevOps Engineers.
+    They are lacking a coherent view for operating applications and improvements should be felt immediately by falling
+    KPIs like MTTR\footnote{MTTR stands for mean time to repair. Its the measured time between a failure of a system
+    until it is fixed again and in working order.}.
+    Refrain initially from targeting other roles such as management, architects, security or non BizDevOps teams with
+    an internal developer platforms.
+    If necessary, try to onboard such additional users and use cases later.
+    \subsubsection{Don't Try to Replace Existing Tooling}
+    It is tempting to use an Internal Developer Portal as an opportunity to simplfy and consolidate the Internal
+    Developer Platform.
+    Remember, the Internal Developer Portal is the frontend and it needs to integrate with the datasource.
+    Most of the presented vendors and products have the capability and the frameworks necessary to achieve this.
+    \subsubsection{Prioritize Missing Capabilities}
+    Try to prioritize missing capabilities instead of building again well understand features such as ordering a resource.
+    \subsubsection{Focus on Runtime Data}
+    There is no need to build again an enterprise application database.
+    IT Architects are using this database for modelling their solutions and thus it may not reflect the current state of an application.
+    Focus instead on the runtime data.
+    For example, use data such as which application is deployed on a platform, telemetry data of applications or platforms or
+    configured resources if GitOps\footnote{
+        GitOps is a practice where resource definitions are stored in a source code version system. If any change
+        happens in this definitions, the values are synced to a runtime, for example to a Kubernetes cluster.} is used.
+
     \pagebreak
     % max 15 - 20 pages end here
 
