@@ -95,21 +95,21 @@
 
     \section{Introduction}
     \label{sec:introduction}
-    SBB has an extensive and steadily growing IT landscape of applications and tools to support the digitization of the
-    SBB's core business processes.
-    These digitization efforts brought major changes to SBB's IT department.
+    SBB has an extensive and steadily growing IT landscape of applications and tools to support the digitization of its
+    core business processes.
+    These digitization efforts brought major changes to the SBB IT department.
     In less than ten years, the development model has changed from a pure waterfall to an agile methodology,
     cloud technologies were adopted while hardware-bound platforms were phased out, and a new internal organization,
     based on the separation of business and line management, has been introduced.\\
-    Although these changes are now taking root and leading to various positive outcomes, they still pose a challenge
-    due to the new and still existing complexity and the rapidly changing technological landscape.
+    Even though these changes are now taking root and leading to various positive outcomes, they still pose a challenge.
+    There is a new complexity with the rapidly changing technological landscape but also due to very many old,
+    business-critical legacy systems.
     In addition, regulatory pressure has increased significantly in recent years, as exemplified by the
-    HCBöV\footnote{Handbuch Cybersecurity für Betriebe des öffentlichen Vekehrs}, as well as the new Data Protection Act
-    in Switzerland - nDSG.\\
-    Feedback from various employees in different roles from SBB's so called ``Digitalen Zone`` indicates, that the overall
+    HCBöV\footnote{Handbuch Cybersecurity für Betriebe des öffentlichen Vekehrs}, as well as the new Data Protection Act in Switzerland - nDSG.\\
+    Feedback from various employees in different roles from SBB so called ``Digitalen Zone`` indicates, that the overall
     increase in complexity has an impact on the daily work of DevOps\footnote{DevOps is a combination of the words
     Development and Operations and can be either a role or a set of practices} engineers.
-    The picture that is being painted is, although all information for the design, development and operation of
+    The picture emerges that, although all information for the design, development and operation of
     applications is available in principle, it is maintained in very different places and forms.
     This makes the procurement of information for these activities time-consuming and requires that a DevOps
     engineer is already very familiar with the IT landscape of SBB .
@@ -117,10 +117,11 @@
     \subsection{Problem Statement and Controversy}
     \label{subsec:iproblemstatement}
     Research on the Internet about this problem, as well as guidance from vendors, indicates that there is greater momentum
-    to address such issues with an internal developer portal (IDP). The central promise of the concept of an
-    Internal Developer Portal is that it can reduce the so-called ``cognitive load`` of DevOps engineers.\\
-    Internal Developer Portal aims to provide a one stop shop for information about teams, associated applications and
-    their used infrastructure and resources.
+    to address such issues with an Internal Developer Portal (IDP).
+    The central promise of the concept of an Internal Developer Portal is that it can reduce the so-called
+    ``cognitive load`` of DevOps engineers.\\
+    An Internal Developer Portal aims to provide a one stop shop for information about teams, associated applications and
+    their used infrastructure and resources for DevOps engineers.
 
     \subsection{Objective of the Certificate Work}
     \label{subsec:iobjective}
@@ -144,13 +145,13 @@
         \item A high cognitive load of engineers because of switching between multiple and very different tools while developing or operating IT Systems
         \item Increasing the developer experience by abstracting away complexity in infrastructure management
     \end{itemize}
-    One potential source of information for using in the Internal Developer Portal is an Internal Developer Platform.
+    One potential source of information for using in the Internal Developer Portal is a so called Internal Developer Platform.
 
     \subsection{Internal Developer Platform}
     \label{subsec:vpplatform}
     Gartner makes a differentiation between the concept of an Internal Developer Portal and an Internal Developer Platform:
-    ``internal developer portals serve as the interface through which developers can discover and
-    access internal developer platform capabilities``\parencite{gartner} .
+    ``Internal Developer Portals serve as the interface through which developers can discover and
+    access Internal Developer Platform capabilities``\parencite{gartner} .
     An Internal Developer Platform (Platform), according to the COO Christoph C. Richter from Humanitec\parencite{richteretal} ,
     should consist at least of the following component:
     \begin{itemize}
@@ -166,6 +167,7 @@
     The capabilities and components of Internal Developer Platforms are not unique to the products of those two suppliers.
     In most contemporary IT operations or software development departments these components and practices are well-known
     and used widely.
+    %TODO korrigendum
     Beyond the size of a very small team, it is necessary to use tooling to know where, in which version and with what
     configuration a software artifact was installed.
     The reason behind this may be to coordinate a new software rollout, test the software on a dedicated stage, fix bugs
@@ -709,10 +711,12 @@
 
     \subsection{Action Recommendations}
     \label{subsec:arec}
+
     \subsubsection{Prioritize Relationships}
     From the rating questions, open question responses to direct feedback, over and over the current tooling landscape is
     criticized for the lack of an integrated view of application, teams, used platforms and resources.
     There is currently no capability of this kind and could be the unique selling point of this Internal Developer Platform.
+
     \subsubsection{Target BizDevOps Engineer}
     There is value in targeting the needs of the BizDevOps Engineers.
     They are lacking a coherent view for operating applications and improvements should be felt immediately by falling
@@ -721,14 +725,17 @@
     Refrain initially from targeting other roles such as management, architects, security or non BizDevOps teams with
     an internal developer platforms.
     If necessary, try to onboard such additional users and use cases later.
+
     \subsubsection{Don't Try to Replace Existing Tooling}
     It is tempting to use an Internal Developer Portal as an opportunity to simplfy and consolidate the Internal
     Developer Platform.
     Remember, the Internal Developer Portal is the frontend and it needs to integrate with the datasource.
     Most of the presented vendors and products have the capability and the frameworks necessary to achieve this.
+
     \subsubsection{Prioritize Missing Capabilities}
     Try to prioritize missing capabilities such as the mentioned FinOps instead of building again well understand
     features such as ordering a resource.
+
     \subsubsection{Focus on Runtime Data}
     There is no need to build again an enterprise application database.
     IT Architects are using this database for modelling their solutions and thus it may not reflect the current state of an application.
