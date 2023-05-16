@@ -108,7 +108,7 @@
     HCBöV\footnote{Handbuch Cybersecurity für Betriebe des öffentlichen Vekehrs}, as well as the new Data Protection Act in Switzerland - nDSG.\\
     Feedback from various employees in different roles from SBB so called ``Digitalen Zone`` indicates, that the overall
     increase in complexity has an impact on the daily work of DevOps\footnote{DevOps is a combination of the words
-    Development and Operations and can be either a role or a set of practices} engineers.
+    Development and Operations and is a set of practices} engineers.
     The picture emerges that, although all information for the design, development and operation of
     applications is available in principle, it is maintained in very different places and forms.
     This makes the procurement of information for these activities time-consuming and requires that a DevOps
@@ -184,20 +184,20 @@
     pipeline for addressing the need for a Deployment Management.
     These solutions are not necessarily integrated with each other and may be products from different vendors.
     It may be also the case, that these products or solutions were established before the advent of Agile Methodologies and DevOps.
-    % durchlesen.
+
     \subsection{DevOps}
     \label{subsec:devops}
     With DevOps, the traditional disciplines of IT operations and software development are much more integrated to
     to reduce friction, release features more frequently, and improve product quality\parencite{safedevops}.
     Prior to DevOps, it was common to use different tools and processes for the development and operations roles
     because these two roles were housed in different departments or teams.
-    There is a fundamental trade-off in developing and operating solutions separately.
-    Developers are measured on responsiveness and speed of delivery.
-    Operators, on the other hand, are measured by the secure and stable operation of solutions.\\
+    There is a fundamental conflict in rigidly separating the roles of developer and operator.
+    Developers are measured by the speed to develop features and how quickly they respond to changing requirements.
+    Operators, on the other hand, are measured on how many failures their systems have and how quickly those can be patched.\\
     One of the basic principles of DevOps was coined by Werner Vogels, the current CTO of Amazon;
     ``You build it, you run it``\parencite{vogels}.
-    This means that the same team that develops the software also runs it.
-    With DevOps, a team takes full responsibility over the lifecycle of a software or platform.
+    This means that the same team that develops the software is also responsible for its operation.
+    With DevOps, a team takes full responsibility over the lifecycle of an application or platform.
     In combination with agile methodologies such as Scrum\footnote{Scrum is an iterative software development methodology}
     or SAFe\footnote{SAFe stands for Scaled Agile Framework and adds orchestration layers above agile (Scrum) teams for
     a better cross-team and product-centric alignment}, business-oriented individuals are also integrated into this
@@ -207,11 +207,12 @@
     Such tools can be used for activities such as requirements engineering, solution architecture, software development
     but also anything needed to operate the software.
     Especially the operation of the software is a tool-intensive work.
-    There are tools for logging, monitoring, incident handling and alerting.
+    There are tools for logging, monitoring, incident handling, alerting and other practices.
     In the event of an incident, a configuration management database or an enterprise architecture database are critical
     to find out who a particular application or resource belongs to.
     This information is important to determine the root cause of the incident and quickly resolve it.
-    Although DevOps offers numerous benefits, it is quite complex for a team member in an agile and DevOps team.
+    Although DevOps offers numerous benefits, it is quite a complexity for a team member to master all necessary tools and
+    practices in an agile DevOps team.
     Here, the Integrated Developer Portal offers several suggestions to help individuals and teams with their day-to-day operations.
 
     \subsection{Internal Developer Portal}
@@ -222,12 +223,12 @@
         \item Developer-centric view
         \item Pluggable framework
     \end{itemize}
-    The overarching goal of these characteristics are to increase the devops experience by shortening the time searching
-    and interpreting information.
-    The search task is supported by a central software catalogue.
-    The interpretation of the data is supported by an underlying logical model, which describes the assets, technologies
-    and their relationship in between.
-    The logical model is different between each of the internal developer portal but have some common elements.
+    The overarching goal of these features is to improve the DevOps experience by reducing the time it takes to search
+    for information and interpret it correctly.
+    The search task is supported by a centralized software catalog.
+    Interpretation of the data is supported by an underlying logical model that describes the assets, technologies
+    and their relationships between them.
+    The logical model varies among implementations of the Internal Developer Portal, but there are some common elements.
 
     \subsubsection{Vendors and Products}
     \label{sssec:vendors}
@@ -238,8 +239,7 @@
     Cloud Platform (``API Catalog tied to an API Gateway / Service Mesh``)and has no opinion about a particular application
     architectural style, such as the products mentioned in the category ``Microservice Catalog``.
     For further discussion about the capabilities of Internal Developer Portal the focus will be laid on this
-    ``Universal Service Catalogue`` category.
-    The reason is, this category has the fewest conceptional restrictions.\\
+    ``Universal Service Catalogue`` category, because it has the fewest conceptional restrictions.\\
     \begin{table}[!htbp]
         \begin{center}
             \begin{tabularx}{\textwidth}{lllll}
@@ -255,9 +255,10 @@
             \caption{\label{tab:vendors} Vendor and Products.}
         \end{center}
     \end{table}
-    Roadie is omitted from the table \ref{tab:vendors} because it's a commercial offering of Backstage.
-    It seems, there are two main directions; Backstage and Clutch have been developed by two big tech companies for their
-    internal audience, have been made available as opensource.\\
+    Roadie is omitted from the table \ref{tab:vendors} because it's a commercial offering of the software Backstage.
+    It seems, there are two main directions.
+    Backstage and Clutch have been developed by two tech companies for their internal audience, have been made
+    available as opensource.\\
     Moment and OpsLevel are purposefully built by startups as their product and have commercial offerings.
     For the further discussion about the value proposition of an Internal Developer Portal, some screenshots and concepts will
     be used from Backstage.\\
@@ -267,7 +268,7 @@
 
     \subsubsection{Discoverability and Information Gathering}
     \label{sssec:disc}
-    The Software Catalogue is the main feature of an Internal Developer Portal.
+    The Software Catalog is the main feature of an Internal Developer Portal.
     Its purpose is to make the capabilities of the Internal Developer Platform accessible for an engineer as seen in the
     screenshot in figure \ref{fig:catalog}.
 
@@ -276,17 +277,19 @@
         \caption{The Software Catalog from the Backstage Demo\parencite{backstagedemo}}
         \label{fig:catalog}
     \end{figure}
-    Its content may be any combination of
+    The content of the catalog may be any combination of
     \begin{itemize}
         \item Teams with members
         \item Applications
         \item Infrastructure and platforms
-        \item Most importantly, the relationships between those. These attributes are modelled, e.g. an application is owned by a team.
+        \item Most importantly, the relationships between those.
     \end{itemize}
-    Data may be shown in a tabular fashion or may be shown as a relationship graph and the catalogue is searchable.
+    Data may be shown in a tabular fashion or as a relationship graph.
+    The catalog allows a search over multiple entities.
+    Usually, the user is already in his context.
+    For example, the application where he' responsible are already loaded.
     An Engineer may bookmark its favourite items and its own resources are marked by ``owned``.
-
-    In addition to the catalogue with its tabular overview, there is a details view seen in figure \ref{fig:portaldetails}.
+    In addition to the catalog with its tabular overview, there are detail views available as seen in figure \ref{fig:portaldetails}.
     \begin{figure}
         \includegraphics[width=\linewidth]{backstage_item_details}
         \caption{Details about an artifact}
@@ -295,40 +298,46 @@
     In the details view more attributes are shown for the chosen item from the overview.
     Depending on the kind of item, different attributes are shown.
     For an application, it may be its used resources, consumed and provided APIs and other subcomponents.
-    For teams, the members are shown and its owned resources and its contact details.
-
-    % not sure if to include this section in the final document.
+    For teams, the members are shown and their owned resources and the details how to contact the team.
 
     \subsubsection{Platform as a Product}
     \label{sssec:paap}
     In some implementations of an Internal Developer Portal, the catalog is not just a copy of an architecture database.
-    In addition to the aforementioned applications, platforms, organizational data, and resources, other products of the
+    In addition to the aforementioned applications, platforms, organizational data and resources, other products of the
     of the teams are represented.
-    For example, platform teams may provide support and consulting for their platform or area of expertise and offer this service.
-    Some teams use the Internal Developer Platform to showcase code or libraries to create an inner-source community.\\
-    In an expertise-sharing session between SBB and Booking.com, Booking.com reported its Internal Developer Portal as a
-    standalone product that is managed by a dedicated team.
-    This team is also responsible for onboarding other platform and application teams, convincing them of the
-    value of an integrated Internal Developer Portal.
+    For example, platform teams may provide support and consulting for their platform or area of expertise and offer
+    this service.
+    Some teams use the Internal Developer Platform to showcase code or libraries solicit input or to create an
+    inner-source community.\\
+    In an expertise-sharing session between SBB and Booking.com, Booking.com reported\parencite{bookingcom} its Internal
+    Developer Portal as a standalone product that is managed by a dedicated team.
+    This team is also responsible for on-boarding other platform and application teams, convincing them of the
+    value of an integrated Internal Developer Portal for the benefit of Booking.com.
 
     \subsubsection{Golden Path}
     \label{sssec:goldenpath}
-    The term ``Golden Path`` was coined by Spotify\parencite{spotifygoldenpath} and is itself a reference to the Frank
-    Herbert`s Dune trilogy and describes the only viable way to do things right.
-    A Golden Path is a ready-to-use template for getting a project started quickly.
+    The term ``Golden Path`` was coined by Spotify\parencite{spotifygoldenpath} and is itself a reference to Frank
+    Herbert`s Dune trilogy.
+    The meaning of this term is, that there is only one viable path to do things right way and to succeed.
+    A Golden Path in the context of an Internal Developer Portal is a ready-to-use template for getting a project
+    started quickly.
     It can consist of software engineering artifacts and preconfigured infrastructure components and is usually very
     opinionated.
     Opinionated means that the context of the enterprise is already considered, such as internal regulations,
-    the currently supported tech stack, and other internal specifics.
+    architectural guidelines, the currently supported tech stack, and other internal specifications.
     For example, a golden path for a database is already built into the company's security infrastructure,
     logging is ensured, and some best practices for database configuration and modeling are implemented.\\
-    Golden Paths are not necessarily product-specific; they can encompass a typical development stack used in the enterprise.
+    Golden Paths are not necessarily product-specific; they can encompass a typical development stack used in the
+    enterprise.
     For example a stack for a typical web application may consists of a frontend built with Javascript, a Java backend
-    and an Oracle database, all integrated into a single build pipeline for CI/CD,
-    securely configured and with the enterprise look and feel already established.
-    With such a template mechanism, new applications can be built faster, the same solutions are implemented for multiple
-    applications and developers don't have to write tedious code to integrate each of these components with each other.
+    and an Oracle database, all integrated into a single build pipeline for CI/CD,    securely configured and with
+    the enterprise look and feel already established.
+    With such a template mechanism, new applications can be built faster and the same solutions are used for multiple
+    applications.
+    Additionally, the developers don't have to write tedious code to integrate each of these components with each other
+    and can focus quickly on the business logic they have to implement.
 
+    %TODO lesen.
     \subsubsection{Technical Documentation and Communication}
     \label{sssec:techdoc}
     Platforms that use an Internal Developer Portal may choose to migrate their user-facing documentation to the portal.
@@ -357,7 +366,7 @@
 
     \subsubsection{Extendability of the Platform}
     \label{sssec:extendability}
-    As shown in chapter\ref{sssec:vendors} , there are multiple offerings of Internal Developer Portal and varying
+    As shown in chapter \ref{sssec:vendors} , there are multiple offerings of Internal Developer Portal and varying
     implementations.
     In case of the Software-as-a-service offerings, the extendability consists of using plugins for well-known
     technologies or products and preparing and inserting the companies data for the catalogue feature.
@@ -416,7 +425,7 @@
 
     \subsection{Internal Developer Platform}
     \label{subsec:sbbplatform}
-    The SBB IT has for most of the core components of an Internal Developer Platform, as laid out in chapter\ref{subsec:vpplatform},
+    The SBB IT has for most of the core components of an Internal Developer Platform, as laid out in chapter \ref{subsec:vpplatform},
     already solutions in place:
     \begin{itemize}
         \item Application Configuration Management - is centered around the practice of GitOps\parencite{hashicorpvault}
@@ -510,7 +519,7 @@
     \textit{Ida Incident} is working on an operational issue which is affecting the users of her application.
     She needs to know the technical topology of her application and the platforms which are used for operating this application.
     She needs to know the team which is responsible for a given platform and how she could reach them.\\
-    For more information about the customer journey, see figure\ref{fig:customerjourney}.
+    For more information about the customer journey, see figure \ref{fig:customerjourney}.
 
     \subsection{Quantitative Survey}
     \label{subsec:quansur}
@@ -591,7 +600,7 @@
     After the two-week period of the survey, the response rate was 9.74\% with 76 respondents.
     Based on a 95\% confidence level, the margin of error for this survey is 10\%.
     The raw results for the rating questions are included in table \ref{tab:rawratingquestionresultstable}.
-    The calculated values for the rating questions are contained in \ref{tab:ratingquestionresultstable}.
+    The calculated values for the rating questions are contained in table \ref{tab:ratingquestionresultstable}.
     Overall, the seventeen questions have an average of 3.40, the average of the detractors is 18.5\% of the
     respondents and the average of those in favor is 51.3\%.
     An aggregate result for the five value propositions with eight associated questions is documented in the table \ref{tab:aggregateidpresults}.
