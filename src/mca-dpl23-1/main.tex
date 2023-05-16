@@ -164,25 +164,27 @@
     In some other sources, there are also additional components mentioned, e.g. Observability\parencite{xenon}.
     XENONSTACK as well as Humanitec mentioned before, are suppliers of Internal Developer Platform solutions with
     different capabilities.\\
-    The capabilities and components of Internal Developer Platforms are not unique to the products of those two suppliers.
+    The capabilities and components of an Internal Developer Platforms, as listed before,  are not specific for the products
+    of those two suppliers.
     In most contemporary IT operations or software development departments these components and practices are well-known
-    and used widely.
-    %TODO korrigendum
-    Beyond the size of a very small team, it is necessary to use tooling to know where, in which version and with what
-    configuration a software artifact was installed.
-    The reason behind this may be to coordinate a new software rollout, test the software on a dedicated stage, fix bugs
-    or develop new features and to solve incidents caused by your software.
+    and used widely.\\
+    Taking for example the practices of Application Configuration, Environment and Deployment Management:
+    Beyond the size of a very small team, it is necessary to use tooling to know where, in which version
+    and with what configuration a software artifact was installed.
+    The reason for this this may be to coordinate a new software rollout, test the software on a dedicated stage, fix bugs
+    or develop new features and to solve incidents caused by your software.\\
     Thus, it can be argued, that the concept of an Internal Developer Platform is not unique to specific products
     or offerings, but can be used on a set of tooling and practices supporting IT operations and software development.
     This set of tooling and practices can be viewed as predecessors of Internal Developer Platforms and are usually
     distinct solutions or products.\\
-    For example there is a separate Configuration Management Database
-    to address the need of Application Configuration Management or there is a purpose built Continuous Integration /
-    Continuous Deployment pipeline for addressing the need for a Deployment Management.
-    These solutions are not necessarily integrated with each other.
-    It may be also the case, that these
-    products or solutions were established before the advent of Agile Methodologies and DevOps.
-
+    For example there is a separate Configuration Management Database to address the need of Application Configuration
+    Management or there is a purpose built CI/CD\footnote{CI/CD stands for continuous
+    integration and continuous deployment and is a practice in software engineering. Its main focus is to automate all steps
+    between development and rolling out on production, such as quality assurance, building artifacts and installing them.}
+    pipeline for addressing the need for a Deployment Management.
+    These solutions are not necessarily integrated with each other and may be products from different vendors.
+    It may be also the case, that these products or solutions were established before the advent of Agile Methodologies and DevOps.
+    % durchlesen.
     \subsection{DevOps}
     \label{subsec:devops}
     With DevOps, the traditional disciplines of IT operations and software development are much more integrated to
@@ -322,9 +324,7 @@
     logging is ensured, and some best practices for database configuration and modeling are implemented.\\
     Golden Paths are not necessarily product-specific; they can encompass a typical development stack used in the enterprise.
     For example a stack for a typical web application may consists of a frontend built with Javascript, a Java backend
-    and an Oracle database, all integrated into a single build pipeline for CI/CD\footnote{CI/CD stands for continuous
-    integration and continuous deployment and is a practice in software engineering. Its main focus is to automate all steps
-    between development and rolling out on production, such as quality assurance, building artifacts and installing them.},
+    and an Oracle database, all integrated into a single build pipeline for CI/CD,
     securely configured and with the enterprise look and feel already established.
     With such a template mechanism, new applications can be built faster, the same solutions are implemented for multiple
     applications and developers don't have to write tedious code to integrate each of these components with each other.
@@ -677,10 +677,15 @@
 
     \subsubsection{Result of the Engagement Question}
     \label{sssec:rengque}
-    The average result of the engagement question was 7.70 with a variance of xx\%.
-    The distribution can be seen in figure 3.
-    %TODO distribution
-    The result of the engagement question is not further discussed for evaluating the value proposition of an Internal Developer Portal.
+    The average result of the engagement question was 7.70 with a variance of 2.080.
+    The distribution can be seen in figure \ref{fig:engque}.
+    \begin{figure}
+        \includegraphics[width=\linewidth]{engagement.PNG}
+        \caption{Results of the Engagement Question}
+        \label{fig:engque}
+    \end{figure}
+    The result of the engagement question is not relevant for evaluating the value proposition of an
+    Internal Developer Portal and is not further discussed.
 
 
     \section{Conclusion}
