@@ -337,7 +337,6 @@
     Additionally, the developers don't have to write tedious code to integrate each of these components with each other
     and can focus quickly on the business logic they have to implement.
 
-    %TODO lesen.
     \subsubsection{Technical Documentation and Communication}
     \label{sssec:techdoc}
     Platforms that use an Internal Developer Portal may choose to migrate their user-facing documentation to the portal.
@@ -347,29 +346,35 @@
     For example, the documentation sits alongside the platform automation code, is peer reviewed, created
     and published in sync with the platform's update cycle.\\
     In the discussion mentioned in the chapter \ref{sssec:paap}, Booking.com talked about an integration in their Internal
-    developer Portal, where communication about lifecycle and changes to their platforms is integrated into their portal.
-    Based, as described in chapter \ref{sssec:disc}, on the data about the relationships between platforms, teams,
-    resources and applications, it is possible to inform the DevOps engineers in a targeted manner with regard to their
-    responsible applications.
+    Developer Portal, where communication about lifecycle and changes to their platforms is also integrated into their portal.
+    With this approach it is possible to inform DevOps engineers with targeted communication, especially combined with data about relationships
+    between platforms, team resources and application as described in chapter \ref{sssec:disc}.
     This is especially important when communicating breaking changes, release notes or information about outages.
 
     \subsubsection{Visibility of Expertise}
     \label{sssec:expertise}
-    Splunk\footnote{Splunk is a company specialised in creating software for loganalysis and monitoring and it is known
+    Splunk\footnote{Splunk is a company specialised in creating software for log analysis and monitoring and it is known
     for its product with the same name}
     describes a use case, how to leverage an Internal Developer Portal to make expertise visible in their
     company\parencite{splunkidp} .
-    Their solution is to enrich teams and users with additional data about their knowledge and let other user give feedback
-    how a team or user did support them, called a ``Bravo`` in their terminology.
+    One of the challenge is, that it is usually not transparent company wide which engineer has which speciality know-how.
+    For example, one team integrated successfully a NoSql\footnote{NoSql databases are a broad class of databases which
+    are not using the classic Structured Query Language (SQL). Examples are key/value stores, document oriented
+    databases and others.  } database.
+    This database is not part of a platform service but an integral part of a business applicaiton.
+    The next team which would like to integrate the same technology faces the problem, that they have no internal
+    expert for this technology and are not aware, that another team already did the legwork.
+    The solution from Splunk is to enrich teams and users in the Internal Developer Portal with additional data about
+    their knowledge and let other user give feedback how a team or user did support them, called a ``Bravo`` in their terminology.
     Thus, they create something like a social network inside their company for connecting people to solve problems or
     easing the way how to find people with specific skills or knowledge.
 
     \subsubsection{Extendability of the Platform}
     \label{sssec:extendability}
-    As shown in chapter \ref{sssec:vendors} , there are multiple offerings of Internal Developer Portal and varying
+    As shown in chapter \ref{sssec:vendors}, there are multiple offerings of Internal Developer Portal and varying
     implementations.
-    In case of the Software-as-a-service offerings, the extendability consists of using plugins for well-known
-    technologies or products and preparing and inserting the companies data for the catalogue feature.
+    In case of the Software-as-a-Service offerings, the extendability consists of using plugins for well-known
+    technologies or products and preparing and inserting the company's data for the catalogue feature.
     The self-hosted variants, such as Backstage and Clutch are more like a skeleton or a framework.
     For both products, there are pre-built binaries which are installable and runnable, but you can choose to build your
     own Internal Developer Portal and use these products as a starting point.
@@ -384,13 +389,13 @@
     \subsubsection{FinOps}
     \label{sssec:finops}
     FinOps is a practice to enable DevOps Teams to make decisions about resource usage and creates transparency
-    about the costs incurred by these decision.
-    The FinOps foundation defines\parencite{finopsdefinition} this practice as ``FinOps is an evolving cloud financial management discipline and
-    cultural practice that enables organizations to get maximum business value by helping engineering, finance,
-    technology and business teams to collaborate on data-driven spending decisions.``.
-    An Internal Developer Portal may help with this practice by providing functionality for one of the basic discipline
-    FinOps: ``Understanding Cloud Usage And Cost``.\\
-    The Backstage.io Demo shows one possible implementation in the Demo\parencite{backstagedemocost}.
+    about the costs incurred by these decisions.
+    The FinOps foundation defines\parencite{finopsdefinition} this practice as ``FinOps is an evolving cloud financial
+    management discipline and cultural practice that enables organizations to get maximum business value by helping
+    engineering, finance, technology and business teams to collaborate on data-driven spending decisions.``.
+    An Internal Developer Portal may help with this practice by providing functionality for one of the basic disciplines
+    of FinOps: ``Understanding Cloud Usage And Cost``.\\
+    The Backstage.io Demo\parencite{backstagedemocost} shows one possible implementation.
     This capability enables a DevOps team to take responsibility also in the financial domain and creates transparency
     for the business what the true costs of their product is.
 
@@ -409,17 +414,15 @@
     Applications and products, built and operated by the SBB, are regulated by different standards and regulations of the
     swiss government or by industry initiatives.
     Examples are the EN 50128 standard by the European Committee for Electrotechnical Standardization (CENELEC)\parencite{cenelec},
-    which governs among other things the development of safety-related software with different requirement levels
-    or the HCBöV\parencite{hcboev} with regulations concerning cyber-security, risk management, business continuity
-    management among others.\\
-    In addition to the more business-oriented applications, there is a need for platforms and tools to help create
+    which governs among other things the development of safety-related software with different requirement levels.
+    Another example is HCBöV\parencite{hcboev}, a swiss government regulation concerning cyber-security, risk management,
+    business continuity management among others.\\
+    In addition to the more business-oriented applications, there is a need for basic platforms, tools and services to help create
     and operate these applications.
-    Examples are a PaaS\footnote{A platform-as-a-service (PaaS) is a platform which exposes resources such as compute or
-    storage to applications. The team which is building an application is relieved from the burden of obtaining and
-    provisioning resources on a hardware level. A well-known implementation of a PaaS is Kubernetes from the CNCF.},
-    databases, messaging but also networking, monitoring, security and
-    speciality services like UX or test-engineering and others.
-    This platform and services are provided in the SBB by the so called DSRVs\footnote{
+    Examples for a foundational platform is a PaaS\footnote{A platform-as-a-service (PaaS) is a software which exposes
+    resources such as compute or storage to applications. The team which is building an application is relieved from the
+    burden of obtaining and provisioning resources on a hardware level. A well-known implementation of a PaaS is Kubernetes from the CNCF.}.
+    This platform and other services are provided in the SBB by the so called DSRVs\footnote{
         A DSRV stands for Digital Service and is one or more teams with multiple services and platforms. A DSRV is built
         around a domain, eg. Monitoring, Cloud, Application Integration and others}.
 
@@ -439,7 +442,7 @@
     \begin{itemize}
         \item Development and operation are dependent on a Wiki Software for documentation and communication.
         \item An Enterprise Architecture Database contains the information about used technologies, platforms and
-        dependencies, as modelled by the architects
+        dependencies, modelled by IT architects
         \item An IT Service Management Platform contains the data concerning team contact information and support groups for applications
         \item A Configuration Management Database contains data about used assets, resources and relations to applications
     \end{itemize}
@@ -458,10 +461,10 @@
     speed in responding to change\parencite{sbbdevops}.\\
     Four years later, a reorganization brought a new operating model to the SBB IT based on agile principles, DevOps and
     SAFe, creating the role of BizDevOps engineer\parencite{sbbagile} .
-    Most of the pre-restructuring roles, such as Application Engineer, Operations Manager, Test Engineer or
+    Most of the existing engineering roles, such as the Application Engineer, Operations Manager, Test Engineer or
     Requirements Engineer were transformed into this BizDevOps Engineer role.
-    Even some formerly more business-oriented roles are now called BizDevOps engineers and integrated into these
-    cross-functional teams.\\
+    To bridge the gap between business and IT and break down silos, some business-facing roles have also been integrated into these
+    cross-functional teams have been integrated and now have the title of a BizDevOps engineer.\\
     DevOps teams in SBB IT in 2023 are now the established standard.
     Despite this, they still work primarily with tools for development and operations from the predecessor organization.
     The tools themselves may be state-of-the-art in their areas, but they were not purchased or developed with
@@ -469,7 +472,8 @@
 
     \subsection{Internal Developer Portal}
     \label{subsec:sbbportal}
-    Most BizDevOps teams at SBB make do with additional structuring of their important information for daily work.
+    Most BizDevOps teams at SBB make do with additional structuring of their important information for daily work, to cope
+    with the lack of a single and integrated portal.
     A common approach is to use the internal wiki software where each team maintains their relevant http link collection
     related to their project on one or more pages.
     In most cases, when someone joins a team, their first task is to familiarize themselves with this collection.
@@ -477,10 +481,10 @@
     When entire teams are newly staffed, for example with models such as managed capacity or near-shore, it is even less
     easy for them to get all the information they need.\\
     While this discovery and knowledge sharing issue has not been fully resolved, there have been some efforts to create
-    a to create a self-service portal for ordering resources.
+    a self-service portal for ordering resources.
     The reason for this portal was that the platform teams were dissatisfied with the unstructured ordering of resources
     via email, phone, or other ad hoc methods.
-    So a modular portal was built that allowed each team to build in their ordering process.
+    So a modular portal was built that allowed each team to integrate their ordering process.
     However, there was no single owner of the portal, and after the immediate pain point of each platform team was
     resolved, there was little effort to expand the functionality to include even more use cases.
 
@@ -500,11 +504,12 @@
     The personas of the customer journey are roles which are quite common in a BizDevOps team in the SBB IT.\\
     \textit{Peter Plattform} is working as a platform engineer and is interested what the platforms are offering for building
     an application.
-    Peter would like to try out a platform.
-    After the try out, he orders a resource from this platform and is responsible over the full lifecycle until it is not
+    Peter orders a resource from a platform and is responsible over the full lifecycle until it this resource is not
     needed anymore.\\
-    \textit{Diego Developer} is a software engineer and his duty is to work on features and enabler in the context of his team.
-    He is interested in building solutions and needs know-how and best practices for doing so.
+    \textit{Diego Developer} is a software engineer and his duty is to work on features in the context of his team.
+    %TODO Korrekturlesen.
+    He is building applications  and needs know-how and best practices for doing so.
+    He is also interested in trying out platforms and service to assess whether these are suitable for the purposes of the application.
     His secondary interest is, to get his work as fast as possible and with the highest quality into the production environment.\\
     \textit{Norbert Neuling} is the rookie in the team and started two days ago in this team.
     He needs first to install the necessary tooling to enable him to develop features.
