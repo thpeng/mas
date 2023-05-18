@@ -126,7 +126,7 @@
     \subsection{Objective of the Certificate Work}
     \label{subsec:iobjective}
     The goal of this certificate thesis is to investigate whether and to what extent the above-mentioned problem
-    can be solved by the introduction of an internal developer portal.\\
+    can be solved by the introduction of an Internal Developer Portal.\\
     In a first step, the benefits of the concept of an internal developer platform are elaborated and placed in the
     into the general context of software development and the operation of IT systems in the SBB.\\
     In a second step, the problem of complexity and lack of integration is underpinned with a quantitative survey.\\
@@ -202,7 +202,7 @@
     or SAFe\footnote{SAFe stands for Scaled Agile Framework and adds orchestration layers above agile (Scrum) teams for
     a better cross-team and product-centric alignment}, business-oriented individuals are also integrated into this
     cross-functional team.
-    An example of a business-oriented role in a DevOps team is the Product Owner\parencite{safepo}.\\
+    An example of a business-oriented role in a DevOps team is the product owner\parencite{safepo}.\\
     This also means that a team must have a wide range of skills and access to various tools needed for their work.
     Such tools can be used for activities such as requirements engineering, solution architecture, software development
     but also anything needed to operate the software.
@@ -266,7 +266,7 @@
     ``developer experience`` (DX)\parencite{spotifydx}.
     Additionally, Backstage was adopted in 2020 as an incubating project into the Cloud Native Computing Foundation\parencite{cncf} .
 
-    \subsubsection{Discoverability and Information Gathering}
+    \subsubsection{Discoverability and Obtaining Information}
     \label{sssec:disc}
     The Software Catalog is the main feature of an Internal Developer Portal.
     Its purpose is to make the capabilities of the Internal Developer Platform accessible for an engineer as seen in the
@@ -351,7 +351,7 @@
     between platforms, team resources and application as described in chapter \ref{sssec:disc}.
     This is especially important when communicating breaking changes, release notes or information about outages.
 
-    \subsubsection{Visibility of Expertise}
+    \subsubsection{Making Expertise Visible}
     \label{sssec:expertise}
     Splunk\footnote{Splunk is a company specialised in creating software for log analysis and monitoring and it is known
     for its product with the same name}
@@ -379,7 +379,7 @@
     For both products, there are pre-built binaries which are installable and runnable, but you can choose to build your
     own Internal Developer Portal and use these products as a starting point.
     Both support custom-made plugins on the front-end side which may use additional datasource outside the direct
-    internal developer portal.
+    Internal Developer Portal.
     This approach is handy for decentralized organisational forms where each team have maximal autonomy about how they
     reach their goals, but would like to use and contribute to a centralized catalogue by adding data and functionality
     via plugins.
@@ -506,72 +506,73 @@
     an application.
     Peter orders a resource from a platform and is responsible over the full lifecycle until it this resource is not
     needed anymore.\\
-    \textit{Diego Developer} is a software engineer and his duty is to work on features in the context of his team.
-    %TODO Korrekturlesen.
-    He is building applications  and needs know-how and best practices for doing so.
-    He is also interested in trying out platforms and service to assess whether these are suitable for the purposes of the application.
-    His secondary interest is, to get his work as fast as possible and with the highest quality into the production environment.\\
+    \textit{Diego Developer} is a software engineer and his duty is to work on features in the context of the application
+    he' responsible for.
+    He needs information about the current tech stack\footnote{A tech stack is short for technology stack.
+    A technology stack is usually a selection of available componentes and framework such as databases, messaging, programming
+    languages and other technologies necessary to build applications.} and he needs advice for the solution design of his application.
+    Diego is also interested to get the releases of his application as fast as possible and with the highest quality
+    into the production environment.\\
     \textit{Norbert Neuling} is the rookie in the team and started two days ago in this team.
     He needs first to install the necessary tooling to enable him to develop features.
-    He needs some guidance about what the best practices are concerning the used technologies and platforms.\\
-    \textit{Agnes Architekt} is working as an IT architect.
-    The product owner of the team asked her to identify possibilities to lower the operational cost.
+    The next assignment for him for his learning journey is to create a sample application on OpenShift and integrate
+    it with sample database provided.
+    Additonally, Norbert needs some guidance about what the best practices are concerning the used technologies and platforms.\\
+    \textit{Agnes Architekt} is working as an IT architect in the team.
+    The product owner of the application she's responsible for, asked her to identify possibilities to lower the operational cost.
     She is also responsible for the enabler\footnote{An enabler is a work item which has no direct business value.
-    For example a migration to a new version for a web framework or other technical necessities.} of the product.
-    She has to create the necessary backlog items and communicates with the Product Owner, so that he can prioritize
+    For example a migration to a new version for a web framework or other technical necessities.} of the application.
+    She has to create the necessary backlog items and communicates with the product owner, so that he can prioritize
     them and put them in one of the next product increments\footnote{SAFe terminology for a cycle of usually five two-week SCRUM Sprints of agile software development.}.
-    For this work, she needs to know about the upgrade plans of the used services an platforms.     \\
+    For this work, she needs to know about the upgrade plans of the used services of the platforms her application is using.     \\
     \textit{Ida Incident} is working on an operational issue which is affecting the users of her application.
     She needs to know the technical topology of her application and the platforms which are used for operating this application.
-    She needs to know the team which is responsible for a given platform and how she could reach them.\\
+    She needs to find the team which is responsible for a given platform and needs to know she can contact them.\\
     For more information about the customer journey, see figure \ref{fig:customerjourney}.
 
     \subsection{Quantitative Survey}
     \label{subsec:quansur}
     For a quantitative survey, a mix of questions were created based on the customer journey.
-    Some are related to the value proposition of an Internal Developer Portal and some questions about other known or
-    suspected issues around the existing Internal Developer Platform.
-    The survey is intentionally kept short.
-    The expectation is, that a short survey generates more responses because for the respondent it is only a small time investment.
-    The intended target of the audience are the BizDevOps engineers of the SBB .
-    One of the main information source for the BizDevOps engineers is the CLEW\footnote{CLEW stands for Cloud, ESTA,
-        itself an acronym of Entwicklungstack and WZU, Werkzeugunterstützung} blog.
-    This blog has an audience of 780 subscribers.
-    The survey itself is built with Microsoft Forms.
-    The start date of the survey was the 24.04.2023 and the end date was on 08.05.2024.
+    Some relate to the value proposition of an Internal Developer Portal and others to other known or suspected issues
+    related to the existing platform for internal developers.
+    The survey is intentionally short, as longer surveys typically tend to show low response rates among BizDevOps engineers.
+    The target audience for the survey is SBB's BizDevOps engineers around SBB IT's cloud platforms.
+    One of the main sources of information for BizDevOps engineers is the CLEW\footnote{CLEW stands for Cloud, ESTA,
+        itself an acronym of development stack and WZU, tool support} blog.
+    This blog has a total of 780 subscribers.
+    The survey itself was created using Microsoft Forms.
+    The start date of the survey was 24.04.2023 and the end date was 08.08.2024.
 
     \subsubsection{Questions}
     \label{sssec:questions}
-    From the sixteen steps in the customer journey seventeen rating questions were created.
-    The rating questions are documented in the appendix in table \ref{tab:ratingquestionstable}.
-    The relation between the value proposal in chapter \ref{sec:vp} and the questions are as follow:
+    Seventeen rating questions were created from the sixteen steps of the Customer Journey.
+    The rating questions are documented in the appendix in the table \ref{tab:ratingquestionstable}.
+    The relationship between the suggested value in chapter \ref{sec:vp} and the questions is as follows:
     \begin{itemize}
-        \item Questions 1, 13 and 14 relate to Discoverability and Information Gathering in chapter \ref{sssec:disc}
-        \item Question 2 relates to Visibility of Expertise from chapter \ref{sssec:expertise}
-        \item Questions 3 and 17 relate to Technical Documentation, chapter \ref{sssec:techdoc}
-        \item Question 10 relates to the chapter \ref{sssec:goldenpath}, Golden Path
-        \item Question 12 relates to FinOps, chapter \ref{sssec:finops}
+        \item question 1, 13, and 14 relate to discoverability and obtaining information in chapter \ref{sssec:disc}
+        \item question 2 refers to making expertise visible from chapter \ref{sssec:expertise}
+        \item questions 3 and 17 relate to technical documentation and communication, chapter \ref{sssec:techdoc}
+        \item Question 10 refers to chapter \ref{sssec:goldenpath}, Golden Path.
+        \item question 12 refers to FinOps, chapter \ref{sssec:finops}
     \end{itemize}
-    Questions 4, 11 and 16 do not have a strong correlation with the concept of an Internal Developer Portal.
-    However, these three questions relate to the capabilities of the existing Internal Developer Platform.\\
-    The questions 5, 6, 7, 8 and 9 gauge the maturity of the Internal Developer Platform concerning the lifecycle of resources.
-    The may be integrated in a Internal Developer Portal because of its Extendability described in chapter \ref{sssec:extendability}.
-    However, information about integrating these use cases in an Internal Developer Portal are scarce.\\
-    There are no direct questions about the chapter Extendability \ref{sssec:extendability} and Platform as a Product
+    Questions 4, 11, and 16 are not closely related to the concept of an Internal Developer Portal.
+    However, these three questions are related to general capabilities of the existing platform for internal developers.\\
+    Questions 5, 6, 7, 8, and 9 measure the maturity of the internal developer platform in terms of resource lifecycle.\\
+    There are no direct questions about the Extendability \ref{sssec:extendability} chapter and Platform as a Product
     \ref{sssec:paap}.
-    Extendability is more of a non-functional requirement for the choosing of the concrete Internal Developer Portal
-    solution instead of a wanted feature for a user of this portal.\\
-    Platform as a Product is a goal for the SBB IT internal product management to make the Work of the BizDevOps
-    teams more visible and accessible and are not an intrinsic goal of an engineer.
-    There is no question for this topic included in the survey.\\
-    Question 15 asks about support in the incident process and is neither related to an Internal Developer Platform
-    nor an Internal Developer Portal. \\
-    The survey and the questions are scoped on the DevOps experience and usage of the platform, products or services of
-    the so called Core\footnote{Core consists of multiple DSRVs, most with mission-critical platforms} DSRVs.
-    It is not necessary, that the respondent must have used all of these services.
-    The scope is also usage in the last three months.\\
-    The rating questions have choices from one to five star and are mandatory.
-    The description of the meaning of the rating is given as follows
+    Extensibility is a non-functional requirement when selecting the specific solution for the Internal Developer Portal.
+    This requirement is not the desire of a user of this portal and does not matter to them.\\
+    Platform as a Product is a goal of SBB IT internal product management to make the work of BizDevOps
+    team more visible and accessible and is not an intrinsic goal of an engineer.
+    There is no question on this topic in the survey.\\
+    Question 15 asks about support in the incident process and does not refer to an internal developer platform or an
+    Internal Developer Portal. \\
+    The survey and questions relate to DevOps experience and use of the platform, products, or services of the so-called core,
+    which consists of multiple DSRVs, most with mission-critical platforms.
+    It is not required that the respondent has used all services and platforms of the Core.
+    It is also scoped about usage of services and platforms in the last three months.\\
+    The rating questions have choices from one to five stars and are all mandatory to complete.
+    The meaning of the rating as defined as follows:
     \begin{itemize}
         \item One star - non-existent or unknown
         \item Two star - with room for improvement
@@ -580,15 +581,15 @@
         \item Five star - super, that's what makes you
     \end{itemize}
 
-    In addition, two more questions, documented in table \ref{tab:oetable} were asked for gathering additional data for
-    internal needs of the SBB IT .
-    One question has a free text answer to solicit more input and to generate additional interview partner
-    for a qualitative survey.
-    This question is optional for the respondent.
-    These interviews and the resulting insights are not part of this certificate work.
-    The last question\footnote{The engagement question was added based on input of the internal product management team}
-    is a engagement question and tries to gauge the overall satisfaction of the BizDevOps engineers
-    with the available services and platforms of the so called Core DSRVs.
+    In addition, two other questions were asked, which are documented in table \ref{tab:oetable}.
+    These questions are primarily for the internal needs of the product management of SBB IT platforms.
+    They provide feedback on overall satisfaction and allow respondents to make additional points.
+    One is a question with a that allows free text responses.
+    The goal is to get additional input and to generate interview partners for a qualitative survey.
+    This question is optional for the interviewee.
+    These interviews and the resulting findings are not part of this certificate thesis.\\
+    The final question {footnote{The engagement question was added based on input from the internal product management team}
+    is an engagement question and is intended to measure the overall satisfaction of BizDevOps engineers related to the core platforms and services.
     % 2.3.2 Discoverability -> 1, 13, 14 (strong)
     %2.3.3 Platform as a Product n/a
     %2.3.4 Golden Path -> 10 (strong)
@@ -602,13 +603,16 @@
 
     \subsubsection{Result of the Rating Questions}
     \label{sssec:rratque}
-    After the two-week period of the survey, the response rate was 9.74\% with 76 respondents.
-    Based on a 95\% confidence level, the margin of error for this survey is 10\%.
+    After the two-week survey period, the response rate was 9.74\% with 76 respondents.
+    Based on an industry standard 95\% confidence level\parencite{nistmean}}, the margin of error for this survey for all
+    Rating questions is 10\% for each.
     The raw results for the rating questions are included in table \ref{tab:rawratingquestionresultstable}.
-    The calculated values for the rating questions are contained in table \ref{tab:ratingquestionresultstable}.
-    Overall, the seventeen questions have an average of 3.40, the average of the detractors is 18.5\% of the
-    respondents and the average of those in favor is 51.3\%.
-    An aggregate result for the five value propositions with eight associated questions is documented in the table \ref{tab:aggregateidpresults}.
+    The calculated scores for the rating questions are included in table \ref{tab:ratingquestionresultstable}.
+    Overall, the seventeen questions have an average score of 3.40, the average of negative responses (1.2) is 18.5\% of the
+    respondents and the average of positive responses (4.5) is 51.3\%.
+    Respondents with scores of 1 and 2 are counted among the detractors and respondents with 4 and 5 are counted as the promoters.
+    The variance for the scoring questions ranges from 0.590 to 1.420.
+    An aggregate result for the five value propostions with eight associated questions is documented in the table \ref{tab:aggregateidpresults}.
     \begin{table}[!htbp]
         \begin{center}
             \begin{tabularx}{\textwidth}{llllll}
@@ -625,7 +629,7 @@
         \end{center}
         \caption{\label{tab:aggregateidpresults} Aggregated results for IDP related questions.}
     \end{table}
-
+% TODO korrekturlesen.
     In contrast, the aggregated result of the questions about other topics, grouped by questions about lifecycle of resources,
     generic Internal Developer Platform questions and about Incident handling are as seen in table \ref{tab:nonidpresults}.
 
@@ -824,10 +828,10 @@
         \begin{center}
             \begin{tabularx}{\textwidth}{lX}
                 \toprule
-                Id & Question                                                                                                                                                                                                                                                                    \\
+                Id & Question                                                                                                                                                                                                                                                                      \\
                 \midrule
                 18 & Was du uns sonst noch mit auf den Weg geben willst für die ``geilste DevOps Experience``, die du erleben möchtest. Falls du bereit bist, in einem kleinen Interview noch mehr Auskünfte zu erteilen und Nachfragen zu beantworten, gib uns doch hier auch deine Kontaktdaten. \\
-                19 & Auf einer Skala von 1 \- 10, würdest du CORE (die genannten DSRVs und deren Plattformen) deinen Freunden und Arbeitskollegen weiterempfehlen?                                                                                                                                \\
+                19 & Auf einer Skala von 1 \- 10, würdest du CORE (die genannten DSRVs und deren Plattformen) deinen Freunden und Arbeitskollegen weiterempfehlen?                                                                                                                                 \\
                 \bottomrule
             \end{tabularx}
         \end{center}
