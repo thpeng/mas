@@ -13,6 +13,8 @@
 \usepackage{hyperref}
 \usepackage{booktabs}
 \usepackage{tabularx}
+\usepackage{pdflscape}
+\usepackage{placeins}
 \usepackage{geometry}
 \geometry{
     a4paper,
@@ -567,9 +569,9 @@
     There is no question on this topic in the survey.\\
     Question 15 asks about support in the incident process and does not refer to an internal developer platform or an
     Internal Developer Portal. \\
-    The survey and questions relate to DevOps experience and use of the platform, products, or services of the so-called core,
+    The survey and questions relate to DevOps experience and use of the platform, products, or services of the so-called CORE,
     which consists of multiple DSRVs, most with mission-critical platforms.
-    It is not required that the respondent has used all services and platforms of the Core.
+    It is not required that the respondent has used all services and platforms of the CORE.
     It is also scoped about usage of services and platforms in the last three months.\\
     The rating questions have choices from one to five stars and are all mandatory to complete.
     The meaning of the rating as defined as follows:
@@ -586,10 +588,10 @@
     They provide feedback on overall satisfaction and allow respondents to make additional points.
     One is a question with a that allows free text responses.
     The goal is to get additional input and to generate interview partners for a qualitative survey.
-    This question is optional for the interviewee.
+    This question is optional for the respondents.
     These interviews and the resulting findings are not part of this certificate thesis.\\
     The final question {footnote{The engagement question was added based on input from the internal product management team}
-    is an engagement question and is intended to measure the overall satisfaction of BizDevOps engineers related to the core platforms and services.
+    is an engagement question and is intended to measure the overall satisfaction of BizDevOps engineers related to the CORE platforms and services.
     % 2.3.2 Discoverability -> 1, 13, 14 (strong)
     %2.3.3 Platform as a Product n/a
     %2.3.4 Golden Path -> 10 (strong)
@@ -629,9 +631,9 @@
         \end{center}
         \caption{\label{tab:aggregateidpresults} Aggregated results for IDP related questions.}
     \end{table}
-% TODO korrekturlesen.
-    In contrast, the aggregated result of the questions about other topics, grouped by questions about lifecycle of resources,
-    generic Internal Developer Platform questions and about Incident handling are as seen in table \ref{tab:nonidpresults}.
+    In contrast, the aggregated results of questions on other topics are contained in the table \ref{tab:nonidpresults}.
+    The results are grouped by resource lifecycle questions, generic questions about the internal developer platform
+    and incident handling.
 
     \begin{table}[!htbp]
         \begin{center}
@@ -651,7 +653,8 @@
     \subsubsection{Result of the Open Question}
     \label{sssec:ropque}
     32 of the 76 respondents answered the open question.
-    Due to the sensitive answers about used technologies, teams and processes only some excerpts of the responses are included in this chapter.
+    Due to the sensitive nature of the answers regarding the technologies, teams and processes used, only some excerpts
+    of the answers are reproduced in this chapter.
     The answers in full are documented in the internal wiki\cite{sbbdevopsexperience}.\\
     Six of the respondents mentioned the topic of Technical Documentation and Communication.
     One BizDevOps engineer would like to have ``Information und Dokumentation zentralisierter oder verknüpft.``.
@@ -659,22 +662,24 @@
     der all die Blogs etc. pp. im Auge behält. Es passiert immer wieder, dass irgendwo eine Information zwischen die
     Stühle fällt, weil es einfach aufgrund der Menge untergeht.``\\
     Four people mentioned the CI/CD pipelines.
-    There are multiple issues concerning the older, but still supported, CI/CD pipeline.\\
-    Three respondents had some comments about the local installation of development tools, which was
-    a target of the question 4.
-    Three had some suggestions about adding tools and improving the development toolset.
-    One respondent was very pleases and said about the setup process: ``In 15 Minuten Entwicklungsumgebung aufsetzen und los coden ist schon geil! :-)``\\
-    Three respondents simply stated their gratitude and thanked the various service and platform teams of the Core for their effort.
+    The older, but still supported, CI/CD pipeline was mentioned several times regarding issues. \\
+    Three respondents had some suggestions for additional tools in the development tools installer and additional
+    feedback for it.
+    This topic was covered in question 4.
+    One respondent was very pleases and said about the setup process for development tools: ``In 15 Minuten
+    Entwicklungsumgebung aufsetzen und los coden ist schon geil! :-)``\\
+    Three respondents simply stated their gratitude and thanked the various service and platform teams of the CORE for
+    their effort.
     For example, one respondent simply wrote ``danke, von Herz``.\\
-    Two mentions the topic of FinOps.
+    Two respondents mentioned the topic of financial transparency, covered by the question 12.
     One quote about this topic by an BizDevOps engineer was: ``Kosten sind sehr schwierig zu verstehen und nachvollziehen auf die Rechnung. Reporting
     sollte unbedingt verbessert sein, man weiss nicht wo man könnte optimieren (zu beispiel welche anteil von kosten für
     xyz kommt von storage? von anzahle objekte? usw.)``\\
-    There were also two suggestions about missing infrastructure as code capabilities with the input of
-    Two feedback concerned the current vision and its wording of the so called Core DSRVs.
-    Two questioned a perceived lack of consultancy and unified support.
+    There were also two suggestions about missing infrastructure as code capabilities.\\
+    Two feedback concerned the current vision and its wording of the so called CORE DSRVs.\\
+    Two questioned a perceived lack of consultancy and unified support.\\
     And finally, there were two critical votes about the modernization effort of the SBB IT which is known as the
-    ''Gandalf Plan'' and the perceived primacy of technology enabler over features for the business.
+    ''Gandalf Plan'' and the perceived primacy of technology enabler over features for the business.\\
     Six feedbacks each concerned different other topics which will not be discussed in more detail.
     % techdoc + Benach: IIIIII
     % CI/CD kritik: IIII
@@ -702,26 +707,34 @@
         \caption{Results of the Engagement Question}
         \label{fig:engque}
     \end{figure}
-    The result of the engagement question is not relevant for evaluating the value proposition of an
-    Internal Developer Portal and is not further discussed.
+    The result of the engagement question is not relevant for evaluating the value proposition.
+    It is valuable to gauge the overall net promoter score\parencite{nps} of the CORE platforms and services.
+    \begin{itemize}
+        \item Values between 1 to 6 are considered detractors. Fourteen responses fell into this category.
+        \item Values between 7 and 8 are considered passives, forty-one responses fell into this range.
+        \item Values between 9 and 10 are considered as promoters. Twenty-one responses fell into this category.
+    \end{itemize}
+    With the NPS method applied, there are 18.42\% detractors and 27.63\% promoters which amounts to a net NPS Score of
+    9.21\%.
 
 
     \section{Conclusion}
     \label{sec:conclusion}
-    Based on the data of the rating questions in chapter \ref{sssec:rratque} the value propositions of Discoverability, Golden Path
-    and FinOps are below the average of all questions (3.40) and outside of the margin of error (10\%).
-    The average of the subject documentation is almost equal to the general average with 3.41.
-    The topic Expertise has a average rating of 3.64, which exceeds the overall average value.
-    The topics which are not directly related to the Internal Developer Portal are at the overall average or above.
-    Platform topics have an average of 3.46 and is near the overall average.
-    Lifecycle has an average value of 3.59 and the topic of Incident support is at an average of 3.92.
-    Summarizing the data;
+    Based on the data from the evaluation questions in chapter \ref{sssec:rratque}, the value propositions of
+    Discoverability and Obatining Information, Golden Path, and FinOps are below the average for all questions (3.40)
+    and outside the margin of error (10\%).
+    The average of the Documentation and Communication theme is 3.41, almost on par with the overall average.
+    The topic Making Expertise Visible has an average score of 3.64, which is above the overall average.
+    Topics not directly related to the internal developer portal are at or above the overall average.
+    General platform topics have an average score of 3.46, which is near the overall average.
+    Lifecycle of Resources has an average score of 3.59 and the Incident Support topic has an average of 3.92.\\
+    Summary of Data;
     \begin{itemize}
-        \item Three of the five tested value propositions are below the overall average and outside the error margin.
-        \item Two of the three other topics are above and one is near the overall average.
-        \item Fifteen answers for the open-ended questions contain issues related to the value proposition of an Internal Developer Portal
+        \item Three of the five, in the survey tested, value propositions of an Internal Developer Portal are below the overall average and outside the error margin.
+        \item Two of the three other topics are above and one is near the overall average of the survey.
+        \item Fifteen answers for the open-ended questions contain issues related to the value propositions of an Internal Developer Portal
     \end{itemize}
-    Thus, seems to be a case, that an Internal Developer Portal could be of value for the BizDevOps engineers if the following
+    Thus, there is an argument, that an Internal Developer Portal could be of value for the BizDevOps engineers if the following
     criteria are met:
     \begin{itemize}
         \item The solution must have have some kind of a FinOps capability.
@@ -730,38 +743,45 @@
     \end{itemize}
     There could be additional benefit for the BizDevOps engineers, if the solution also has the capability to aid with
     Documentation functionality and makes it more accessible.
-    There seems no current need to use an Internal Developer Platform for making Expertise more visible.
+    There seems no current need to use an Internal Developer Portal for making Expertise more visible.
 
-    \subsection{Action Recommendations}
+    \subsection{Recommendations for Action}
     \label{subsec:arec}
+    The recommendations for action are for SBB IT with the current status in May 2023 regarding the Internal Developer Platform.
 
     \subsubsection{Prioritize Relationships}
-    From the rating questions, open question responses to direct feedback, over and over the current tooling landscape is
-    criticized for the lack of an integrated view of application, teams, used platforms and resources.
-    There is currently no capability of this kind and could be the unique selling point of this Internal Developer Platform.
+    From the evaluation questions to the answers to open questions to additional direct feedback outside of the survey,
+    there is repeated criticism that there is no capability to have an integrated view of applications, teams, platforms
+    used, and resources.
+    There is currently no platform of this kind and could be the unique selling point of this internal developer platform.
 
     \subsubsection{Target BizDevOps Engineer}
     There is value in targeting the needs of the BizDevOps Engineers.
     They are lacking a coherent view for operating applications and improvements should be felt immediately by falling
     KPIs like MTTR\footnote{MTTR stands for mean time to repair. Its the measured time between a failure of a system
-    until it is fixed again and in working order.}.
+    until it is fixed again and in working order.} or an improved future net promoter score, the current value is 9.21\%
+    as calculated in chapter \ref{sssec:rengque}.\\
     Refrain initially from targeting other roles such as management, architects, security or non BizDevOps teams with
-    an internal developer platforms.
-    If necessary, try to onboard such additional users and use cases later.
+    an Internal Developer Portal to not dilute the focus of the Internal Developer Portal and maximizing the impact on
+    the work of the BizDevOps engineers.
+    If necessary, try to onboard such additional users and use cases later on.
 
     \subsubsection{Don't Try to Replace Existing Tooling}
-    It is tempting to use an Internal Developer Portal as an opportunity to simplfy and consolidate the Internal
-    Developer Platform.
-    Remember, the Internal Developer Portal is the frontend and it needs to integrate with the datasource.
-    Most of the presented vendors and products have the capability and the frameworks necessary to achieve this.
+    It is tempting to use an Internal Developer Portal as an opportunity to simplify and consolidate the existing tooling
+    landscape, for example the components of the Internal Developer Platform.
+    Remember, the Internal Developer Portal is only the frontend and makes the Internal Developer Platform accessible
+    as seen in chapter \ref{subsec:vpplatform}.
+    Most of the presented vendors and products in chapter \ref{sssec:vendors} have the capability and the frameworks
+    necessary to achieve this separation of concern.
 
     \subsubsection{Prioritize Missing Capabilities}
-    Try to prioritize missing capabilities such as the mentioned FinOps instead of building again well understand
-    features such as ordering a resource.
+    Try to prioritize missing capabilities such as the mentioned FinOps instead of building again well understand and already
+    implemented features such as ordering a resource.
 
     \subsubsection{Focus on Runtime Data}
     There is no need to build again an enterprise application database.
-    IT Architects are using this database for modelling their solutions and thus it may not reflect the current state of an application.
+    IT Architects are using the established database for modelling their solutions and thus it may not reflect the current
+    state of an application.
     Focus instead on the runtime data.
     For example, use data such as which application is deployed on a platform, telemetry data of applications or platforms or
     configured resources if GitOps\footnote{
@@ -782,11 +802,13 @@
 
     \subsection{Customer Journey Map}
     \label{subsec:cusjourmap}
-    \begin{figure}
-        \includegraphics[angle=270,origin=c,width=\linewidth]{customer-journey.png}
-        \caption{Customer Journey Map}
-        \label{fig:customerjourney}
-    \end{figure}
+    \begin{landscape}
+        \begin{figure}[h]
+            \includegraphics[origin=c,width=0.9\linewidth]{customer-journey.png}
+            \caption{Customer Journey Map}
+            \label{fig:customerjourney}
+        \end{figure}
+    \end{landscape}
 
     \subsection{Survey}
     \label{subsec:survey}
@@ -837,6 +859,7 @@
         \end{center}
         \caption{\label{tab:oetable} Open and engagement questions used in the survey.}
     \end{table}
+    \FloatBarrier
 
     \subsection{Rating Questions Results}
     \label{subsec:ratingresults}
@@ -866,36 +889,36 @@
                 \bottomrule
             \end{tabularx}
         \end{center}
-        \caption{\label{tab:rawratingquestionresultstable} Rating questions raw result from the survey.}
+        \caption{\label{tab:rawratingquestionresultstable} Raw results for the rating questions.}
     \end{table}
 
     \begin{table}[!htbp]
         \begin{center}
             \begin{tabularx}{\textwidth}{lllll}
                 \toprule
-                Id & Average & Variance & Detractors & Promoters \\
+                Id & Average & Detractors & Promoters & Variance \\
                 \midrule
-                1  & 3.04    & 0.590    & 20.0\%     & 28.0\%    \\
-                2  & 3.64    & 1.097    & 12.0\%     & 65.3\%    \\
-                3  & 3.25    & 0.661    & 18.7\%     & 42.7\%    \\
-                4  & 3.37    & 1.312    & 18.7\%     & 52.0\%    \\
-                5  & 3.55    & 1.379    & 17.3\%     & 57.3\%    \\
-                6  & 3.92    & 0.915    & 8.0\%      & 70.7\%    \\
-                7  & 3.59    & 1.057    & 10.7\%     & 62.7\%    \\
-                8  & 3.55    & 1.037    & 21.3\%     & 57.3\%    \\
-                9  & 3.32    & 1.348    & 20.0\%     & 49.3\%    \\
-                10 & 3.21    & 0.850    & 20.0\%     & 42.7\%    \\
-                11 & 3.76    & 0.865    & 8.0\%      & 66.7\%    \\
-                12 & 2.62    & 1.420    & 45.3\%     & 21.3\%    \\
-                13 & 3.38    & 0.841    & 16.0\%     & 44.0\%    \\
-                14 & 2.92    & 1.046    & 37.3\%     & 33.3\%    \\
-                15 & 3.92    & 1.099    & 10.7\%     & 74.7\%    \\
-                16 & 3.25    & 0.898    & 20.0\%     & 45.3\%    \\
-                17 & 3.53    & 1.118    & 18.7\%     & 58.7\%    \\
+                1  & 3.04    & 20.0\%     & 28.0\%    & 0.590    \\
+                2  & 3.64    & 12.0\%     & 65.3\%    & 1.097    \\
+                3  & 3.25    & 18.7\%     & 42.7\%    & 0.661    \\
+                4  & 3.37    & 18.7\%     & 52.0\%    & 1.312    \\
+                5  & 3.55    & 17.3\%     & 57.3\%    & 1.379    \\
+                6  & 3.92    & 8.0\%      & 70.7\%    & 0.915    \\
+                7  & 3.59    & 10.7\%     & 62.7\%    & 1.057    \\
+                8  & 3.55    & 21.3\%     & 57.3\%    & 1.037    \\
+                9  & 3.32    & 20.0\%     & 49.3\%    & 1.348    \\
+                10 & 3.21    & 20.0\%     & 42.7\%    & 0.850    \\
+                11 & 3.76    & 8.0\%      & 66.7\%    & 0.865    \\
+                12 & 2.62    & 45.3\%     & 21.3\%    & 1.420    \\
+                13 & 3.38    & 16.0\%     & 44.0\%    & 0.841    \\
+                14 & 2.92    & 37.3\%     & 33.3\%    & 1.046    \\
+                15 & 3.92    & 10.7\%     & 74.7\%    & 1.099    \\
+                16 & 3.25    & 20.0\%     & 45.3\%    & 0.898    \\
+                17 & 3.53    & 18.7\%     & 58.7\%    & 1.118    \\
                 \bottomrule
             \end{tabularx}
         \end{center}
-        \caption{\label{tab:ratingquestionresultstable} Rating questions calculated result from the survey.}
+        \caption{\label{tab:ratingquestionresultstable} Calculated results for the rating questions.}
     \end{table}
 
 \end{document}
