@@ -57,20 +57,20 @@
 
 
     \section*{Management Summary}
-    An internal developer portal is software that aims to provide a centralized and unified view to support the daily
+    An internal developer portal is a software that aims to provide a centralized and unified view to support the daily
     work of DevOps engineers.
     Internal developer portals have been developed by several companies to reduce the so-called ``cognitive load`` of
     their DevOps engineers.
-    At its core is a catalog that includes teams, users, applications, platforms and resources.
-    It visualizes the relationships between these types and gives users an overview of the immediate context in
+    At its core it is a catalog that includes teams, users, applications, platforms and resources.
+    It visualizes the relationships between these items and gives users an overview of the immediate context in
     which they are working.
-    Additional use cases were also built on implementations of an internal developer portal, for example, features
+    Additional use cases are also built on implementations of an internal developer portal, for example, features
     to help a DevOps team manage cloud costs, blueprints for building applications from scratch, or means to organize
     technical documentation and communicate with internal users.\\ \\
-    SBB IT adopted cloud technologies in 2016 and has since built a comprehensive, agile DevOps organization to
-    develop and run its business applications in the cloud.
-    In some cases, SBB IT still uses development tools from the previous organization.
-    While these tools meet the requirements to be called an ``Internal Developer Platform``, they are largely not integrated.
+    SBB IT adopted cloud technologies in 2016 and has since built a comprehensive, agile DevOps organization for
+    developing and running its business applications in the cloud.
+    In some cases, SBB IT still uses development tools from its previous organization.
+    While these tools meet the requirements to be called an ``Internal Developer Platform``, mostly they are not integrated.
     This certificate thesis tests the value proposition of an Internal Developer Portal against the challenges that
     exist in SBB IT and was corroborated with a survey of DevOps engineers.  \\ \\
     The results of the analysis and the survey can be summarized as follows.
@@ -81,9 +81,9 @@
             \item The platform's continuous integration and continuous deployment capabilities were rated very positively
         \end{itemize}
 
-        \item There are several findings with significance that could be addressed with an internal developer portal
+        \item However, there are several findings with significance that could be addressed with an internal developer portal
         \begin{itemize}
-            \item The lowest rated issue was related to financial transparency around platform and resource usage
+            \item The lowest rated issue was related to the financial transparency around platform and resource usage
             \item DevOps engineers miss an integrated view of their application in the context of platform, resources, and other applications
             \item Additional functionality to find and publish blueprints for standardized platform usage is in demand
         \end{itemize}
@@ -102,8 +102,8 @@
     In addition to the sources mentioned in the bibliography, chapter \ref{sec:bibliograhpy}, the following aids and tools have been used
     \begin{itemize}
         \item Version control with Git and GitHub, the source code for this document is at \url{https://github.com/thpeng/mas/tree/master/src/mca-dpl23-1}
-        \item Deepl at \url{https://www.deepl.com/} to support translations.
-        \item Microsoft Forms to conduct a survey (\url{https://forms.office.com}) .
+        \item Deepl to support translations at \url{https://www.deepl.com/}
+        \item Microsoft Forms to conduct a survey (\url{https://forms.office.com})
         \item The document is written in \LaTeX  (\url{https://miktex.org/}) with the editor IntelliJ IDEA (\url{https://www.jetbrains.com/de-de/idea/})
     \end{itemize}
 
@@ -135,7 +135,7 @@
     core business processes.
     These digitization efforts brought major changes to the SBB IT department.
     In less than ten years, the development model has changed from a pure waterfall to an agile methodology,
-    cloud technologies were adopted while hardware-bound platforms were phased out, and a new internal organization,
+    cloud technologies were adopted while hardware-bound platforms were phased out, and an new internal organization,
     based on the separation of business and line management, has been introduced.\\
     Even though these changes are now taking root and leading to various positive outcomes, they still pose a challenge.
     There is a new complexity with the rapidly changing technological landscape but also due to very many old,
@@ -145,14 +145,14 @@
     Feedback from various employees in different roles from SBB so called ``Digitalen Zone`` indicates, that the overall
     increase in complexity has an impact on the daily work of DevOps\footnote{DevOps is a combination of the words
     Development and Operations and is a set of practices} engineers.
-    The picture emerges that, although all information for the design, development and operation of
-    applications is available in principle, it is maintained in very different places and forms.
-    This makes the procurement of information for these activities time-consuming and requires that a DevOps
+    The picture emerges that although all information for the design, development and operation of
+    applications is available in principle, it is maintained in all different places and forms.
+    This makes the procurement of information for these activities very time-consuming and requires that a DevOps
     engineer is already very familiar with the IT landscape of SBB .
 
     \subsection{Problem Statement and Controversy}
     \label{subsec:iproblemstatement}
-    Research on the Internet about this problem, as well as guidance from vendors, indicates that there is greater momentum
+    Research in the Internet about this problem as well as guidance from vendors indicates that there is greater momentum
     to address such issues with an Internal Developer Portal (IDP).
     The central promise of the concept of an Internal Developer Portal is that it can reduce the so-called
     ``cognitive load`` of DevOps engineers.\\
@@ -162,26 +162,26 @@
     \subsection{Objective of the Certificate Work}
     \label{subsec:iobjective}
     The goal of this certificate thesis is to investigate whether and to what extent the above-mentioned problem
-    can be solved by the introduction of an Internal Developer Portal.\\
-    In a first step, the benefits of the concept of an internal developer platform are elaborated and placed in the
+    can be solved by introduction of an Internal Developer Portal.\\
+    In a first step, the benefits of the concept of an internal developer platform are elaborated and placed
     into the general context of software development and the operation of IT systems in the SBB.\\
     In a second step, the problem of complexity and lack of integration is underpinned with a quantitative survey.\\
-    The third part consists of bringing together the results of the survey and the value proposition and making a
+    The third part consists in bringing together the results of the survey and the value proposition as well as making a
     recommendation for action.
 
 
     \section{Value Proposition for an Internal Developer Portal}
     \label{sec:vp}
-    An Internal Developer Portal is a web-based information catalogue which is tailored for the needs of
+    An Internal Developer Portal is a web-based information catalogue which is tailored to the needs of
     engineers operating IT systems, developing software and other related work.\\
-    Internal Developer Portal are proposed as the solution for perceived problems\parencite{backstagestory} of DevOps
+    Internal Developer Portals are proposed as the solution for perceived problems\parencite{backstagestory} of DevOps
     engineers while developing and operating IT Systems such as
     \begin{itemize}
         \item A lack of a central repository for reliable and tailored information
-        \item A high cognitive load of engineers because of switching between multiple and very different tools while developing or operating IT Systems
+        \item A high cognitive load of engineers due to switching between multiple and very different tools while developing or operating IT Systems
         \item Increasing the developer experience by abstracting away complexity in infrastructure management
     \end{itemize}
-    One potential source of information for using in the Internal Developer Portal is a so called Internal Developer Platform.
+    One potential source of information for using the Internal Developer Portal is a so called Internal Developer Platform.
 
     \subsection{Internal Developer Platform}
     \label{subsec:vpplatform}
@@ -203,12 +203,12 @@
     The capabilities and components of an Internal Developer Platforms, as listed before,  are not specific for the products
     of those two suppliers.
     In most contemporary IT operations or software development departments these components and practices are well-known
-    and used widely.\\
+    and widely used.\\
     Taking for example the practices of Application Configuration, Environment and Deployment Management:
     Beyond the size of a very small team, it is necessary to use tooling to know where, in which version
-    and with what configuration a software artifact was installed.
-    The reason for this this may be to coordinate a new software rollout, test the software on a dedicated stage, fix bugs
-    or develop new features and to solve incidents caused by your software.\\
+    and with what configuration a software artifact is installed.
+    The reason for this may be to coordinate a new software rollout, to test the software on a dedicated stage, to fix bugs
+    or to develop new features and to solve incidents caused by your software.\\
     Thus, it can be argued, that the concept of an Internal Developer Platform is not unique to specific products
     or offerings, but can be used on a set of tooling and practices supporting IT operations and software development.
     This set of tooling and practices can be viewed as predecessors of Internal Developer Platforms and are usually
@@ -223,30 +223,30 @@
 
     \subsection{DevOps}
     \label{subsec:devops}
-    With DevOps, the traditional disciplines of IT operations and software development are much more integrated to
-    to reduce friction, release features more frequently, and improve product quality\parencite{safedevops}.
+    With DevOps the traditional disciplines of IT operations and software development are much more integrated to
+    reduce friction, release features more frequently, and improve product quality\parencite{safedevops}.
     Prior to DevOps, it was common to use different tools and processes for the development and operations roles
     because these two roles were housed in different departments or teams.
     There is a fundamental conflict in rigidly separating the roles of developer and operator.
-    Developers are measured by the speed to develop features and how quickly they respond to changing requirements.
-    Operators, on the other hand, are measured on how many failures their systems have and how quickly those can be patched.\\
+    Developers were measured by the speed to develop features and how quickly they respond to changing requirements.
+    Operators, on the other hand, were measured on how many failures their systems have and how quickly those can be patched.\\
     One of the basic principles of DevOps was coined by Werner Vogels, the current CTO of Amazon;
     ``You build it, you run it``\parencite{vogels}.
     This means that the same team that develops the software is also responsible for its operation.
-    With DevOps, a team takes full responsibility over the lifecycle of an application or platform.
+    With DevOps, a team takes the full responsibility over the lifecycle of an application or platform.
     In combination with agile methodologies such as Scrum\footnote{Scrum is an iterative software development methodology}
     or SAFe\footnote{SAFe stands for Scaled Agile Framework and adds orchestration layers above agile (Scrum) teams for
     a better cross-team and product-centric alignment}, business-oriented individuals are also integrated into this
     cross-functional team.
     An example of a business-oriented role in a DevOps team is the product owner\parencite{safepo}.\\
-    This also means that a team must have a wide range of skills and access to various tools needed for their work.
+    This also means that a team must have a wide range of skills and access to various tools for their work.
     Such tools can be used for activities such as requirements engineering, solution architecture, software development
-    but also anything needed to operate the software.
+    but also anything else needed to operate the software.
     Especially the operation of the software is a tool-intensive work.
     There are tools for logging, monitoring, incident handling, alerting and other practices.
     In the event of an incident, a configuration management database or an enterprise architecture database are critical
-    to find out who a particular application or resource belongs to.
-    This information is important to determine the root cause of the incident and quickly resolve it.
+    to for the purpose which team is responsible for a particular application or resource.
+    This information is important to determine the root cause of the incident and to quickly resolve it.
     Although DevOps offers numerous benefits, it is quite a complexity for a team member to master all necessary tools and
     practices in an agile DevOps team.
     Here, the Integrated Developer Portal offers several suggestions to help individuals and teams with their day-to-day operations.
@@ -260,7 +260,7 @@
         \item Pluggable framework
     \end{itemize}
     The overarching goal of these features is to improve the DevOps experience by reducing the time it takes to search
-    for information and interpret it correctly.
+    for information and to interpret it correctly.
     The search task is supported by a centralized software catalog.
     Interpretation of the data is supported by an underlying logical model that describes the assets, technologies
     and their relationships between them.
@@ -268,8 +268,8 @@
 
     \subsubsection{Vendors and Products}
     \label{sssec:vendors}
-    While it's not the focus of this certificate work to delve into the details of each possible product on the market
-    and make a comparison between them, it's worthwhile to describe a few.
+    While it is not the focus of this certificate work to delve into the details of each possible product on the market
+    and make a comparison between them, it is worthy to describe a few.
     Redpoints mentions five products as ``Universal Service Catalogue`` offerings\parencite{devportalsprimer}.
     This kind of Internal Developer Portal is not tied into specific cloud offerings such as AWS, Azure or Google
     Cloud Platform (``API Catalog tied to an API Gateway / Service Mesh``)and has no opinion about a particular application
@@ -291,9 +291,9 @@
             \caption{\label{tab:vendors} Vendor and Products.}
         \end{center}
     \end{table}
-    Roadie is omitted from the table \ref{tab:vendors} because it's a commercial offering of the software Backstage.
+    Roadie is omitted from the table \ref{tab:vendors} because it is a commercial offering of the software Backstage.
     It seems, there are two main directions.
-    Backstage and Clutch have been developed by two tech companies for their internal audience, have been made
+    Backstage and Clutch, developed by two tech companies for their internal audience, have been made
     available as opensource.\\
     Moment and OpsLevel are purposefully built by startups as their product and have commercial offerings.
     For the further discussion about the value proposition of an Internal Developer Portal, some screenshots and concepts will
@@ -306,9 +306,9 @@
     \label{sssec:disc}
     The Software Catalog is the main feature of an Internal Developer Portal.
     Its purpose is to make the capabilities of the Internal Developer Platform accessible for an engineer as seen in the
-    screenshot in figure \ref{fig:catalog}.
+    screenshot in figure \ref{fig:catalog}.\\
 
-    \begin{figure}
+    \begin{figure}[h]
         \includegraphics[width=\linewidth]{backstage_catalog}
         \caption{The Software Catalog from the Backstage Demo\parencite{backstagedemo}}
         \label{fig:catalog}
@@ -572,7 +572,7 @@
     Some relate to the value proposition of an Internal Developer Portal and others to other known or suspected issues
     related to the existing platform for internal developers.
     The survey is intentionally short, as longer surveys typically tend to show low response rates among BizDevOps engineers.
-    The target audience for the survey is SBB's BizDevOps engineers around SBB IT's cloud platforms.
+    The target audience for the survey is SBB's BizDevOps engineers around SBB it is cloud platforms.
     One of the main sources of information for BizDevOps engineers is the CLEW\footnote{CLEW stands for Cloud, ESTA,
         itself an acronym of development stack and WZU, tool support} blog.
     This blog has a total of 780 subscribers.
