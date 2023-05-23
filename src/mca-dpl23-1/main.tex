@@ -142,7 +142,7 @@
     business-critical legacy systems.
     In addition, regulatory pressure has increased significantly in recent years, as exemplified by the
     HCBöV\footnote{Handbuch Cybersecurity für Betriebe des öffentlichen Vekehrs}, as well as the new Data Protection Act in Switzerland - nDSG.\\
-    Feedback from various employees in different roles from SBB so called ``Digitalen Zone`` indicates, that the overall
+    Feedback from various employees in different roles from SBB so called ``Digitalen Zone`` indicates that the overall
     increase in complexity has an impact on the daily work of DevOps\footnote{DevOps is a combination of the words
     Development and Operations and is a set of practices} engineers.
     The picture emerges that although all information for the design, development and operation of
@@ -209,7 +209,7 @@
     and with what configuration a software artifact is installed.
     The reason for this may be to coordinate a new software rollout, to test the software on a dedicated stage, to fix bugs
     or to develop new features and to solve incidents caused by your software.\\
-    Thus, it can be argued, that the concept of an Internal Developer Platform is not unique to specific products
+    Thus, it can be argued that the concept of an Internal Developer Platform is not unique to specific products
     or offerings, but can be used on a set of tooling and practices supporting IT operations and software development.
     This set of tooling and practices can be viewed as predecessors of Internal Developer Platforms and are usually
     distinct solutions or products.\\
@@ -219,7 +219,7 @@
     between development and rolling out on production, such as quality assurance, building artifacts and installing them.}
     pipeline for addressing the need for a Deployment Management.
     These solutions are not necessarily integrated with each other and may be products from different vendors.
-    It may be also the case, that these products or solutions were established before the advent of Agile Methodologies and DevOps.
+    It may be also the case that these products or solutions were established before the advent of Agile Methodologies and DevOps.
 
     \subsection{DevOps}
     \label{subsec:devops}
@@ -253,7 +253,7 @@
 
     \subsection{Internal Developer Portal}
     \label{subsec:vpportal}
-    Manjunath Bhat from Gartner argues, that an Internal Developer Portal has three main characteristics\parencite{gartner}:
+    Manjunath Bhat from Gartner argues that an Internal Developer Portal has three main characteristics\parencite{gartner}:
     \begin{itemize}
         \item Abstraction
         \item Developer-centric view
@@ -269,7 +269,7 @@
     \subsubsection{Vendors and Products}
     \label{sssec:vendors}
     While it is not the focus of this certificate work to delve into the details of each possible product on the market
-    and make a comparison between them, it is worthy to describe a few.
+    and make a comparison between them, it is worthy to describe a few.\\
     Redpoints mentions five products as ``Universal Service Catalogue`` offerings\parencite{devportalsprimer}.
     This kind of Internal Developer Portal is not tied into specific cloud offerings such as AWS, Azure or Google
     Cloud Platform (``API Catalog tied to an API Gateway / Service Mesh``)and has no opinion about a particular application
@@ -298,7 +298,7 @@
     Moment and OpsLevel are purposefully built by startups as their product and have commercial offerings.
     For the further discussion about the value proposition of an Internal Developer Portal, some screenshots and concepts will
     be used from Backstage.\\
-    Backstage has been built by Spotify, which invests heavily in what they call the
+    Backstage has been built by Spotify which invests heavily in what they call the
     ``developer experience`` (DX)\parencite{spotifydx}.
     Additionally, Backstage was adopted in 2020 as an incubating project into the Cloud Native Computing Foundation\parencite{cncf} .
 
@@ -323,8 +323,8 @@
     Data may be shown in a tabular fashion or as a relationship graph.
     The catalog allows a search over multiple entities.
     Usually, the user is already in his context.
-    For example, the application where he' responsible are already loaded.
-    An Engineer may bookmark its favourite items and its own resources are marked by ``owned``.
+    For example, the application where he is responsible for, is already loaded on the first screen.
+    An user may bookmark its favourite items and its own resources are marked by ``owned``.
     In addition to the catalog with its tabular overview, there are detail views available as seen in figure \ref{fig:portaldetails}.
     \begin{figure}
         \includegraphics[width=\linewidth]{backstage_item_details}
@@ -334,14 +334,14 @@
     In the details view more attributes are shown for the chosen item from the overview.
     Depending on the kind of item, different attributes are shown.
     For an application, it may be its used resources, consumed and provided APIs and other subcomponents.
-    For teams, the members are shown and their owned resources and the details how to contact the team.
+    For teams, the members are shown with their owned resources and also the details how to contact the team is available.
 
     \subsubsection{Platform as a Product}
     \label{sssec:paap}
     In some implementations of an Internal Developer Portal, the catalog is not just a copy of an architecture database.
-    In addition to the aforementioned applications, platforms, organizational data and resources, other products of the
+    In addition to the aforementioned applications, platforms, organizational data and resources, other products
     of the teams are represented.
-    For example, platform teams may provide support and consulting for their platform or area of expertise and offer
+    For example, platform teams may provide support and consulting services for their platform or area of expertise and offer
     this service.
     Some teams use the Internal Developer Platform to showcase code or libraries solicit input or to create an
     inner-source community.\\
@@ -354,23 +354,23 @@
     \label{sssec:goldenpath}
     The term ``Golden Path`` was coined by Spotify\parencite{spotifygoldenpath} and is itself a reference to Frank
     Herbert`s Dune trilogy.
-    The meaning of this term is, that there is only one viable path to do things right way and to succeed.
+    The meaning of this term is that there is only one viable path to do things the right way and to succeed.
     A Golden Path in the context of an Internal Developer Portal is a ready-to-use template for getting a project
-    started quickly.
+    to start quickly.
     It can consist of software engineering artifacts and preconfigured infrastructure components and is usually very
     opinionated.
     Opinionated means that the context of the enterprise is already considered, such as internal regulations,
     architectural guidelines, the currently supported tech stack, and other internal specifications.
     For example, a golden path for a database is already built into the company's security infrastructure,
-    logging is ensured, and some best practices for database configuration and modeling are implemented.\\
+    logging is ensured, and some best practices for database configuration and modeling are already implemented.\\
     Golden Paths are not necessarily product-specific;
     they can encompass a typical development stack used in the enterprise.
-    For example a stack for a typical web application may consists of a frontend built with Javascript, a Java backend
+    For example, a stack for a typical web application may consists of a frontend built with Javascript, a Java backend
     and an Oracle database, all integrated into a single build pipeline for CI/CD,    securely configured and with
     the enterprise look and feel already established.
     With such a template mechanism, new applications can be built faster and the same solutions are used for multiple
     applications.
-    Additionally, the developers don't have to write tedious code to integrate each of these components with each other
+    Additionally, the developers do not have to write tedious code to integrate each of these components with each other
     and can focus quickly on the business logic they have to implement.
 
     \subsubsection{Technical Documentation and Communication}
@@ -382,28 +382,30 @@
     For example, the documentation sits alongside the platform automation code, is peer reviewed, created
     and published in sync with the platform's update cycle.\\
     In the discussion mentioned in the chapter \ref{sssec:paap}, Booking.com talked about an integration in their Internal
-    Developer Portal, where communication about lifecycle and changes to their platforms is also integrated into their portal.
+    Developer Portal  where communication about lifecycle and changes to their platforms is also integrated into their portal.
     With this approach it is possible to inform DevOps engineers with targeted communication, especially combined with data about relationships
     between platforms, team resources and application as described in chapter \ref{sssec:disc}.
-    This is especially important when communicating breaking changes, release notes or information about outages.
+    This is especially important when communicating breaking changes\footnote{A breaking change is a change in a software
+    which makes an action necessary by the user or a client. For example, a new release of a software needs a newer version
+    of an operating system to function properly.}, release notes or information about outages.
 
     \subsubsection{Making Expertise Visible}
     \label{sssec:expertise}
     Splunk\footnote{Splunk is a company specialised in creating software for log analysis and monitoring and it is known
     for its product with the same name}
-    describes a use case, how to leverage an Internal Developer Portal to make expertise visible in their
+    describes a use case how to leverage an Internal Developer Portal to make expertise visible in their
     company\parencite{splunkidp} .
-    One of the challenge is, that it is usually not transparent company wide which engineer has which speciality know-how.
+    One of the challenge is that it is usually not transparent in the company which engineer has what kind of speciality know-how.
     For example, one team integrated successfully a NoSql\footnote{NoSql databases are a broad class of databases which
     are not using the classic Structured Query Language (SQL). Examples are key/value stores, document oriented
     databases and others.  } database.
-    This database is not part of a platform service but an integral part of a business applicaiton.
-    The next team which would like to integrate the same technology faces the problem, that they have no internal
-    expert for this technology and are not aware, that another team already did the legwork.
+    This database is not part of a platform service but an integral part of a business application.
+    The next team which would like to integrate the same technology faces the problem that they do not have any internal
+    expert for this technology and are not aware that another team already did the legwork.
     The solution from Splunk is to enrich teams and users in the Internal Developer Portal with additional data about
-    their knowledge and let other user give feedback how a team or user did support them, called a ``Bravo`` in their terminology.
+    their knowledge and let other user give feedback to how a team or user did support them, called a ``Bravo`` in their terminology.
     Thus, they create something like a social network inside their company for connecting people to solve problems or
-    easing the way how to find people with specific skills or knowledge.
+    easing the way in how to find people with specific skills or knowledge.
 
     \subsubsection{Extendability of the Platform}
     \label{sssec:extendability}
@@ -482,7 +484,7 @@
         \item An IT Service Management Platform contains the data concerning team contact information and support groups for applications
         \item A Configuration Management Database contains data about used assets, resources and relations to applications
     \end{itemize}
-    Thus, it could be argued, that the foundation for an Internal Developer Platform is in place, but there are two
+    Thus, it could be argued that the foundation for an Internal Developer Platform is in place, but there are two
     critical pieces missing.
     First, most of the components mentioned are only partially integrated with each other.
     Examples for missing integration are different identifier for assets, unaligned authorization such as per-user vs.
@@ -535,7 +537,7 @@
     \subsection{Customer Journey}
     \label{subsec:cusjour}
     The customer journey is focused on the interaction of different personas with the existing Internal Developer Platform.
-    The assumption is, that this interaction between the BizDevOps Engineers and the Internal Developer Platform has a big
+    The assumption is that this interaction between the BizDevOps Engineers and the Internal Developer Platform has a big
     impact on the DevOps Experience.\\
     The personas of the customer journey are roles which are quite common in a BizDevOps team in the SBB IT.\\
     \textit{Peter Plattform} is working as a platform engineer and is interested what the platforms are offering for building
@@ -557,7 +559,7 @@
     \textit{Agnes Architekt} is working as an IT architect in the team.
     The product owner of the application she's responsible for, asked her to identify possibilities to lower the operational cost.
     She is also responsible for the enabler\footnote{An enabler is a work item which has no direct business value.
-    For example a migration to a new version for a web framework or other technical necessities.} of the application.
+    For example, a migration to a new version for a web framework or other technical necessities.} of the application.
     She has to create the necessary backlog items and communicates with the product owner, so that he can prioritize
     them and put them in one of the next product increments\footnote{SAFe terminology for a cycle of usually five two-week SCRUM Sprints of agile software development.}.
     For this work, she needs to know about the upgrade plans of the used services of the platforms her application is using.     \\
@@ -614,10 +616,10 @@
         \item Two star - with room for improvement
         \item Three star - I can work with it, corresponds to what I expect
         \item Four star - above average
-        \item Five star - super, that's what makes you
+        \item Five star - super that's what makes you
     \end{itemize}
 
-    In addition, two other questions were asked, which are documented in table \ref{tab:oetable}.
+    In addition, two other questions were asked which are documented in table \ref{tab:oetable}.
     These questions are primarily for the internal needs of the product management of SBB IT platforms.
     They provide feedback on overall satisfaction and allow respondents to make additional points.
     One is a question with a that allows free text responses.
@@ -689,7 +691,7 @@
     32 of the 76 respondents answered the open question.
     Due to the sensitive nature of the answers regarding the technologies, teams and processes used, only some excerpts
     of the answers are reproduced in this chapter.
-    The answers in full are documented in the internal wiki\cite{sbbdevopsexperience}.\\
+    The answers in full are documented in the internal wiki\parencite{sbbdevopsexperience}.\\
     Six of the respondents mentioned the topic of Technical Documentation and Communication.
     One BizDevOps engineer would like to have ``Information und Dokumentation zentralisierter oder verknüpft.``.
     Another mentioned the decentralized communication about platform news: ``Man müsste eigentlich jemanden separat einstellen
@@ -758,9 +760,9 @@
     Discoverability and Obatining Information, Golden Path, and FinOps are below the average for all questions (3.40)
     and outside the margin of error (10\%).
     The average of the Documentation and Communication theme is 3.41, almost on par with the overall average.
-    The topic Making Expertise Visible has an average score of 3.64, which is above the overall average.
+    The topic Making Expertise Visible has an average score of 3.64 which is above the overall average.
     Topics not directly related to the internal developer portal are at or above the overall average.
-    General platform topics have an average score of 3.46, which is near the overall average.
+    General platform topics have an average score of 3.46 which is near the overall average.
     Lifecycle of Resources has an average score of 3.59 and the Incident Support topic has an average of 3.92.\\
     Summary of Data;
     \begin{itemize}
@@ -768,7 +770,7 @@
         \item Two of the three other topics are above and one is near the overall average of the survey.
         \item Fifteen answers for the open-ended questions contain issues related to the value propositions of an Internal Developer Portal
     \end{itemize}
-    Thus, there is an argument, that an Internal Developer Portal could be of value for the BizDevOps engineers if the following
+    Thus, there is an argument that an Internal Developer Portal could be of value for the BizDevOps engineers if the following
     criteria are met:
     \begin{itemize}
         \item The solution must have have some kind of a FinOps capability.
@@ -800,7 +802,7 @@
     the work of the BizDevOps engineers.
     If necessary, try to onboard such additional users and use cases later on.
 
-    \subsubsection{Don't Try to Replace Existing Tooling}
+    \subsubsection{Do not Try to Replace Existing Tooling}
     It is tempting to use an Internal Developer Portal as an opportunity to simplify and consolidate the existing tooling
     landscape, for example the components of the Internal Developer Platform.
     Remember, the Internal Developer Portal is only the frontend and makes the Internal Developer Platform accessible
