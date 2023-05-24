@@ -16,6 +16,8 @@
 \usepackage{pdflscape}
 \usepackage{placeins}
 \usepackage{geometry}
+\usepackage{textcomp}
+
 \geometry{
     a4paper,
     total={170mm,257mm},
@@ -77,20 +79,19 @@
     \begin{itemize}
         \item DevOps engineers are largely satisfied with the current internal developer platform
         \begin{itemize}
-            \item Especially the support for the lifecycle of resources was rated as very good
             \item The platform's continuous integration and continuous deployment capabilities were rated very positively
+            \item The support for the lifecycle of resources was rated as very good
         \end{itemize}
 
         \item However, there are several findings with significance that could be addressed with an internal developer portal
         \begin{itemize}
             \item The lowest rated issue was related to the financial transparency around platform and resource usage
             \item DevOps engineers miss an integrated view of their application in the context of platform, resources, and other applications
-            \item Additional functionality to find and publish blueprints for standardized platform usage is in demand
         \end{itemize}
     \end{itemize}
 
     In conclusion, the certificate work states that with its current technology and organizational landscape, SBB IT
-    can add value by investing resources in an Internal Developer Portal.
+    generates value by investing resources in an Internal Developer Portal.
 
     \pagebreak
 
@@ -631,7 +632,7 @@
     The goal is to get additional input and to generate interview partners for a qualitative survey.
     This question is optional for the respondents.
     These interviews and the resulting findings are not part of this certificate thesis.\\
-    The final question\{footnote{The engagement question was added based on input from the internal product management team}
+    The final question\footnote{The engagement question was added based on input from the internal product management team}
     is an engagement question and is intended to measure the overall satisfaction of BizDevOps engineers related to the CORE platforms and services.
     % 2.3.2 Discoverability -> 1, 13, 14 (strong)
     %2.3.3 Platform as a Product n/a
@@ -647,27 +648,30 @@
     \subsubsection{Result of the Rating Questions}
     \label{sssec:rratque}
     After the two-week survey period, the response rate was 9.74\% with 76 respondents.
-    Based on an industry standard 95\% confidence level\parencite{nistmean}, the margin of error for this survey for all
-    Rating questions is 10\% for each.
     The raw results for the rating questions are included in table \ref{tab:rawratingquestionresultstable}.
     The calculated scores for the rating questions are included in table \ref{tab:ratingquestionresultstable}.
-    Overall, the seventeen questions have an average score of 3.40, the average of negative responses (1.2) is 18.5\% of the
-    respondents and the average of positive responses (4.5) is 51.3\%.
-    Respondents with scores of 1 and 2 are counted among the detractors and respondents with 4 and 5 are counted as the promoters.
-    The variance for the rating questions ranges from 0.590 to 1.420.
+    Overall, the seventeen questions have an mean score of 3.40, the average of negative responses (1.2) is 18.5\% of the
+    respondents and the average of positive responses (4.5) is 51.3\%.\\
+    Based on an industry standard 95\% confidence level\parencite{nistmean}, a population size of 76, a critical value
+    of 1.96 and a standard deviation of 1.0155, the confidence interval is 3.40 \textpm 0.228.\\
+    % low: 3.172, high: 3.628
+    % calc \[ 0.228 = 1.96 * (1.0155 / \sqrt{76})]
+    %see https://www.scribbr.com/statistics/confidence-interval/
+    Respondents with scores of 1 and 2 are counted as Negative and respondents with 4 and 5 are counted as the Positive.\\
+    The standard deviation for the rating questions ranges from 0.590 to 1.420.
     An aggregate result for the five value propositions with eight associated questions is documented in the table \ref{tab:aggregateidpresults}.\\
 
     \begin{table}[!htbp]
         \begin{center}
             \begin{tabularx}{\textwidth}{llllll}
                 \toprule
-                Topic           & Ids       & Average & Detractors & Promoters & Variance \\
+                Topic           & Ids       & Mean & Negative & Positive \\
                 \midrule
-                Discoverability & 1, 13, 14 & 3.11    & 24.4\%     & 35.1\%    & 0.826    \\
-                Expertise       & 2         & 3.64    & 12.0\%     & 65.3\%    & 1.097    \\
-                Documentation   & 3, 17     & 3.41    & 18.7\%     & 51.9\%    & 1.056    \\
-                Golden Path     & 10        & 3.21    & 20.0\%     & 42.7\%    & 0.850    \\
-                FinOps          & 12        & 2.62    & 45.3\%     & 21.3\%    & 1.420    \\
+                Discoverability & 1, 13, 14 & 3.11   & 24.4\%   & 35.1\%   \\
+                Expertise       & 2         & 3.64   & 12.0\%   & 65.3\%   \\
+                Documentation   & 3, 17     & 3.41   & 18.7\%   & 51.9\%   \\
+                Golden Path     & 10        & 3.21   & 20.0\%   & 42.7\%   \\
+                FinOps          & 12        & 2.62   & 45.3\%   & 21.3\%   \\
                 \bottomrule
             \end{tabularx}
         \end{center}
@@ -682,11 +686,11 @@
         \begin{center}
             \begin{tabularx}{\textwidth}{llllll}
                 \toprule
-                Topic     & Ids           & Average & Detractors & Promoters & Variance \\
+                Topic     & Ids           & Mean & Negative & Positive \\
                 \midrule
-                Lifecycle & 5, 6, 7, 8, 9 & 3.59    & 13.9\%     & 59.5\%    & 1.147    \\
-                Platform  & 4, 11, 16     & 3.46    & 15.6\%     & 54.7\%    & 1.025    \\
-                Incident  & 15            & 3.92    & 10.7\%     & 74.7\%    & 1.099    \\
+                Lifecycle & 5, 6, 7, 8, 9 & 3.59   & 13.9\%   & 59.5\%   \\
+                Platform  & 4, 11, 16     & 3.46   & 15.6\%   & 54.7\%   \\
+                Incident  & 15            & 3.92   & 10.7\%   & 74.7\%   \\
                 \bottomrule
             \end{tabularx}
         \end{center}
@@ -744,19 +748,19 @@
 
     \subsubsection{Result of the Engagement Question}
     \label{sssec:rengque}
-    The average result of the engagement question was 7.70 with a variance of 2.080.
+    The average result of the engagement question was 7.70 with a standard deviation of 1.452.
     The distribution can be seen in figure \ref{fig:engque}.
     \begin{figure}
         \includegraphics[width=\linewidth]{engagement.PNG}
         \caption{Results of the Engagement Question}
         \label{fig:engque}
     \end{figure}
-    The result of the engagement question is not relevant for evaluating the value proposition.
+    The result of the engagement question is not relevant for evaluating the value proposition of an Internal Developer Portal.
     It is valuable to gauge the overall net promoter score\parencite{nps} of the CORE platforms and services.
     \begin{itemize}
-        \item Values between 1 to 6 are considered detractors. Fourteen responses fell into this category.
-        \item Values between 7 and 8 are considered passives, forty-one responses fell into this range.
-        \item Values between 9 and 10 are considered as promoters. Twenty-one responses fell into this category.
+        \item Values between 1 to 6 are considered detractors; fourteen responses fell into this category
+        \item Values between 7 and 8 are considered passives; forty-one responses fell into this range
+        \item Values between 9 and 10 are considered as promoters; twenty-one responses fell into this category
     \end{itemize}
     With the NPS method applied, there are 18.42\% detractors and 27.63\% promoters which amounts to a net NPS Score of
     9.21\%.
@@ -764,33 +768,31 @@
 
     \section{Conclusion}
     \label{sec:conclusion}
-    Based on the data from the evaluation questions in chapter \ref{sssec:rratque}, the topic of
-    FinOps is significant rated below the average, there are significant more detractors and
-    less promoters compared to the overall average.
-    This topic has also the overall biggest variance with 1.420.\\
-    The topic of Discoverability and Obtaining Information is less clear.
-    The overall average is below the global average, but inside of the margin of error. There are
-    The average of the Documentation and Communication theme is 3.41, almost on par with the overall average.
-    The topic Making Expertise Visible has an average score of 3.64 which is above the overall average.
-    Topics not directly related to the internal developer portal are at or above the overall average.
+    Based on the data from the evaluation questions in chapter \ref{sssec:rratque}, the value propositions of
+    Discoverability and Obtaining Information (3.11) and FinOps (2.62) are below the mean for all questions (3.40)
+    and outside the margin of error (\textpm 0.228).\\
+    The mean of the Documentation and Communication theme is 3.41, almost on par with the overall mean.
+    The topic Making Expertise Visible has an average score of 3.64 which is above the overall mean.
+    Topics not directly related to the internal developer portal are at or above the overall mean.
     General platform topics have an average score of 3.46 which is near the overall average.
     Lifecycle of Resources has an average score of 3.59 and the Incident Support topic has an average of 3.92.\\
-    Summary of Data;
+    The data can be summarized as follows:
     \begin{itemize}
-        \item Three of the five, in the survey tested, value propositions of an Internal Developer Portal are below the overall average and outside the error margin.
-        \item Two of the three other topics are above and one is near the overall average of the survey.
+        \item Two of the five tested value propositions of an Internal Developer Portal are below the overall average and outside the error margin
+        \item One of the three other topics are above and two are near the overall mean of the survey
         \item Fifteen answers for the open-ended questions contain issues related to the value propositions of an Internal Developer Portal
     \end{itemize}
     Thus, there is an argument that an Internal Developer Portal could be of value for the BizDevOps engineers if the following
     criteria are met:
     \begin{itemize}
-        \item The solution must have have some kind of a FinOps capability.
-        \item The solution must improve the discoverability of services, teams, resources and platforms.
-        \item The solution must have the capability to publish Golden Path
+        \item The solution must have have some kind of a FinOps capability
+        \item The solution must improve the discoverability of services, teams, resources and platforms
     \end{itemize}
+    The Golden Path topic might be also benefit from an Internal Developer Portal.
     There could be additional benefit for the BizDevOps engineers, if the solution also has the capability to aid with
     Documentation functionality and makes it more accessible.
-    There seems no current need to use an Internal Developer Portal for making Expertise more visible.
+    There seems no current need to use an Internal Developer Portal for making Expertise more visible as it this topic is
+    currently of no concern.
 
     \subsection{Recommendations for Action}
     \label{subsec:arec}
@@ -939,25 +941,25 @@
         \begin{center}
             \begin{tabularx}{\textwidth}{lllll}
                 \toprule
-                Id & Average & Detractors & Promoters & Variance \\
+                Id & Mean & Negative & Positive & Standard Deviation \\
                 \midrule
-                1  & 3.04    & 20.0\%     & 28.0\%    & 0.590    \\
-                2  & 3.64    & 12.0\%     & 65.3\%    & 1.097    \\
-                3  & 3.25    & 18.7\%     & 42.7\%    & 0.661    \\
-                4  & 3.37    & 18.7\%     & 52.0\%    & 1.312    \\
-                5  & 3.55    & 17.3\%     & 57.3\%    & 1.379    \\
-                6  & 3.92    & 8.0\%      & 70.7\%    & 0.915    \\
-                7  & 3.59    & 10.7\%     & 62.7\%    & 1.057    \\
-                8  & 3.55    & 21.3\%     & 57.3\%    & 1.037    \\
-                9  & 3.32    & 20.0\%     & 49.3\%    & 1.348    \\
-                10 & 3.21    & 20.0\%     & 42.7\%    & 0.850    \\
-                11 & 3.76    & 8.0\%      & 66.7\%    & 0.865    \\
-                12 & 2.62    & 45.3\%     & 21.3\%    & 1.420    \\
-                13 & 3.38    & 16.0\%     & 44.0\%    & 0.841    \\
-                14 & 2.92    & 37.3\%     & 33.3\%    & 1.046    \\
-                15 & 3.92    & 10.7\%     & 74.7\%    & 1.099    \\
-                16 & 3.25    & 20.0\%     & 45.3\%    & 0.898    \\
-                17 & 3.53    & 18.7\%     & 58.7\%    & 1.118    \\
+                1  & 3.04   & 20.0\%   & 28.0\%   & 0.774              \\
+                2  & 3.64   & 12.0\%   & 65.3\%   & 1.055              \\
+                3  & 3.25   & 18.7\%   & 42.7\%   & 0.819              \\
+                4  & 3.37   & 18.7\%   & 52.0\%   & 1.153              \\
+                5  & 3.55   & 17.3\%   & 57.3\%   & 1.182              \\
+                6  & 3.92   & 8.0\%    & 70.7\%   & 0.963              \\
+                7  & 3.59   & 10.7\%   & 62.7\%   & 1.035              \\
+                8  & 3.55   & 21.3\%   & 57.3\%   & 1.025              \\
+                9  & 3.32   & 20.0\%   & 49.3\%   & 1.169              \\
+                10 & 3.21   & 20.0\%   & 42.7\%   & 0.929              \\
+                11 & 3.76   & 8.0\%    & 66.7\%   & 0.936              \\
+                12 & 2.62   & 45.3\%   & 21.3\%   & 1.200              \\
+                13 & 3.38   & 16.0\%   & 44.0\%   & 0.923              \\
+                14 & 2.92   & 37.3\%   & 33.3\%   & 1.030              \\
+                15 & 3.92   & 10.7\%   & 74.7\%   & 1.055              \\
+                16 & 3.25   & 20.0\%   & 45.3\%   & 0.954              \\
+                17 & 3.53   & 18.7\%   & 58.7\%   & 1.064              \\
                 \bottomrule
             \end{tabularx}
         \end{center}
