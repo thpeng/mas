@@ -154,9 +154,13 @@
     \label{subsec:iproblemstatement}
     Research in the Internet about this problem as well as guidance from vendors indicates that there is greater momentum
     to address such issues with an Internal Developer Portal (IDP).
-    The central promise of the concept of an Internal Developer Portal is that it can reduce the so-called
-    ``cognitive load`` of DevOps engineers.\\
-    An Internal Developer Portal aims to provide a one stop shop for information about teams, associated applications and
+    The central promise of the concept of an Internal Developer Portal is that it can reduce the so-called ``cognitive load`` of DevOps engineers.\\
+    Cognitive Load Theory is used to describe the load and learning ability of individuals using different problem solving
+    strategies.
+    Novices in a problem domain frequently apply general solution strategies, but these are so burdensome that they
+    cannot develop and learn an efficient solution strategy at all\parencite{cogload}.
+    Cognitive load in software development is experienced in different ways; intrinsic, extrinsic and germane load\parencite{cogdev}.
+    An Internal Developer Portal claims to address the extrinsic load part with a one stop shop for information about teams, associated applications and
     their used infrastructure and resources for DevOps engineers.
 
     \subsection{Objective of the Certificate Work}
@@ -269,10 +273,10 @@
     \subsubsection{Vendors and Products}
     \label{sssec:vendors}
     While it is not the focus of this certificate work to delve into the details of each possible product on the market
-    and make a comparison between them, it is worthy to describe a few.\\
+    and make a comparison between them, it is worthy to describe the most relevant ones.\\
     Redpoints mentions five products as ``Universal Service Catalogue`` offerings\parencite{devportalsprimer}.
-    This kind of Internal Developer Portal is not tied into specific cloud offerings such as AWS, Azure or Google
-    Cloud Platform (``API Catalog tied to an API Gateway / Service Mesh``)and has no opinion about a particular application
+    This kind of Internal Developer Portal is not tied into specific cloud offerings such as Amazon Web Services, Microsoft Azure or Google
+    Cloud Platform (``API Catalog tied to an API Gateway / Service Mesh``) and has no opinion about a particular application
     architectural style, such as the products mentioned in the category ``Microservice Catalog``.
     For further discussion about the capabilities of Internal Developer Portal the focus will be laid on this
     ``Universal Service Catalogue`` category, because it has the fewest conceptional restrictions.\\
@@ -291,6 +295,7 @@
             \caption{\label{tab:vendors} Vendor and Products.}
         \end{center}
     \end{table}
+    \FloatBarrier
     Roadie is omitted from the table \ref{tab:vendors} because it is a commercial offering of the software Backstage.
     It seems, there are two main directions.
     Backstage and Clutch, developed by two tech companies for their internal audience, have been made
@@ -305,7 +310,7 @@
     \subsubsection{Discoverability and Obtaining Information}
     \label{sssec:disc}
     The Software Catalog is the main feature of an Internal Developer Portal.
-    Its purpose is to make the capabilities of the Internal Developer Platform accessible for an engineer as seen in the
+    Its purpose is to make the capabilities of the Internal Developer Platform discoverable for an engineer as seen in the
     screenshot in figure \ref{fig:catalog}.\\
 
     \begin{figure}[h]
@@ -382,7 +387,7 @@
     For example, the documentation sits alongside the platform automation code, is peer reviewed, created
     and published in sync with the platform's update cycle.\\
     In the discussion mentioned in the chapter \ref{sssec:paap}, Booking.com talked about an integration in their Internal
-    Developer Portal  where communication about lifecycle and changes to their platforms is also integrated into their portal.
+    Developer Portal where communication about lifecycle and changes to their platforms is also integrated into their portal.
     With this approach it is possible to inform DevOps engineers with targeted communication, especially combined with data about relationships
     between platforms, team resources and application as described in chapter \ref{sssec:disc}.
     This is especially important when communicating breaking changes\footnote{A breaking change is a change in a software
@@ -649,8 +654,9 @@
     Overall, the seventeen questions have an average score of 3.40, the average of negative responses (1.2) is 18.5\% of the
     respondents and the average of positive responses (4.5) is 51.3\%.
     Respondents with scores of 1 and 2 are counted among the detractors and respondents with 4 and 5 are counted as the promoters.
-    The variance for the scoring questions ranges from 0.590 to 1.420.
-    An aggregate result for the five value propositions with eight associated questions is documented in the table \ref{tab:aggregateidpresults}.
+    The variance for the rating questions ranges from 0.590 to 1.420.
+    An aggregate result for the five value propositions with eight associated questions is documented in the table \ref{tab:aggregateidpresults}.\\
+
     \begin{table}[!htbp]
         \begin{center}
             \begin{tabularx}{\textwidth}{llllll}
@@ -667,10 +673,11 @@
         \end{center}
         \caption{\label{tab:aggregateidpresults} Aggregated results for IDP related questions.}
     \end{table}
+    \FloatBarrier
+
     In contrast, the aggregated results of questions on other topics are contained in the table \ref{tab:nonidpresults}.
     The results are grouped by resource lifecycle questions, generic questions about the internal developer platform
-    and incident handling.
-
+    and incident handling.\\
     \begin{table}[!htbp]
         \begin{center}
             \begin{tabularx}{\textwidth}{llllll}
@@ -685,6 +692,7 @@
         \end{center}
         \caption{\label{tab:nonidpresults} Aggregated results for non-IDP related questions.}
     \end{table}
+    \FloatBarrier
 
     \subsubsection{Result of the Open Question}
     \label{sssec:ropque}
@@ -756,9 +764,12 @@
 
     \section{Conclusion}
     \label{sec:conclusion}
-    Based on the data from the evaluation questions in chapter \ref{sssec:rratque}, the value propositions of
-    Discoverability and Obatining Information, Golden Path, and FinOps are below the average for all questions (3.40)
-    and outside the margin of error (10\%).
+    Based on the data from the evaluation questions in chapter \ref{sssec:rratque}, the topic of
+    FinOps is significant rated below the average, there are significant more detractors and
+    less promoters compared to the overall average.
+    This topic has also the overall biggest variance with 1.420.\\
+    The topic of Discoverability and Obtaining Information is less clear.
+    The overall average is below the global average, but inside of the margin of error. There are
     The average of the Documentation and Communication theme is 3.41, almost on par with the overall average.
     The topic Making Expertise Visible has an average score of 3.64 which is above the overall average.
     Topics not directly related to the internal developer portal are at or above the overall average.
@@ -785,13 +796,12 @@
     \label{subsec:arec}
     The recommendations for action are for SBB IT with the current status in May 2023 regarding the Internal Developer Platform.
 
-    \subsubsection{Focus on Relationships}
-    From the evaluation questions to the answers to open questions to additional direct feedback outside of the survey,
-    there is repeated criticism that there is no capability to have an integrated view of applications, teams, platforms
-    used, and resources.
-    There is currently no platform of this kind and could be the unique selling point of this internal developer platform.
+    \subsubsection{Focus on Discoverability}
+    From the evaluation questions to the open-ended question responses to additional direct feedback, a universal criticism emerges.
+    There is no capability to get an integrated view of applications, teams, platforms and resources in the specific context of a BizDevOps engineer.
+    There is currently no platform of this kind and could be the unique selling point of an Internal Developer Portal in the SBB IT.
 
-    \subsubsection{Target BizDevOps Engineer}
+    \subsubsection{Focus on BizDevOps Engineer}
     There is value in targeting the needs of the BizDevOps Engineers.
     They are lacking a coherent view for operating applications and improvements should be felt immediately by falling
     KPIs like MTTR\footnote{MTTR stands for mean time to repair. Its the measured time between a failure of a system
@@ -811,7 +821,7 @@
     necessary to achieve this separation of concern.
 
     \subsubsection{Prioritize Missing Capabilities}
-    Try to prioritize missing capabilities such as the mentioned FinOps instead of building again well understand and already
+    Try to prioritize missing capabilities such as the mentioned FinOps instead of building again well understood and already
     implemented features such as ordering a resource.
 
     \subsubsection{Focus on Runtime Data}
