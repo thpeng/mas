@@ -77,7 +77,7 @@
     exist in SBB IT and was corroborated with a survey of DevOps engineers.  \\ \\
     The results of the analysis and the survey can be summarized as follows.
     \begin{itemize}
-        \item DevOps engineers are largely satisfied with the current internal developer platform
+        \item DevOps engineers are largely satisfied with the current Internal Developer Platform
         \begin{itemize}
             \item The platform's continuous integration and continuous deployment capabilities were rated very positively
             \item The support for the lifecycle of resources was rated as very good
@@ -85,13 +85,14 @@
 
         \item However, there are several findings with significance that could be addressed with an internal developer portal
         \begin{itemize}
-            \item The lowest rated issue was related to the financial transparency around platform and resource usage
+            \item The lowest rated issue was related to the financial transparency around platform and resource usage (FinOps)
             \item DevOps engineers miss an integrated view of their application in the context of platform, resources, and other applications
         \end{itemize}
     \end{itemize}
 
     In conclusion, the certificate work states that with its current technology and organizational landscape, SBB IT
-    generates value by investing resources in an Internal Developer Portal.
+    can generate value by investing resources in an Internal Developer Portal and thus improving the DevOps experience and
+    lowering the cognitive load of the engineers.
 
     \pagebreak
 
@@ -652,8 +653,8 @@
     The calculated scores for the rating questions are included in table \ref{tab:ratingquestionresultstable}.
     Overall, the seventeen questions have an mean score of 3.40, the average of negative responses (1.2) is 18.5\% of the
     respondents and the average of positive responses (4.5) is 51.3\%.\\
-    Based on an industry standard 95\% confidence level\parencite{nistmean}, a population size of 76, a critical value
-    of 1.96 and a standard deviation of 1.0155, the confidence interval is 3.40 \textpm 0.228.\\
+    Overall, based on an industry standard 95\% confidence level\parencite{nistmean}, a population size of 76, a critical value
+    of 1.96\parencite{ci} and a standard deviation ($ \sigma $ ) of 1.0155, the confidence interval (CI) is 3.40 \textpm 0.228.\\
     % low: 3.172, high: 3.628
     % calc \[ 0.228 = 1.96 * (1.0155 / \sqrt{76})]
     %see https://www.scribbr.com/statistics/confidence-interval/
@@ -663,15 +664,15 @@
 
     \begin{table}[!htbp]
         \begin{center}
-            \begin{tabularx}{\textwidth}{llllll}
+            \begin{tabularx}{\textwidth}{lllllll}
                 \toprule
-                Topic           & Ids       & Mean & Negative & Positive \\
+                Topic           & Ids       & Mean & Negative & Positive & $ \sigma $ & CI            \\
                 \midrule
-                Discoverability & 1, 13, 14 & 3.11   & 24.4\%   & 35.1\%   \\
-                Expertise       & 2         & 3.64   & 12.0\%   & 65.3\%   \\
-                Documentation   & 3, 17     & 3.41   & 18.7\%   & 51.9\%   \\
-                Golden Path     & 10        & 3.21   & 20.0\%   & 42.7\%   \\
-                FinOps          & 12        & 2.62   & 45.3\%   & 21.3\%   \\
+                Discoverability & 1, 13, 14 & 3.11 & 24.4\%   & 35.1\%   & 0.932      & \textpm 0.121 \\
+                Expertise       & 2         & 3.64 & 12.0\%   & 65.3\%   & 1.055      & \textpm 0.237 \\
+                Documentation   & 3, 17     & 3.39 & 18.7\%   & 51.9\%   & 0.956      & \textpm 0.152 \\
+                Golden Path     & 10        & 3.21 & 20.0\%   & 42.7\%   & 0.929      & \textpm 0.209 \\
+                FinOps          & 12        & 2.62 & 45.3\%   & 21.3\%   & 1.200      & \textpm 0.270 \\
                 \bottomrule
             \end{tabularx}
         \end{center}
@@ -684,13 +685,13 @@
     and incident handling.\\
     \begin{table}[!htbp]
         \begin{center}
-            \begin{tabularx}{\textwidth}{llllll}
+            \begin{tabularx}{\textwidth}{lllllll}
                 \toprule
-                Topic     & Ids           & Mean & Negative & Positive \\
+                Topic     & Ids           & Mean & Negative & Positive & $ \sigma $ & CI            \\
                 \midrule
-                Lifecycle & 5, 6, 7, 8, 9 & 3.59   & 13.9\%   & 59.5\%   \\
-                Platform  & 4, 11, 16     & 3.46   & 15.6\%   & 54.7\%   \\
-                Incident  & 15            & 3.92   & 10.7\%   & 74.7\%   \\
+                Lifecycle & 5, 6, 7, 8, 9 & 3.59 & 13.9\%   & 59.5\%   & 1.090      & \textpm 0.110 \\
+                Platform  & 4, 11, 16     & 3.46 & 15.6\%   & 54.7\%   & 1.038      & \textpm 0.134 \\
+                Incident  & 15            & 3.92 & 10.7\%   & 74.7\%   & 1.055      & \textpm 0.237 \\
                 \bottomrule
             \end{tabularx}
         \end{center}
@@ -756,26 +757,31 @@
         \label{fig:engque}
     \end{figure}
     The result of the engagement question is not relevant for evaluating the value proposition of an Internal Developer Portal.
-    It is valuable to gauge the overall net promoter score\parencite{nps} of the CORE platforms and services.
+    For the product management team of the SBB IT, it is valuable to gauge the overall net promoter score\parencite{nps}
+    of the CORE platforms and services.
     \begin{itemize}
         \item Values between 1 to 6 are considered detractors; fourteen responses fell into this category
         \item Values between 7 and 8 are considered passives; forty-one responses fell into this range
         \item Values between 9 and 10 are considered as promoters; twenty-one responses fell into this category
     \end{itemize}
-    With the NPS method applied, there are 18.42\% detractors and 27.63\% promoters which amounts to a net NPS Score of
+    With the NPS method applied, there are 18.42\% detractors and 27.63\% promoters which amounts to a net NPS score of
     9.21\%.
 
 
     \section{Conclusion}
     \label{sec:conclusion}
-    Based on the data from the evaluation questions in chapter \ref{sssec:rratque}, the value propositions of
-    Discoverability and Obtaining Information (3.11) and FinOps (2.62) are below the mean for all questions (3.40)
-    and outside the margin of error (\textpm 0.228).\\
-    The mean of the Documentation and Communication theme is 3.41, almost on par with the overall mean.
+    Based on the data from the evaluation questions in chapter \ref{sssec:rratque}, the topic of FinOps is significant
+    below the mean (3.40) of the survey.
+    FinOps has the most respondents with a negative attitude (45.3\%).\\
+    Considering the confidence interval, Discoverability and Obtaining Information (3.11) is below the mean of the survey.
+    Additionally, this topic has the second highest amount of respondents with a negative attitude in question 14 of 37\%.\\
+    The mean of the Documentation and Communication theme is 3.39, almost on par with the overall mean and well within the
+    confidence interval.
     The topic Making Expertise Visible has an average score of 3.64 which is above the overall mean.
     Topics not directly related to the internal developer portal are at or above the overall mean.
-    General platform topics have an average score of 3.46 which is near the overall average.
-    Lifecycle of Resources has an average score of 3.59 and the Incident Support topic has an average of 3.92.\\
+    The general Internal Developer Platform topic has an average score of 3.46 which is near the overall average.
+    Lifecycle of Resources has an average score of 3.59 and considering the confidence interval is above the overall mean of the survey.
+    The topic Incident Support topic has an average of 3.92 and is significant above the overall mean.\\
     The data can be summarized as follows:
     \begin{itemize}
         \item Two of the five tested value propositions of an Internal Developer Portal are below the overall average and outside the error margin
@@ -785,14 +791,21 @@
     Thus, there is an argument that an Internal Developer Portal could be of value for the BizDevOps engineers if the following
     criteria are met:
     \begin{itemize}
-        \item The solution must have have some kind of a FinOps capability
-        \item The solution must improve the discoverability of services, teams, resources and platforms
+        \item The Internal Developer Portal must address the topic of FinOps
+        \item The Internal Developer Portal must improve the discoverability of services, teams, resources and platforms
     \end{itemize}
-    The Golden Path topic might be also benefit from an Internal Developer Portal.
-    There could be additional benefit for the BizDevOps engineers, if the solution also has the capability to aid with
-    Documentation functionality and makes it more accessible.
+    For the topics Golden Path and Documentation and Communication, the picture is less clear.
+    Both have an overlap of their confidence interval with the overall mean of the survey.
+    The topic Golden Path rated higher than the Documentation and Communication, but interestingly the Documentation and
+    Communication topic yielded six responses with the open question.
+    It is possible, but not certain, that both of these topics may benefit from an Internal Developer Portal.
     There seems no current need to use an Internal Developer Portal for making Expertise more visible as it this topic is
-    currently of no concern.
+    currently of no concern.\\
+    In contrast it seems that the non-IDP topics do not have an immediate need for action.
+    There are isolated requests for improvement, mostly centered around the old CI/CD pipeline and the local installation
+    of development tools.\\
+    Interestingly, the need to invest in ordering, modifying and deleting resources,
+    which is often mentioned internally by the product management of the SBB IT, is refuted.
 
     \subsection{Recommendations for Action}
     \label{subsec:arec}
@@ -803,12 +816,11 @@
     There is no capability to get an integrated view of applications, teams, platforms and resources in the specific context of a BizDevOps engineer.
     There is currently no platform of this kind and could be the unique selling point of an Internal Developer Portal in the SBB IT.
 
-    \subsubsection{Focus on BizDevOps Engineer}
+    \subsubsection{Improve the DevOps Experience}
     There is value in targeting the needs of the BizDevOps Engineers.
     They are lacking a coherent view for operating applications and improvements should be felt immediately by falling
     KPIs like MTTR\footnote{MTTR stands for mean time to repair. Its the measured time between a failure of a system
-    until it is fixed again and in working order.} or an improved future net promoter score, the current value is 9.21\%
-    as calculated in chapter \ref{sssec:rengque}.\\
+    until it is fixed again and in working order.} or an improved future net promoter score.\\
     Refrain initially from targeting other roles such as management, architects, security or non BizDevOps teams with
     an Internal Developer Portal to not dilute the focus of the Internal Developer Portal and maximizing the impact on
     the work of the BizDevOps engineers.
@@ -826,15 +838,21 @@
     Try to prioritize missing capabilities such as the mentioned FinOps instead of building again well understood and already
     implemented features such as ordering a resource.
 
-    \subsubsection{Focus on Runtime Data}
+    \subsubsection{Use Runtime Data as the Foundation}
     There is no need to build again an enterprise application database.
-    IT Architects are using the established database for modelling their solutions and thus it may not reflect the current
-    state of an application.
+    IT Architects are using the established enterprise application database for modelling their solutions and thus it
+    may not reflect the current state of an application and is less usefully in the incident case.
     Focus instead on the runtime data.
     For example, use data such as which application is deployed on a platform, telemetry data of applications or platforms or
     configured resources if GitOps\footnote{
         GitOps is a practice where resource definitions are stored in a source code version system. If any change
         happens in this definitions, the values are synced to a runtime, for example to a Kubernetes cluster.} is used.
+
+    \subsubsection{Discover Excitement Features}
+    The survey was constructed to identify primarily the needs of the BizDevOps engineers.
+    Unsurprisingly, the survey did not identify any Excitement Features.
+    It might be possible to identify potential Excitement Features with another methodology which would lead potentially
+    to a better and faster adoption of an Internal Developer Portal.
 
     \pagebreak
     % max 15 - 20 pages end here
@@ -939,27 +957,27 @@
 
     \begin{table}[!htbp]
         \begin{center}
-            \begin{tabularx}{\textwidth}{lllll}
+            \begin{tabularx}{\textwidth}{llllll}
                 \toprule
-                Id & Mean & Negative & Positive & Standard Deviation \\
+                Id & Mean & Negative & Positive & Standard Deviation & Confidence Interval \\
                 \midrule
-                1  & 3.04   & 20.0\%   & 28.0\%   & 0.774              \\
-                2  & 3.64   & 12.0\%   & 65.3\%   & 1.055              \\
-                3  & 3.25   & 18.7\%   & 42.7\%   & 0.819              \\
-                4  & 3.37   & 18.7\%   & 52.0\%   & 1.153              \\
-                5  & 3.55   & 17.3\%   & 57.3\%   & 1.182              \\
-                6  & 3.92   & 8.0\%    & 70.7\%   & 0.963              \\
-                7  & 3.59   & 10.7\%   & 62.7\%   & 1.035              \\
-                8  & 3.55   & 21.3\%   & 57.3\%   & 1.025              \\
-                9  & 3.32   & 20.0\%   & 49.3\%   & 1.169              \\
-                10 & 3.21   & 20.0\%   & 42.7\%   & 0.929              \\
-                11 & 3.76   & 8.0\%    & 66.7\%   & 0.936              \\
-                12 & 2.62   & 45.3\%   & 21.3\%   & 1.200              \\
-                13 & 3.38   & 16.0\%   & 44.0\%   & 0.923              \\
-                14 & 2.92   & 37.3\%   & 33.3\%   & 1.030              \\
-                15 & 3.92   & 10.7\%   & 74.7\%   & 1.055              \\
-                16 & 3.25   & 20.0\%   & 45.3\%   & 0.954              \\
-                17 & 3.53   & 18.7\%   & 58.7\%   & 1.064              \\
+                1  & 3.04 & 20.0\%   & 28.0\%   & 0.774              & \textpm 0.174       \\
+                2  & 3.64 & 12.0\%   & 65.3\%   & 1.055              & \textpm 0.237       \\
+                3  & 3.25 & 18.7\%   & 42.7\%   & 0.819              & \textpm 0.184       \\
+                4  & 3.37 & 18.7\%   & 52.0\%   & 1.153              & \textpm 0.259       \\
+                5  & 3.55 & 17.3\%   & 57.3\%   & 1.182              & \textpm 0.266       \\
+                6  & 3.92 & 8.0\%    & 70.7\%   & 0.963              & \textpm 0.217       \\
+                7  & 3.59 & 10.7\%   & 62.7\%   & 1.035              & \textpm 0.233       \\
+                8  & 3.55 & 21.3\%   & 57.3\%   & 1.025              & \textpm 0.230       \\
+                9  & 3.32 & 20.0\%   & 49.3\%   & 1.169              & \textpm 0.263       \\
+                10 & 3.21 & 20.0\%   & 42.7\%   & 0.929              & \textpm 0.209       \\
+                11 & 3.76 & 8.0\%    & 66.7\%   & 0.936              & \textpm 0.211       \\
+                12 & 2.62 & 45.3\%   & 21.3\%   & 1.200              & \textpm 0.270       \\
+                13 & 3.38 & 16.0\%   & 44.0\%   & 0.923              & \textpm 0.208       \\
+                14 & 2.92 & 37.3\%   & 33.3\%   & 1.030              & \textpm 0.232       \\
+                15 & 3.92 & 10.7\%   & 74.7\%   & 1.055              & \textpm 0.237       \\
+                16 & 3.25 & 20.0\%   & 45.3\%   & 0.954              & \textpm 0.214       \\
+                17 & 3.53 & 18.7\%   & 58.7\%   & 1.064              & \textpm 0.239       \\
                 \bottomrule
             \end{tabularx}
         \end{center}
