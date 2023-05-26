@@ -1,7 +1,7 @@
 %! Date = 28/03/2023
 
 % Preamble
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -26,6 +26,7 @@
     top=25mm,
     bottom=25mm,
 }
+\linespread{1.5}
 \addbibresource{references.bib}
 
 \begin{document}
@@ -256,8 +257,8 @@
     but also anything else needed to operate the software.
     Especially the operation of the software is a tool-intensive work.
     There are tools for logging, monitoring, incident handling, alerting and other practices.
-    In the event of an incident, a configuration management database or an enterprise architecture database are critical
-    to for the purpose which team is responsible for a particular application or resource.
+    In the event of an incident, configuration management databases or enterprise architecture databases are crucial for
+    identifying the team responsible for a particular application or resource.
     This information is important to determine the root cause of the incident and to quickly resolve it.
     Although DevOps offers numerous benefits, it is quite a complexity for a team member to master all necessary tools and
     practices in an agile DevOps team.
@@ -275,7 +276,7 @@
     for information and to interpret it correctly.
     The search task is supported by a centralized software catalog.
     Interpretation of the data is supported by an underlying logical model that describes the assets, technologies
-    and their relationships between them.
+    and the relationships between them.
     The logical model varies among implementations of the Internal Developer Portal, but there are some common elements.
 
     \subsubsection{Vendors and Products}
@@ -311,9 +312,9 @@
     Moment and OpsLevel are purposefully built by startups as their product and have commercial offerings.
     For the further discussion about the value proposition of an Internal Developer Portal, some screenshots and concepts will
     be used from Backstage.\\
-    Backstage has been built by Spotify which invests heavily in what they call the
+    Backstage, developed by Spotify, is a product of the company's heavy investment in what they refer to as the
     ``developer experience`` (DX)\parencite{spotifydx}.
-    Additionally, Backstage was adopted in 2020 as an incubating project into the Cloud Native Computing Foundation\parencite{cncf} .
+    Additionally, in 2020, Backstage was accepted as an incubating project by the Cloud Native Computing Foundation\parencite{cncf} .
 
     \subsubsection{Discoverability and Obtaining Information}
     \label{sssec:disc}
@@ -335,10 +336,11 @@
     \end{itemize}
     Data may be shown in a tabular fashion or as a relationship graph.
     The catalog allows a search over multiple entities.
-    Usually, the user is already in his context.
-    For example, the application where he is responsible for, is already loaded on the first screen.
-    An user may bookmark its favourite items and its own resources are marked by ``owned``.
-    In addition to the catalog with its tabular overview, there are detail views available as seen in figure \ref{fig:portaldetails}.
+    Usually, the user's context is automatically loaded.
+    For example, the application they are responsible for appears on the initial screen.
+    Users can bookmark their favorite items, and their own resources are marked as ``owned``.
+    In addition to the tabular overview provided by the catalog, for each component exists a detail view, as shown in
+    figure\ref{fig:portaldetails}.
     \begin{figure}
         \includegraphics[width=\linewidth]{backstage_item_details}
         \caption{Details about an artifact}
@@ -368,8 +370,7 @@
     The term ``Golden Path`` was coined by Spotify\parencite{spotifygoldenpath} and is itself a reference to Frank
     Herbert`s Dune trilogy.
     The meaning of this term is that there is only one viable path to do things the right way and to succeed.
-    A Golden Path in the context of an Internal Developer Portal is a ready-to-use template for getting a project
-    to start quickly.
+    A Golden Path in the context of an Internal Developer Portal is a ready-to-use template that enables quick project startup.
     It can consist of software engineering artifacts and preconfigured infrastructure components and is usually very
     opinionated.
     Opinionated means that the context of the enterprise is already considered, such as internal regulations,
@@ -377,7 +378,7 @@
     For example, a golden path for a database is already built into the company's security infrastructure,
     logging is ensured, and some best practices for database configuration and modeling are already implemented.\\
     Golden Paths are not necessarily product-specific;
-    they can encompass a typical development stack used in the enterprise.
+    they can represent a typical development stack used within the enterprise.
     For example, a stack for a typical web application may consists of a frontend built with Javascript, a Java backend
     and an Oracle database, all integrated into a single build pipeline for CI/CD,    securely configured and with
     the enterprise look and feel already established.
@@ -394,8 +395,8 @@
     The advantage of this approach is that the documentation is treated like code and can be integrated into the same toolchain.
     For example, the documentation sits alongside the platform automation code, is peer reviewed, created
     and published in sync with the platform's update cycle.\\
-    In the discussion mentioned in the chapter \ref{sssec:paap}, Booking.com talked about an integration in their Internal
-    Developer Portal where communication about lifecycle and changes to their platforms is also integrated into their portal.
+    In the discussion mentioned in the chapter \ref{sssec:paap}, Booking.com discussed an integration feature in their
+    Internal Developer Portal that incorporates communication about the lifecycle and changes to their platforms.
     With this approach it is possible to inform DevOps engineers with targeted communication, especially combined with data about relationships
     between platforms, team resources and application as described in chapter \ref{sssec:disc}.
     This is especially important when communicating breaking changes\footnote{A breaking change is a change in a software
@@ -406,34 +407,36 @@
     \label{sssec:expertise}
     Splunk\footnote{Splunk is a company specialised in creating software for log analysis and monitoring and it is known
     for its product with the same name}
-    describes a use case how to leverage an Internal Developer Portal to make expertise visible in their
-    company\parencite{splunkidp} .
-    One of the challenge is that it is usually not transparent in the company which engineer has what kind of speciality know-how.
+    describes a use case demonstrating how an Internal Developer Portal can be leveraged to make expertise more visible
+    within their company\parencite{splunkidp} .
+    One challenge is that it's usually not transparent within the company which engineer possesses what kind of specialty
+    know-how.
     For example, one team integrated successfully a NoSql\footnote{NoSql databases are a broad class of databases which
     are not using the classic Structured Query Language (SQL). Examples are key/value stores, document oriented
     databases and others.  } database.
     This database is not part of a platform service but an integral part of a business application.
-    The next team which would like to integrate the same technology faces the problem that they do not have any internal
-    expert for this technology and are not aware that another team already did the legwork.
-    The solution from Splunk is to enrich teams and users in the Internal Developer Portal with additional data about
-    their knowledge and let other user give feedback to how a team or user did support them, called a ``Bravo`` in their terminology.
+    The next team that wishes to integrate the same technology faces the issue of lacking an internal expert in this
+    technology and may not be aware that another team has already mastered it.
+    Splunk's solution is to enrich teams and users in the Internal Developer Portal with additional data about their
+    knowledge and allow other users to provide feedback on how a team or user supported them.
+    They refer to this feedback as a ``Bravo`` .
     Thus, they create something like a social network inside their company for connecting people to solve problems or
     easing the way in how to find people with specific skills or knowledge.
 
     \subsubsection{Extendability of the Platform}
     \label{sssec:extendability}
-    As shown in chapter \ref{sssec:vendors}, there are multiple offerings of Internal Developer Portal and varying
-    implementations.
+    As illustrated in chapter \ref{sssec:vendors}, there are multiple offerings of Internal Developer Portals and a
+    variety of implementations.
     In case of the Software-as-a-Service offerings, the extendability consists of using plugins for well-known
     technologies or products and preparing and inserting the company's data for the catalogue feature.
-    The self-hosted variants, such as Backstage and Clutch are more like a skeleton or a framework.
+    Self-hosted variants, like Backstage and Clutch, function more like a skeleton or a framework.
     For both products, there are pre-built binaries which are installable and runnable, but you can choose to build your
     own Internal Developer Portal and use these products as a starting point.
-    Both support custom-made plugins on the front-end side which may use additional datasource outside the direct
-    Internal Developer Portal.
-    This approach is handy for decentralized organisational forms where each team have maximal autonomy about how they
-    reach their goals, but would like to use and contribute to a centralized catalogue by adding data and functionality
-    via plugins.
+    Both support custom-made plugins on the front-end, which can utilize additional data sources outside the immediate
+    realm of the Internal Developer Portal.
+    This approach is handy for decentralized organizational structures where each team has maximum autonomy over how
+    they achieve their goals, but also wishes to utilize and contribute to a centralized catalog by adding data and
+    functionality via plugins.
     The plugin architecture allows to leverage your Internal Developer Portal with the tooling landscape in a
     single and integrated user experience for DevOps Engineers.
 
@@ -460,10 +463,10 @@
     and controlling.
     Other software is specially built for mission-critical, day-to-day operations of the railway such as the Rail Control
     System (RCS)\parencite{sbbrcs} .\\
-    An SBB IT application may be a purchased product, may be developed in-house or is a combination thereof which is
-    sometimes called a ``customization``.\\
-    Applications and products, built and operated by the SBB, are regulated by different standards and regulations of the
-    swiss government or by industry initiatives.
+    An SBB IT application might be a purchased product, developed in-house, or a combination of both, sometimes referred
+    to as a ``customization``.\\
+    Applications and products, built and operated by SBB, adhere to various standards and regulations set by the Swiss
+    government and industry initiatives.
     Examples are the EN 50128 standard by the European Committee for Electrotechnical Standardization (CENELEC)\parencite{cenelec},
     which governs among other things the development of safety-related software with different requirement levels.
     Another example is HCBöV\parencite{hcboev}, a swiss government regulation concerning cyber-security, risk management,
@@ -479,8 +482,8 @@
 
     \subsection{Internal Developer Platform}
     \label{subsec:sbbplatform}
-    The SBB IT has for most of the core components of an Internal Developer Platform, as laid out in chapter \ref{subsec:vpplatform},
-    already solutions in place:
+    SBB IT already has solutions in place for most of the core components of an Internal Developer Platform, as laid out
+    in Chapter\ref{subsec:vpplatform}:
     \begin{itemize}
         \item Application Configuration Management - is centered around the practice of GitOps\parencite{hashicorpvault}
         \item Infrastructure Orchestration - for example, SBB uses OpenShift since 2015\parencite{rhsbbopenshift}
@@ -497,8 +500,8 @@
         \item An IT Service Management Platform contains the data concerning team contact information and support groups for applications
         \item A Configuration Management Database contains data about used assets, resources and relations to applications
     \end{itemize}
-    Thus, it could be argued that the foundation for an Internal Developer Platform is in place, but there are two
-    critical pieces missing.
+    Thus, while it could be argued that the foundation for an Internal Developer Platform is in place, there are still
+    two critical pieces missing.
     First, most of the components mentioned are only partially integrated with each other.
     Examples for missing integration are different identifier for assets, unaligned authorization such as per-user vs.
     per-group models and manual data maintenance.
@@ -510,27 +513,27 @@
     In 2015, DevOps practices and a PaaS were introduced in SBB IT .
     The stated goal of these additions was to improve the increasing complexity in operations and the perceived slow
     speed in responding to change\parencite{sbbdevops}.\\
-    Four years later, a reorganization brought a new operating model to the SBB IT based on agile principles, DevOps and
-    SAFe, creating the role of BizDevOps engineer\parencite{sbbagile} .
+    Four years later, a reorganization introduced a new operating model to SBB IT, based on agile principles, DevOps,
+    and SAFe, resulting in the creation of the BizDevOps engineer role\parencite{sbbagile} .
     Most of the existing engineering roles, such as the Application Engineer, Operations Manager, Test Engineer or
     Requirements Engineer were transformed into this BizDevOps Engineer role.
     To bridge the gap between business and IT and break down silos, some business-facing roles have also been integrated into these
     cross-functional teams have been integrated and now have the title of a BizDevOps engineer.\\
-    DevOps teams in SBB IT in 2023 are now the established standard.
+    By 2023, DevOps teams have become the established standard in SBB IT.
     Despite this, they still work primarily with tools for development and operations from the predecessor organization.
     The tools themselves may be state-of-the-art in their areas, but they were not purchased or developed with
     end-to-end integration in mind.
 
     \subsection{Internal Developer Portal}
     \label{subsec:sbbportal}
-    Most BizDevOps teams at SBB make do with additional structuring of their important information for daily work, to cope
+    Most BizDevOps teams at SBB make do by structuring of their important information for daily work, to cope
     with the lack of a single and integrated portal.
     A common approach is to use the internal wiki software where each team maintains their relevant http link collection
     related to their project on one or more pages.
     In most cases, when someone joins a team, their first task is to familiarize themselves with this collection.
     Of course, these link collections become outdated and maintaining them also requires effort from a team.
-    When entire teams are newly staffed, for example with models such as managed capacity or near-shore, it is even less
-    easy for them to get all the information they need.\\
+    When entire teams are newly staffed, for example with models such as managed capacity or near-shore, it is even more
+    difficult for them to get all the information they need.\\
     While this discovery and knowledge sharing issue has not been fully resolved, there have been some efforts to create
     a self-service portal for ordering resources.
     The reason for this portal was that the platform teams were dissatisfied with the unstructured ordering of resources
@@ -555,10 +558,10 @@
     The personas of the customer journey are roles which are quite common in a BizDevOps team in the SBB IT.\\
     \textit{Peter Plattform} is working as a platform engineer and is interested what the platforms are offering for building
     an application.
-    Peter orders a resource from a platform and is responsible over the full lifecycle until it this resource is not
+    Peter orders a resource from a platform and is responsible for the full lifecycle until it this resource is not
     needed anymore.\\
     \textit{Diego Developer} is a software engineer and his duty is to work on features in the context of the application
-    he' responsible for.
+    he is responsible for.
     He needs information about the current tech stack\footnote{A tech stack is short for technology stack.
     A technology stack is usually a selection of available componentes and framework such as databases, messaging, programming
     languages and other technologies necessary to build applications.} and he needs advice for the solution design of his application.
