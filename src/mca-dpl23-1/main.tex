@@ -60,14 +60,14 @@
 
 
     \section*{Management Summary}
-    An internal developer portal is a software that aims to provide a centralized and unified view to support the daily
+    An Internal Developer Portal is a software that aims to provide a centralized and unified view to support the daily
     work of DevOps engineers.
     Internal developer portals have been developed by several companies to reduce the so-called ``cognitive load`` of
     their DevOps engineers.
     At its core, it serves as a catalog that includes elements such as teams, users, applications, platforms, and resources.
     It visualizes the relationships between these items and gives users an overview of the immediate context in
     which they are working.
-    Additionally, various use cases have been developed based on the implementations of an internal developer portal.
+    Additionally, various use cases have been developed based on the implementations of an Internal Developer Portal.
     These include features that assist DevOps teams in managing cloud costs, blueprints for building applications from
     the ground up, and tools for organizing technical documentation and facilitating internal communication.\\ \\
     SBB IT adopted cloud technologies in 2016 and has since built a comprehensive, agile DevOps organization for
@@ -85,7 +85,7 @@
             \item The support for the lifecycle of resources was rated as very good
         \end{itemize}
 
-        \item However, there are several findings with significance that could be addressed with an internal developer portal
+        \item However, there are several findings with significance that could be addressed with an Internal Developer Portal
         \begin{itemize}
             \item The issue receiving the lowest rating pertained to financial transparency regarding the usage of platforms and resources (FinOps).
             \item DevOps engineers miss an integrated view of their application in the context of platform, resources, and other applications
@@ -161,7 +161,7 @@
     \subsection{Problem Statement and Controversy}
     \label{subsec:iproblemstatement}
     Internet research and vendor guidance suggest growing momentum towards addressing these issues with an Internal
-    Developer Portal (IDP)
+    Developer Portal (IDP) .
     The central promise of the concept of an Internal Developer Portal is that it can reduce the so-called ``cognitive load``
     of DevOps engineers.\\
     The Cognitive Load Theory is a framework used to describe individuals' learning ability and cognitive load when using
@@ -169,8 +169,8 @@
     Novices in a problem domain frequently apply general solution strategies, but these are so burdensome that they
     cannot develop and learn an efficient solution strategy at all\parencite{cogload}.
     Cognitive load in software development is experienced in different ways; intrinsic, extrinsic and germane load\parencite{cogdev}.
-    An Internal Developer Portal claims to address the extrinsic load part with a one stop shop for information about teams, associated applications and
-    their used infrastructure and resources for DevOps engineers.
+    An Internal Developer Portal claims to address the extrinsic load part with a one stop shop for information about teams,
+    associated applications and their used infrastructure and resources for DevOps engineers.
 
     \subsection{Objective of the Certificate Work}
     \label{subsec:iobjective}
@@ -222,7 +222,7 @@
     and with what configuration a software artifact is installed.
     The reason for this may be to coordinate a new software rollout, to test the software on a dedicated stage, to fix bugs
     or to develop new features and to solve incidents caused by your software.\\
-    Therefore, one could argue that the concept of an Internal Developer Platform isn't unique to certain products or
+    Therefore, one could argue that the concept of an Internal Developer Platform is not unique to certain products or
     offerings, but rather applies to a set of tools and practices that support IT operations and software development.
     These tools and practices can be considered precursors to Internal Developer Platforms and are usually
     distinct solutions or products.\\
@@ -409,7 +409,7 @@
     for its product with the same name}
     describes a use case demonstrating how an Internal Developer Portal can be leveraged to make expertise more visible
     within their company\parencite{splunkidp} .
-    One challenge is that it's usually not transparent within the company which engineer possesses what kind of specialty
+    One challenge is that it is usually not transparent within the company which engineer possesses what kind of specialty
     know-how.
     For example, one team integrated successfully a NoSql\footnote{NoSql databases are a broad class of databases which
     are not using the classic Structured Query Language (SQL). Examples are key/value stores, document oriented
@@ -563,7 +563,7 @@
     \textit{Diego Developer} is a software engineer and his duty is to work on features in the context of the application
     he is responsible for.
     He needs information about the current tech stack\footnote{A tech stack is short for technology stack.
-    A technology stack is usually a selection of available componentes and framework such as databases, messaging, programming
+    A technology stack is usually a selection of available components and framework such as databases, messaging, programming
     languages and other technologies necessary to build applications.} and he needs advice for the solution design of his application.
     Diego is also interested to get the releases of his application as fast as possible and with the highest quality
     into the production environment.\\
@@ -571,9 +571,9 @@
     He needs first to install the necessary tooling to enable him to develop features.
     The next assignment for him for his learning journey is to create a sample application on OpenShift and integrate
     it with sample database provided.
-    Additonally, Norbert needs some guidance about what the best practices are concerning the used technologies and platforms.\\
+    Additionally, Norbert needs some guidance about what the best practices are concerning the used technologies and platforms.\\
     \textit{Agnes Architekt} is working as an IT architect in the team.
-    The product owner of the application she's responsible for, asked her to identify possibilities to lower the operational cost.
+    The product owner of the application, for which she is responsible, asked her to identify possibilities to lower operational costs.
     She is also responsible for the enabler\footnote{An enabler is a work item which has no direct business value.
     For example, a migration to a new version for a web framework or other technical necessities.} of the application.
     She has to create the necessary backlog items and communicates with the product owner, so that he can prioritize
@@ -581,7 +581,7 @@
     For this work, she needs to know about the upgrade plans of the used services of the platforms her application is using.     \\
     \textit{Ida Incident} is working on an operational issue which is affecting the users of her application.
     She needs to know the technical topology of her application and the platforms which are used for operating this application.
-    She needs to find the team which is responsible for a given platform and needs to know how she can contact them.\\
+    She needs to identify the team responsible for the given platform and understand how she can get in touch with them.\\
     For more information about the customer journey, see figure \ref{fig:customerjourney}.
 
     \subsection{Quantitative Survey}
@@ -601,38 +601,39 @@
     \label{sssec:questions}
     Seventeen rating questions were created from the sixteen steps of the Customer Journey.
     The rating questions are documented in the appendix in the table \ref{tab:ratingquestionstable}.
-    The relationship between the suggested value in chapter \ref{sec:vp} and the questions is as follows:
+    The correlation between the proposed values in chapter \ref{sec:vp} and the questions is as follows:
     \begin{itemize}
-        \item Questions 1, 13, and 14 relate to discoverability and obtaining information in chapter \ref{sssec:disc}
-        \item Question 2 refers to making expertise visible from chapter \ref{sssec:expertise}
-        \item Questions 3 and 17 relate to technical documentation and communication, chapter \ref{sssec:techdoc}
+        \item Questions 1, 13, and 14 relate to Discoverability and Obtaining Information in chapter \ref{sssec:disc}
+        \item Question 2 refers to Making Expertise Visible from chapter \ref{sssec:expertise}
+        \item Questions 3 and 17 relate to Technical Documentation and Communication, chapter \ref{sssec:techdoc}
         \item Question 10 refers to chapter \ref{sssec:goldenpath}, Golden Path.
         \item Question 12 refers to FinOps, chapter \ref{sssec:finops}
     \end{itemize}
-    Questions 4, 11, and 16 are not closely related to the concept of an Internal Developer Portal.
-    However, these three questions are related to general capabilities of the existing platform for internal developers.\\
-    Questions 5, 6, 7, 8, and 9 measure the maturity of the internal developer platform in terms of resource lifecycle.\\
+    Questions 4, 11, and 16 do not closely correlate to the concept of an Internal Developer Portal.
+    However, these three questions are related to general capabilities of the existing Internal Developer Platform.\\
+    Questions 5, 6, 7, 8, and 9 measure the maturity of Lifecycle of Resources capabilities.\\
     There are no direct questions about the Extendability \ref{sssec:extendability} chapter and Platform as a Product
     \ref{sssec:paap}.
-    Extensibility is a non-functional requirement when selecting the specific solution for the Internal Developer Portal.
-    This requirement is not the desire of a user of this portal and does not matter to them.\\
+    Extensibility is a non-functional requirement when choosing a specific solution for the Internal Developer Portal.
+    This feature is not directly relevant or desired by the portal's users.\\
     Platform as a Product is a goal of SBB IT internal product management to make the work of BizDevOps
     team more visible and accessible and is not an intrinsic goal of an engineer.
-    There is no question on this topic in the survey.\\
-    Question 15 asks about support in the incident process and does not refer to an internal developer platform or an
+    No question in the survey addresses this topic.\\
+    Question 15 asks about support in the incident process and does not refer to an Internal Developer Platform or an
     Internal Developer Portal. \\
     The survey and questions relate to DevOps experience and use of the platform, products, or services of the so-called CORE,
-    which consists of multiple DSRVs, most with mission-critical platforms.
+    which consists of multiple DSRVs.
+    Most of these DSRVs operate mission-critical platforms.
     It is not required that the respondent has used all services and platforms of the CORE.
     It is also scoped about usage of services and platforms in the last three months.\\
-    The rating questions have choices from one to five stars and are all mandatory to complete.
+    The rating questions have choices from one to five stars and are mandatory to complete.
     The meaning of the rating as defined as follows:
     \begin{itemize}
         \item One star - non-existent or unknown
         \item Two star - with room for improvement
         \item Three star - I can work with it, corresponds to what I expect
         \item Four star - above average
-        \item Five star - super that's what makes you
+        \item Five star - super that is what makes you
     \end{itemize}
 
     In addition, two other questions were asked which are documented in table \ref{tab:oetable}.
@@ -641,7 +642,7 @@
     One is a question with a that allows free text responses.
     The goal is to get additional input and to generate interview partners for a qualitative survey.
     This question is optional for the respondents.
-    These interviews and the resulting findings are not part of this certificate thesis.\\
+    The outcomes from these interviews are beyond the scope of this certificate thesis.\\
     The final question\footnote{The engagement question was added based on input from the internal product management team}
     is an engagement question and is intended to measure the overall satisfaction of BizDevOps engineers related to the CORE platforms and services.
     % 2.3.2 Discoverability -> 1, 13, 14 (strong)
@@ -657,19 +658,17 @@
 
     \subsubsection{Result of the Rating Questions}
     \label{sssec:rratque}
-    After the two-week survey period, the response rate was 9.74\% with 76 respondents.
+    After the two-week survey period, the response rate was 9.74\% with 76 respondents and a margin of error of 11\%.
     The raw results for the rating questions are included in table \ref{tab:rawratingquestionresultstable}.
     The calculated scores for the rating questions are included in table \ref{tab:ratingquestionresultstable}.
-    Overall, the seventeen questions have an mean score of 3.40, the average of negative responses (1.2) is 18.5\% of the
-    respondents and the average of positive responses (4.5) is 51.3\%.\\
+    On average, the seventeen questions have a mean score of 3.40, with 18.5\% of respondents giving negative responses
+    (1 and 2), and 51.3\% giving positive responses (4 and 5)
     Overall, based on an industry standard 95\% confidence level\parencite{nistmean}, a population size of 76, a critical value
     of 1.96\parencite{ci} and a standard deviation ($ \sigma $ ) of 1.0155, the confidence interval (CI) is 3.40 \textpm 0.228.\\
     % low: 3.172, high: 3.628
     % calc \[ 0.228 = 1.96 * (1.0155 / \sqrt{76})]
     %see https://www.scribbr.com/statistics/confidence-interval/
-    Respondents with scores of 1 and 2 are counted as Negative and respondents with 4 and 5 are counted as the Positive.\\
-    The standard deviation for the rating questions ranges from 0.590 to 1.420.
-    An aggregate result for the five value propositions with eight associated questions is documented in the table \ref{tab:aggregateidpresults}.\\
+    Table \ref{tab:aggregateidpresults} documents the aggregate result for the five value propositions along with the eight associated questions.\\
 
     \begin{table}[!htbp]
         \begin{center}
@@ -690,7 +689,7 @@
     \FloatBarrier
 
     In contrast, the aggregated results of questions on other topics are contained in the table \ref{tab:nonidpresults}.
-    The results are grouped by resource lifecycle questions, generic questions about the internal developer platform
+    The results are grouped by resource lifecycle questions, generic questions about the Internal Developer Platform
     and incident handling.\\
     \begin{table}[!htbp]
         \begin{center}
@@ -734,10 +733,10 @@
     sollte unbedingt verbessert sein, man weiss nicht wo man könnte optimieren (zu beispiel welche anteil von kosten für
     xyz kommt von storage? von anzahle objekte? usw.)``\\
     There were also two suggestions about missing infrastructure as code capabilities.\\
-    Two feedback concerned the current vision and its wording of the so called CORE DSRVs.\\
+    Two feedback concerned the current vision and its wording of the CORE DSRVs.\\
     Two questioned a perceived lack of consultancy and unified support.\\
     And finally, there were two critical votes about the modernization effort of the SBB IT which is known as the
-    ''Gandalf Plan'' and the perceived primacy of technology enabler over features for the business.\\
+    ``Gandalf Plan`` and the perceived primacy of technology enabler over features for the business.\\
     Six feedbacks each concerned different other topics which will not be discussed in more detail.
     % techdoc + Benach: IIIIII
     % CI/CD kritik: IIII
@@ -779,23 +778,24 @@
 
     \section{Conclusion}
     \label{sec:conclusion}
-    Based on the data from the evaluation questions in chapter \ref{sssec:rratque}, the topic of FinOps is significant
-    below the mean (3.40) of the survey.
+    The evaluation data from chapter \ref{sssec:rratque} indicates that the topic of FinOps is significantly below the
+    survey's mean of 3.40.
     FinOps has the most respondents with a negative attitude (45.3\%).\\
     Considering the confidence interval, Discoverability and Obtaining Information (3.11) is below the mean of the survey.
     Additionally, this topic has the second highest amount of respondents with a negative attitude in question 14 of 37\%.\\
     The mean of the Documentation and Communication theme is 3.39, almost on par with the overall mean and well within the
     confidence interval.
     The topic Making Expertise Visible has an average score of 3.64 which is above the overall mean.
-    Topics not directly related to the internal developer portal are at or above the overall mean.
+    Topics not directly related to the Internal Developer Portal are at or above the overall mean.
     The general Internal Developer Platform topic has an average score of 3.46 which is near the overall average.
-    Lifecycle of Resources has an average score of 3.59 and considering the confidence interval is above the overall mean of the survey.
+    With an average score of 3.59, the topic of Lifecycle of Resources, considering the confidence interval, is above
+    the overall mean of the survey.
     The topic Incident Support topic has an average of 3.92 and is significant above the overall mean.\\
     The data can be summarized as follows:
     \begin{itemize}
-        \item Two of the five tested value propositions of an Internal Developer Portal are below the overall average and outside the error margin
+        \item Two of the five tested value propositions of an Internal Developer Portal are below the overall average and have no overlap of the confidence interval
         \item One of the three other topics are above and two are near the overall mean of the survey
-        \item Fifteen answers for the open-ended questions contain issues related to the value propositions of an Internal Developer Portal
+        \item Fifteen answers for the open questions contain issues related to the value propositions of an Internal Developer Portal
     \end{itemize}
     Thus, there is an argument that an Internal Developer Portal could be of value for the BizDevOps engineers if the following
     criteria are met:
@@ -803,9 +803,9 @@
         \item The Internal Developer Portal must address the topic of FinOps
         \item The Internal Developer Portal must improve the discoverability of services, teams, resources and platforms
     \end{itemize}
-    For the topics Golden Path and Documentation and Communication, the picture is less clear.
+    For the topics Golden Path and Technical Documentation and Communication, the picture is less clear.
     Both have an overlap of their confidence interval with the overall mean of the survey.
-    The topic Golden Path rated higher than the Documentation and Communication, but interestingly the Documentation and
+    The topic Golden Path rated higher than the Documentation and Communication, but interestingly the Technical Documentation and
     Communication topic yielded six responses with the open question.
     It is possible, but not certain, that both of these topics may benefit from an Internal Developer Portal.
     There seems no current need to use an Internal Developer Portal for making Expertise more visible as it this topic is
@@ -826,13 +826,14 @@
     There is currently no platform of this kind and could be the unique selling point of an Internal Developer Portal in the SBB IT.
 
     \subsubsection{Improve the DevOps Experience}
-    There is value in targeting the needs of the BizDevOps Engineers.
-    They are lacking a coherent view for operating applications and improvements should be felt immediately by falling
-    KPIs like MTTR\footnote{MTTR stands for mean time to repair. Its the measured time between a failure of a system
-    until it is fixed again and in working order.} or an improved future net promoter score.\\
-    Refrain initially from targeting other roles such as management, architects, security or non BizDevOps teams with
-    an Internal Developer Portal to not dilute the focus of the Internal Developer Portal and maximizing the impact on
-    the work of the BizDevOps engineers.
+    Targeting the needs of the BizDevOps Engineers is valuable.
+    They currently lack a coherent view of operating applications, and improvements can potentially lead to immediate
+    positive effects, such as a decrease in Key Performance Indicators (KPIs) like MTTR\footnote{MTTR stands for mean time to repair. Its the measured time between a failure of a system
+    until it is fixed again and in working order.}, or an improvement in the
+    net promoter score in a future survey.
+    Initially, avoid targeting roles other than BizDevOps Engineers, such as management, architects, and security teams,
+    with an Internal Developer Portal.
+    This strategy will prevent dilution of the portal's focus and will maximize its impact on the BizDevOps engineers' work.
     If necessary, try to onboard such additional users and use cases later on.
 
     \subsubsection{Do not Try to Replace Existing Tooling}
